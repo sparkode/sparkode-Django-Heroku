@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/menu.js' %}"></script>
+  <script src="{% static 'js/tema.js' %}"></script>
+  <script src="{% static 'js/Chart.js' %}"> </script>
+	<link rel="stylesheet" href="{% static 'css/estilosprincipal.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Raleway.css' %}">
+    <link rel="stylesheet" href="{% static 'cssK/bootstrap.min.css' %}" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'jsK/bootstrap.min.js' %}">
+	<title>Sparkode</title>
+    <link rel="icon" href="../static/media/icono48.ico" >
+</head>
+<body>
+	<header>
+		<div class="contenido">
+      <!--
+			<div class="logo">
+				<img src="" alt="">
+			</div>-->
+			<nav class="menu">
+				<ul>
+					<li><a href="#" class="menu_btn"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+					<li class="tema">Bienvenido a Sparkode</li>					
+				 	<li class="logout"><a href="/logOut/">Cerrar sesión</a></li>  
+				</ul>
+			</nav>
+		</div>
+
+		<nav class="menud">
+			<ul>
+        <li><a href="/principal/"><i class="fa fa-user" aria-hidden="true"></i>Inicio</a></li>
+				<li><a href="/perfil/"><i class="fa fa-user" aria-hidden="true"></i>Mi perfil</a></li>
+				<li><a href="/temario/"><i class="fa fa-book" aria-hidden="true"></i>Temario</a></li>
+				<li><a href="/acercade/"><i class="fa fa-question-circle" aria-hidden="true"></i>Acerca de</a></li>
+			
+			</ul>
+		</nav>
+	</header>
+
+    <div class="contenido1">
+                {% if errores %}
+	<ul style="margin-top: 10px;">
+	   {% for error in errores %}
+		<li style="color: red;">{{ error }}</li>
+	   {% endfor %}
+	</ul>
+	{% endif %}
+        <div class="row" id="hiddenMe">
+            <div class="col-sm-5">
+                <ul class="list-group-flush" >
+                    <li class="list-group-item"><strong>Nombre:&nbsp</strong> {{ nombre }}</li>
+                    <li class="list-group-item"><strong>Apellidos:&nbsp</strong>{{ apellidoP }} {{ apellidoM }} </li>
+                    <li class="list-group-item">Email: {{ email }}</li>
+                    <li class="list-group-item">Fecha de Nacimiento: {{ fechaNac }}</li>
+                    <li class="list-group-item">Tecnológico: {{ tec }}</li>
+                    <li class="list-group-item">Clave Tecnológico: {{ clave }}</li>
+                    <li class="list-group-item">Nivel: {{ nivel }}</li>
+                    <li class="list-group-item">Progreso: {{ progreso }}</li>
+                  </ul>
+
+            </div>
+            <div class="col-sm-2">
+                
+            </div>
+          <div class="col-md-3">
+            <h1 align="center">{{ nombreU }}</h1>
+            <div class="text-center">
+            {% if fotoP %}
+                <img src="{{ fotoP.url }}" class="img-thumbnail" alt="avatar">
+            {% else %}
+              <h3>No hay foto de perfil</h3>
+            {% endif %}
+            <br>
+            <br>
+                <a href="/fotoPerfil/" class="btn btn-primary" style="margin-left: 20px;">Modificar Datos</a>
+            </div>
+        </div>
+        
+
+      </div>
+      <div class="container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+                <h3>Estado de los temas</h3>
+                <th>Tema 1</th>
+                <th>Tema 2</th>
+                <th>Tema 3</th>
+                <th>Tema 4</th>
+                <th>Tema 5</th>
+            </tr>
+          </thead>
+          <tbody id="items">
+
+    <tr>
+      {% for R in avance %}
+      {% if R == "Tema Incompleto" %}
+      <td style="color:#ff0000" >{{ R }}</td>   
+      {% elif R  == "100.0% Tema Completo" %}
+      <td style="color:#009419" >{{ R }}</td>
+      {% else %}
+      <td style="color:#aec200" >{{ R }}</td>
+      {% endif %}
+      {% endfor %}      
+    </tr>
+    <tr>
+      <th><a href="/ejercicio/E1" class="btn btn-primary" style="margin-left: 20px;">Ir a Ejercicios</a></th>
+      <th><a href="/ejercicio/E2" class="btn btn-primary" style="margin-left: 20px;">Ir a Ejercicios</a></th>
+      <th><a href="/ejercicio/E3" class="btn btn-primary" style="margin-left: 20px;">Ir a Ejercicios</a></th>
+      <th><a href="/ejercicio/E4" class="btn btn-primary" style="margin-left: 20px;">Ir a Ejercicios</a></th>
+      <th><a href="/ejercicio/E5" class="btn btn-primary" style="margin-left: 20px;">Ir a Ejercicios</a></th>
+
+    </tr>
+              </tbody>
+            </table>
+    </div>
+              <div class="container">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                        <h3>Mis ejercicios resueltos</h3>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Evaluacion</th>
+                        <th>Fecha</th>
+                        <th>R1</th>
+                        <th>R2</th>
+                        <th>R3</th>
+                        <th>R4</th>
+                        <th>R5</th>
+                        <th>R6</th>    
+                        <th>Tema </th>
+                    </tr>
+                  </thead>
+                  <tbody id="items">
+            {% if ejercicios %}
+            {% for ejercicio in ejercicios %}
+            <tr>
+                <td>{{ ejercicio.Nombre }}</td>
+                <td>{{ ejercicio.Tipo }}</td>
+                <td>{{ ejercicio.Evaluacion }}</td>
+                <td>{{ ejercicio.Fecha }}</td>
+                <td>{{ ejercicio.R1 }}</td>
+                <td>{{ ejercicio.R2 }}</td>
+                <td>{{ ejercicio.R3 }}</td>
+                <td>{{ ejercicio.R4 }}</td>
+                <td>{{ ejercicio.R5 }}</td>
+                <td>{{ ejercicio.R6 }}</td>
+                <td>{{ ejercicio.IdTem }}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+
+            <td>No hay ejercicios resueltos</td>
+            {% endif %}
+                  </tbody>
+                </table>
+          <div class="container">
+            <h3>Tipo de Aprendizaje</h3>
+            <center>
+            <canvas id="myChart2" style="height:500px; width: 500px;" ></canvas>
+            </center>
+<br>
+
+<script src="{% static 'js/Chart.js' %}"></script>
+<script>
+
+
+var ctx2 = document.getElementById('myChart2').getContext('2d');
+
+var chart = new Chart(ctx2, {
+    type: 'doughnut',
+    data:{     	
+          labels: ['Visual {{ Visual }}%','Kinestesico {{ Kinestesico }}%','Auditivo {{ Auditivo }}%'],
+		      datasets: [
+            {		
+              label: 'Tipo de Aprendizaje',		      
+					    backgroundColor: ['#42a5f5', 'red', 'green','blue','red'],
+              data: [{{ Visual }},{{ Auditivo }}, {{ Kinestesico }}],
+				    }
+        ],
+			},
+    options: { responsive: false,
+              tooltips: {
+                enabled: false
+              },
+              legend:{
+                labels:{
+                fontSize : 20
+                }
+              }              
+    	}
+});
+
+</script>
+            </div>
+        
+    </div>
+
+
+		<div class="pie">
+			<footer>
+				<a href="" class="facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+				<a href="" class="twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+				<a href="" class="googleplus"><i class="fab fa-google-plus-official" aria-hidden="true"></i></a>
+
+				<div class="logo">
+					<img src="{% static 'media/logo.png' %}" alt="" width="30" height="30"><p>Sparkode</p>
+				</div>
+			</footer>
+		</div>
+
+
+</body>
+</html>

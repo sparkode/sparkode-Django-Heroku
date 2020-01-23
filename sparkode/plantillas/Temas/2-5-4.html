@@ -1,0 +1,76 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.5: Traducción de un programa: compilación, enlace, ejecución y errores.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify"><b>EJECUCIÓN:</b><br>Un programa de ejecución es un objeto que realiza una determinada acción cuando se abre.</p>
+		<p class="post-contenido text-justify">Puede encontrar programas de ejecución en los paneles, en la barra de menús de un panel y en el escritorio. 
+			Un programa de ejecución se representa mediante un icono en todas estas ubicaciones. Puede utilizar un programa de ejecución para realizar cualquiera de las 
+			siguientes acciones: <ul>
+			<li>Iniciar una aplicación.</li>
+			<li>Ejecutar un comando.</li>
+			<li>Abrir una carpeta.</li>
+			<li class="post-contenido text-justify">Abrir un explorador web en una página específica de Internet.</li>
+			<li class="post-contenido text-justify">Abrir URI (identificadores uniformes de recursos) especiales. Oracle Solaris Desktop proporciona URI 
+				especiales que permiten acceder a funciones particulares en el gestor de archivos. </li>
+		</ul></p>
+
+		<p class="post-contenido text-justify">Es posible modificar las propiedades de un programa de ejecución. Por ejemplo, las propiedades de un programa de ejecución incluyen el nombre del programa, el icono que lo representa y cómo se ejecuta. Para obtener más información sobre cómo modificar un programa de ejecución, consulte Modificación de un programa de ejecución.</p>
+		<p class="post-contenido text-justify"><b>ERRORES EN TIEMPO DE EJECUCIÓN</b></p>
+		<p class="post-contenido text-justify">Si el programa fuente es sintácticamente correcto, el compilador generará el código objeto, en caso contrario mostrará una lista con los errores encontrados, 
+			no generándose ningún programa objeto, para que procedamos a su depuración.</p>
+		<p class="post-contenido text-justify">Los compiladores emiten mensajes de error o de advertencia durante las fases de compilación, de enlace o de ejecución de un programa: <ul>
+			<li class="post-contenido text-justify">Los errores en tiempo de compilación son los que se producen antes de la ejecución del programa, 
+				durante el proceso de compilación del programa.</li>
+		</ul></p>
+
+		<p class="post-contenido text-justify"> Los errores que se pueden producir en la fase de compilación son: <ul>
+			<li class="post-contenido text-justify">Errores fatales: son raros. Indican errores internos del compilador. Cuando ocurre la compilación se detiene inmediatamente.</li>
+			<li class="post-contenido text-justify">Errores de sintaxis: son los errores típicos de sintaxis. No detienen la compilación, sino que al finalizar ésta 
+				se mostrará la lista con todos los errores encontrados. Algunos errores suelen ser consecuencia de otros cometidos con anterioridad. 
+				Con este tipo de errores no se puede obtener un programa objeto y por lo tanto tampoco el ejecutable.</li>
+			<li class="post-contenido text-justify">Advertencias o avisos (warnings): indican que hay líneas de código sospechosas que, 
+				a pesar de no infringir ninguna regla sintáctica, el compilador las encuentra susceptibles de provocar un error. 
+				Cuando se detecta un warning la compilación no se detiene. Si en un programa fuente sólo se detectan warnings, 
+				se podrá obtener un programa objeto, que tras el linkado dará lugar a un programa ejecutable. Las advertencias no indican errores, 
+				sino que llaman la atención al programador sobre los posibles usos incorrectos del lenguaje. Las advertencias, a diferencia de los errores no detienen el 
+				proceso de compilación, pero casi siempre señalan un error oculto.</li>
+		</ul></p>
+
+	</article>
+
+	<div class="siguiente-btn">
+		<a href="/ejercicioEj/EJ2/5/N/3" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+	</div>
+
+{% endblock %}
+
+{% block paginacion %}
+	<li class="page-item"><a class="page-link" href="/tema/2/5/3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/2">2</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/3">3</a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/5/4">4</a></li>
+	<li class="page-item disabled"><a class="page-link" href="/tema/2/5/4"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+	<div class="ejercicios-btn">
+		<a href="/ejercicio/E2" class="btn btn-primary" style="margin-left: 20px;">Ejercicios</a>
+	</div>
+	
+	<div class="siguiente-btn">
+		<a href='/../' class="btn btn-primary" style="margin-left: 20px;">Finalizar</a>
+	</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,81 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 3. Control de flujo. </h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.2: Estructuras selectivas: simple, doble y múltple. </li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Atento!</strong> Utiliza letras minusculas, utilizando la estructura de selección simple y en español
+    </div>
+
+    <script>
+      window.onload = function()
+    {
+      A = document.getElementById('Padre').innerHTML;
+
+    }
+      </script>
+    
+    <p>Completa las palabras faltantes.</p>
+    <br>
+    <div id="puzzle" class="contenedorPiezas">
+      <div class="row">
+        <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="si">
+          <samp>
+            si
+          </samp>
+      </div>
+  
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="entonces">
+        <samp>
+          entonces
+        </samp>
+    </div>
+  
+    <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="fin_si">
+      <samp>
+        fin_si
+      </samp>
+  </div>
+      </div>
+      </div>
+    <br>
+
+  <div class="container" id="Padre">
+    <div class="row">
+  <div class="col-1">  <input type="text" id="res1" class="form-control form-control-sm"></div>&lt condición &gt &nbsp 
+  <div class="col-2"><input type="text" id="res2" class="form-control form-control-sm">   </div>
+    </div>
+    <div class="row"> &lt &nbsp acción s1 &gt</div>
+    <div class="col-2"><input type="text" id="res3" class="form-control form-control-sm">  </div>
+  </div>
+    
+
+    
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+
+  <form id="form1" name="form1" method="post" action="/evaluarK/E3/2/K/1" class="formulario" >{% csrf_token %} 
+    <input type="text"  name="calificacion" id="calificacion" hidden= "true">
+    <br>
+    <button class="btn btn-primary" type="submit" onclick="valid3k();">Validar</button>
+  
+    <input type="submit" class="btn btn-primary" value="Evaluar">
+  <input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="resetA();"> 
+  
+  </form>
+	{% endblock %}
+
+
+
+
+

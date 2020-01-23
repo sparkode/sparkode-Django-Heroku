@@ -1,0 +1,28 @@
+{% extends "Temas/BaseTemas.html" %}
+{% block subtema %}
+	    <h1 class="display-4">RESULTADOS</h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item active" aria-current="page">Resultados del ejercicio</li>
+    {% endblock %}
+    
+	{% block contenido %}
+	<h2 class="post-title">
+		Los resultados del ejercicio son:<br></h2>
+        {% if errores %}
+         
+            {% for error in errores %}
+             <h3 class="post-title" >{{ error }}</h3>
+            {% endfor %}
+       
+         {% endif %}
+		
+         <li class="page-item"><a class="page-link" href="/tema/{{ t }}/{{ sub }}/1"><i class="fa fa-arrow-right" aria-hidden="true"></i> ¿Tienes dudas?, ve al subtema del ejercicio </a></li> 
+    {% endblock %}
+
+	
+    {% block paginacion %}
+    
+    <li class="page-item"><a class="page-link" href="/ejercicio/{{ tema }}"><i class="fa fa-arrow-right" aria-hidden="true"></i> Siguiente Ejercicio</a></li>                        
+	{% endblock %}

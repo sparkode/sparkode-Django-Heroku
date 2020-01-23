@@ -1,0 +1,58 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.5: Traducción de un programa: compilación, enlace, ejecución y errores.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+
+		<P class="post-contenido text-justify">
+			<h2 class="post-title">
+				Traducción de un programa: compilación, enlace, ejecución y errores.
+				</h2>
+			Un compilador es un programa informático que traduce un programa escrito en un lenguaje de programación a otro lenguaje de programación, generando un programa equivalente que la máquina será capaz de interpretar. Usualmente el segundo lenguaje es lenguaje de máquina, pero también puede ser un código intermedio (bytecode), o simplemente texto. Este proceso de traducción se conoce como compilación.
+		</P>
+
+		<p class="post-contenido text-justify">Además, permite traducir el código fuente de un programa en lenguaje de alto nivel, a otro lenguaje de nivel inferior (típicamente lenguaje de máquina). De esta manera un programador puede diseñar un programa en un lenguaje mucho más cercano a cómo piensa un ser humano, para luego compilarlo a un programa más manejable por una computadora.</p>
+		
+		<p><b>Partes de un compilador.</b></p>
+		<p class="post-contenido text-justify">La construcción de un compilador involucra la división del proceso en una serie de fases que variará con su complejidad.
+			 Generalmente estas fases se agrupan en dos tareas: el análisis del programa fuente y la síntesis del programa objeto.
+			<ul>
+				<li class="post-contenido text-justify"><b>Análisis:</b>  Se trata de la comprobación de la corrección del programa fuente, e incluye las fases correspondientes al Análisis Léxico (que consiste en la descomposición del programa fuente en componentes léxicos), Análisis Sintáctico (agrupación de los componentes léxicos en frases gramaticales ) y Análisis Semántico (comprobación de la validez semántica de las sentencias aceptadas en la fase de Análisis Sintáctico).</li>
+				<li class="post-contenido text-justify"><b>Síntesis:</b> Su objetivo es la generación de la salida expresada en el lenguaje objeto y suele estar formado por una o varias combinaciones de fases de Generación de Código (normalmente se trata de código intermedio o de código objeto) y de Optimización de Código (en las que se busca obtener un código lo más eficiente posible).</li>
+			</ul></p>
+			<p class="post-contenido text-justify">Alternativamente, las fases descritas para las tareas de análisis y síntesis se pueden agrupar en Front-end y Back-end: <ul>
+				<li class="post-contenido text-justify"> <b>Front-end:</b>  es la parte que analiza el código fuente, comprueba su validez, genera el árbol de derivación y rellena los valores de la tabla de símbolos. Esta parte suele ser independiente de la plataforma o sistema para el cual se vaya a compilar, y está compuesta por las fases comprendidas entre el Análisis Léxico y la Generación de Código Intermedio.</li>
+				<li class="post-contenido text-justify"> <b>Back-end:</b> es la parte que genera el código máquina, específico de una plataforma, a partir de los resultados de la fase de análisis, realizada por el Front End.</li>
+			</ul></p>
+
+	</article>
+
+	<div class="siguiente-btn">
+		<a href="/ejercicioEj/EJ2/5/N/1" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+	</div>
+{% endblock %}
+{% block video %}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/L3BugKxfzqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+{% block paginacion %}
+<div class="siguiente-btn">
+	<a href="/tema/2/4/4" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+</div>
+
+	<li class="page-item disabled"><a class="page-link" href="/tema/2/5/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/5/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/2">2</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/3">3</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/4">4</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+{% endblock %}

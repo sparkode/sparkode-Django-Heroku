@@ -1,0 +1,61 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 3. Control de flujo. </h1>
+    	{% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.3: Estructuras iterativas: repetir mientras, hasta, desde. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+	<article class="post clearfix">
+						
+							
+			<p class="post-contenido text-justify">
+				
+			La estructura desde comienza con un valor inicial de la variable índice y las acciones especificadas se ejecutan, a menos que el valor inicial sea mayor que el valor final. <br><br>
+			La variable índice se incrementa en uno y si este nuevo valor no excede al final, se ejecutan de nuevo las acciones. Por consiguiente, las acciones específicas en el bucle se ejecutan para cada valor de la variable índice desde el valor inicial hasta el valor final con el incremento de uno en uno.<br><br>
+
+			El incremento de la variable índice siempre es 1 si no se indica expresamente lo contrario. Dependiendo del tipo de lenguaje, es posible que el incremento sea distinto de uno, positivo o negativo. <br>
+			La variable índice o de control normalmente será de tipo entero y es normal emplear como nombres las letras I, J, K.<br>
+			El formato de la estructura desde varía si se desea un incremento distinto a 1, bien positivo, bien negativo (decremento).<br><br>
+
+	<img src="{% static 'media/3.3.3.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br><br>
+
+			Si el valor inicial de la variable índice es menor que el valor final, los incrementos deben ser positivos, ya que en caso contrario la secuencia de acciones no se ejecutaría. De igual modo, si el valor inicial es mayor que el valor final, el incremento debe ser en este caso negativo, es decir, decremento. Al incremento se le suele denominar también paso (“step”, en inglés). Es decir: <br><br>
+
+			<img src="{% static 'media/3.3.3.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br><br>
+			
+			No se ejecutaría, ya que el valor inicial es 20 y el valor final 10, y como se supone un incremento positivo, de valor 1, se produciría un error. El pseudocódigo correcto debería ser:<br><br>
+
+			<img src="{% static 'media/3.3.3.2.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>					
+
+			</p>
+	</article>	
+   	{% endblock %}
+
+
+	{% block paginacion %}
+	<li class="page-item"><a class="page-link" href="/tema/3/3/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item"><a class="page-link" href="/tema/3/3/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/3/3/2">2</a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/3/3/3">3</a></li>
+	<li class="page-item disabled"><a class="page-link" href="/tema/3/3/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+	<div class="ejercicio-btn">
+		<a href="/ejercicio/E3" class="btn btn-primary" style="margin-left: 20px;">Ejercicios</a>
+	</div>		
+
+	<div class="siguiente-btn">
+		<a href='/../' class="btn btn-primary" style="margin-left: 20px;">Finalizar</a>
+	</div>
+	{% endblock %}
+
+

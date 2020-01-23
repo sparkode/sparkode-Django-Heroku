@@ -1,0 +1,108 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 5. Modularidad. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 5.1: Declaración y uso de módulos. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+			<article class="post clearfix article">
+								
+								
+				<p class="post-contenido text-justify">
+					<h2 class="post-title">
+						Declaración y uso de módulos.
+					</h2>
+					
+				La programación modular es uno de los métodos de diseño más flexible y potente para mejorar la productividad de un programa. 
+				En programación modular el programa se divide en módulos, cada uno de los cuales ejecuta una única actividad o tarea y se codifican 
+				independientemente de otros módulos. Cada uno de estos módulos se analiza, codifica y pone a punto por separado. <br><br>
+
+				Si la tarea asignada a cada submódulo es demasiado compleja, éste deberá romperse en otros módulos más pequeños. El proceso sucesivo de 
+				subdivisión de módulos continúa hasta que cada módulo tenga solamente una tarea específica que ejecutar. Esta tarea puede ser entrada, salida, 
+				manipulación de datos, control de otros módulos o alguna combinación de éstos. <br> Los módulos son independientes en el sentido en que ningún 
+				módulo puede tener acceso directo a cualquier otro módulo excepto el módulo al que llama y sus propios submódulos. <br><br>
+
+				Un módulo se puede modificar radicalmente sin afectar a otros módulos, incluso sin alterar su función principal. 
+				La descomposición de un programa en módulos independientes más simples se conoce también como el <i>método de divide y vencerás</i>. 
+				Cada módulo se diseña con independencia de los demás, y siguiendo un método ascendente o descendente se llegará hasta la descomposición 
+				final del problema en módulos en forma jerárquica.<br><br>
+
+				<img src="{% static 'media/5-1-1.png' %}"><br><br>
+
+				El enfoque de diseño y programación modular es útil en dos casos:
+
+				<ol>
+					<li>Cuando existe un grupo de instrucciones o una tarea especifíca que debe ejecutarse en más de una ocasión. </li>
+					<li>Cuando un problema es complejo o extenso y la solución se divide o segmenta en módulos que ejecutan partes o tareas específicas. </li>
+				</ol>
+
+				<h4 class="post-title">
+					<a>Declaración de un módulo.</a>
+				</h4>
+					Los módulos tienen un formato bien definido para su utilización: <br><br>
+					
+					<ul>
+						<li>Tiene un tipo de retorno.</li>
+						<li>Tiene un nombre o identificador. </li>
+						<li>Puede tener o no lista de parámetros (elementos de comunicación con el módulo principal).</li>
+						<li>Tiene un cuerpo o conjunto de instrucciones que resuelven una tarea en específica.</li>
+						<li>Pueden o no devolver un valor de algún tipo de dato básico, estructurado o definido por el usuario.</li>
+					</ul>
+					
+					Sintaxis para declarar un módulo. <br>
+
+					<img src="{% static 'media/sintaxismodulo.png' %}"> <br><br>
+
+					Donde:
+					<ul>
+						<li><b>Tipo</b> es el tipo de dato de salida.</li>
+						<li><b>Nombre</b> es un identificador que representa el nombre de la función.</li>
+						<li><b>Lista de parámetros</b> es una lista de parámetros separados por comas, donde cada parámetro se declara como en 
+							una declaración de variables normal.</li>
+						<li><b>Valor</b> es aquel dato que regresa y debe coincidir con el tipo declarado al inicio.</li>
+					</ul> 
+					
+
+				</p>
+			</article>
+		
+   	{% endblock %}
+
+
+
+	{% block video %}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/s_4gdw-Q-f4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+	
+	{% block paginacion %}
+	<div class="siguiente-btn">
+		<a href="/tema/4/1/1" class="btn btn-primary" style="margin-right: 20px;">Tema Anterior</a>
+	</div>
+	
+		<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/5/1/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/4">4</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+	{% endblock %}
+
+
+
+
+
+
+
+
+

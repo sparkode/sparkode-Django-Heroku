@@ -1,0 +1,122 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+		<h1 class="display-4">Temario</h1>
+		<!---A ver-->
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Temario del curso</a></li>
+		
+    {% endblock %}
+    
+	{% block contenido %}
+	
+<h3>Fundamentos de programación</h3>
+<p><b>Clave de la asignatura: </b> AED-1285 </p>
+<p><b>Carrera: </b> Ingeniería  en  Sistemas  Computacionales.</p>
+<hr style="height:8px; color: black; background-color: black;" />
+<h3>Temario</h3>
+ 	<dl >
+		<dt><a class="tema-1" href=/tema/1/1/1> 1. Diseño Algorítmico </a></dt>
+
+			<ul>
+				<dd><a class="tema-1" href="/tema/1/1/1"> 1.1 Conceptos básicos. </a></dd>
+				<dd><a class="tema-1" href="/tema/1/2/1"> 1.2 Representación  de  algoritmos:  gráfica  y pseudocódigo. </a></dd>
+				<dd><a class="tema-1" href="/tema/1/3/1">1.3 Diseño de algoritmos.</a> </dd>
+				<dd><a class="tema-1" href="/tema/1/4/1">1. 4 Diseño de funciones.</a></dd>
+			</ul>
+	<dt><a class="tema-2" href="/tema/2/1/1">2. Introducción a la Programación</a></dt>
+
+			<ul>
+				<dd><a class="tema-2" href="/tema/2/1/1"> 2.1 Conceptos básicos. </a></dd>
+				<dd><a class="tema-2" href="/tema/2/2/1">2.2 Características del lenguaje de programación. </a></dd>
+				<dd><a class="tema-2" href="/tema/2/3/1">2.3 Estructura básica de un programa.</a>  </dd>
+				<dd><a class="tema-2" href="/tema/2/4/1"> 2.4 Elementos  del  lenguaje:  tipos  de  datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos. </a></dd>
+				<dd><a class="tema-2" href="/tema/2/5/1">2.5 Traducción  de  un  programa:  compilación, enlace, ejecución y errores.</a></dd>
+			</ul>
+	<dt><a class="tema-3" href="/tema/3/1/1">3. Control de flujo</a></dt>
+
+			<ul>
+				<dd><a class="tema-3" href="/tema/3/1/1"> 3.1 Estructuras secuenciales.</a></dd>
+				<dd><a class="tema-3" href="/tema/3/2/1">3.2 Estructuras   selectivas:  simple,   doble   y múltiple.  </a></dd>
+				<dd><a class="tema-3" href="/tema/3/3/1">3.3 Estructuras  iterativas:  repetir  mientras,  hasta, desde. </a>  </dd>
+			 
+			</ul>
+		
+	
+		<dt><a class="tema-4" href="/tema/4/1/1">4. Organización de datos</a></dt>
+
+			<ul>
+				<dd><a class="tema-4" href="/tema/4/1/1">	4.1 Arreglos.</a></dd>
+				<dd><a class="tema-4" href="/tema/4/2/1">4.2 Unidimensionales:    conceptos    básicos, operaciones y aplicaciones.</a></dd>
+				<dd><a class="tema-4" href="/tema/4/3/1"> 4.3 Multidimensionales:    conceptos    básicos, operaciones y aplicaciones.  </a>  </dd>
+				<dd><a class="tema-4" href="/tema/4/4/1">	4.4 Estructuras o registros.</a>  </dd>
+			</ul>
+
+		<dt><a class="tema-5" href="/tema/5/1/1">5. Modularidad</a></dt>
+
+			<ul>
+				<dd><a class="tema-5" href="/tema/5/1/1">5.1 Declaración y uso de módulos.</a></dd>
+				<dd><a class="tema-5" href="/tema/5/2/1">  5.2 Paso de parámetros o argumentos.</a></dd>
+				<dd><a class="tema-5" href="/tema/5/3/1">  5.3 Implementación.</a>  </dd>
+			
+			</ul>
+ 
+	</dl>
+<hr style="height:8px; color: black; background-color: black;" />
+<style type="text/css">
+	 dd a:link, dt a:link{
+	color: black;
+}
+   dd a:visited,dt a:visited  {
+	color: black;
+}
+dd a:hover,dt a:hover {
+
+font-size: 25px;
+text-decoration:underline;
+  /*background:#ffe89b;*/
+
+  box-shadow: inset 0 0 0 3px white;
+
+-webkit-transform:scale(1.5,1.5);
+-moz-transform:scale(1.5,1.5);
+-ms-transform:scale(1.5,1.5);
+-o-transform:scale(1.5,1.5);
+
+transform:scale(1.5,1.5);
+text-decoration: none;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+}
+
+.tema-1:hover{
+	background-color: #2d8064;
+}
+.tema-2:hover{
+	background-color: #018abd;
+}
+.tema-3:hover{
+	background-color: #004581;
+}
+.tema-4:hover{
+	background-color: #7503BB;
+}
+.tema-5:hover{
+	background-color: #D30000;
+}
+</style>
+ 
+<center>
+<div id="copyright">&copy; Derechos reservados<br>
+TECNOLÓGICO NACIONAL DE MÉXICO / INSTITUTO TECNOLÓGICO DE ACAPULCO <br>
+Secretaría Académica, de Investigación e Innovación<br> Dirección de Docencia e Innovación Educativa</div>
+</center>
+
+		
+   {% endblock %}
+
+	

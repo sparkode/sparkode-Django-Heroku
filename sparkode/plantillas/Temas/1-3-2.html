@@ -1,0 +1,54 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.3 Diseño de algoritmos.</li>
+	{% endblock %}
+	{% block contenido %}
+		<h2 class="post-title">
+			Algoritmo.
+		</h2>
+		<p class="post-contenido text-justify">
+		<br>
+		Un algoritmo tiene las siguientes propiedades: <br>
+1.- Tiene definidas las entradas que se requieren, así como las salidas que se deben producir. <br>
+2.- Es preciso: Se debe indicar sin ambigüedades el orden exacto de los pasos a seguir y la manera en la que éstos deben realizarse. Por ejemplo, una receta de cocina, aunque tiene todas las demás características de los algoritmos, muchas veces no es precisa: “añada una pizca de sal”, “caliente en un recipiente pequeño”. Las instrucciones deben ser tan claras que incluso una computadora pueda seguirlas.<br> 
+3.- Es determinista: para un mismo conjunto de datos proporcionado como entrada, el algoritmo debe producir siempre el mismo resultado. <br>
+4.- Es finito: un algoritmo siempre termina después de un número finito de pasos. Si un procedimiento tiene las otras 4 características de un algoritmo, pero no es finito, entonces se le llama “método computacional”.<br>
+5.- Es efectivo: cada paso o acción se debe poder llevar a cabo en un tiempo finito y se debe lograr el efecto que se desea o espera.
+Pueden existir diferentes formas de implementar un algoritmo, a cada una de éstas se le llama implementación del algoritmo y es un conjunto diferente de instrucciones elaboradas por el programador.						
+		</p>
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ1/3/N/2" class="btn btn-primary">Ejemplo</a>
+		</div>
+    {% endblock %}
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/i3BTFDaf9O0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+	
+	{% block paginacion %}
+	    <li class="page-item "><a class="page-link" href="/tema/1/3/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/3/1">1</a></li>
+	    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+		<li class="page-item disabled"><a class="page-link" href="/tema/1/4/1"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>							                      
+	
+		<div class="siguiente-btn">
+			<a href="/tema/1/4/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>
+	{% endblock %}
+<!-- aquí se podía continuar al siguiente tema, pero vamos a forzar a que termine los ejercicios para que pueda continuar
+					</nav>
+					<div class="siguiente-btn">
+						<a href="/ejercicio/E1/3/V/1" class="btn btn-primary">Ejercicios</a>
+					</div>
+
+					<div class="siguiente-btn">
+						<a href="/tema/1/4/1" class="btn btn-primary">Siguiente tema</a>
+					</div>
+				</section>
+				-->

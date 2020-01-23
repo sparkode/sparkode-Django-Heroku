@@ -1,0 +1,48 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+
+{% block scrips %}
+	
+{% endblock %}
+
+{% block tema %}
+<h1 class="display-4">Tema 4. Organización de datos. </h1>	
+{% endblock %}
+
+{% block subtema %}
+<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+<li class="breadcrumb-item active" aria-current="page">Tema 4.1: Arreglos. </li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+			<a href="#" class="thumb pull-left">
+				<img src="" alt="">
+			</a>
+			<h2 class="post-title">
+				<a href="#">Algoritmo </a>
+			</h2>
+			
+
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.- Código de como hacer un arreglo bidimensional en java.</p><br>
+			<p style="text-align: center;">
+			<img src="{% static 'media/Java.png' %}" width="700" height="500" class="d-inline-block align-top" alt=""><br>
+			</p>
+
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		2.- Código de como hacer un arreglo bidimensional en C#.</p><br>
+			<p style="text-align: center;">
+			<img src="{% static 'media/C#.PNG' %}" width="800" height="350" class="d-inline-block align-top" alt=""><br>
+			</p>
+
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/4/1/2" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+

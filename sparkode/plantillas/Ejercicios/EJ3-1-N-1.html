@@ -1,0 +1,49 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+
+{% block scrips %}
+	
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 3. Control de flujo. </h1>		
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 3.1: Estructuras secuenciales.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+			<a href="#" class="thumb pull-left">
+				<img src="" alt="">
+			</a>
+			<h2 class="post-title">
+				<a href="#">Algoritmo </a>
+			</h2>
+			
+
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.-Se trata de calcular el salario neto de un trabajador en función del número de horas trabajadas, precio de la hora de trabajo y, considerando unos descuentos fijos, el sueldo bruto en concepto de impuestos (20 por 100).</p><br>
+			<p style="text-align: center;">
+			<img src="{% static 'media/E3.1.1.png' %}" width="600" height="500" class="d-inline-block align-top" alt=""><br>
+			</p>
+
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		2.-Observe el siguiente problema de tipo cotidiano y sus respectivos algoritmos representados en Pseudocódigo y en diagramas de flujos:
+		Tengo un teléfono y necesito llamar a alguien pero no sé como hacerlo.</p><br>
+			<p style="text-align: center;">
+			<img src="{% static 'media/3.1.1.jpg' %}" width="600" height="500" class="d-inline-block align-top" alt=""><br>
+			</p>
+
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/3/1/1" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+

@@ -1,0 +1,150 @@
+/* -- HEADER -- */
+.navbar 
+{
+	margin-bottom: 0;
+}
+
+.j1 
+{
+	background-color: #2d9064;
+	color:#fff;
+	padding:20px 0;
+}
+.j2
+{
+	background-color: #018ace;
+	color:#fff;
+	padding:20px 0;
+}
+.j3
+{
+	background-color: #004591;
+	color:#fff;
+	padding:20px 0;
+}
+.j4
+{
+	background-color: #9801F5;
+	color:#fff;
+	padding:20px 0;
+}
+.j5
+{
+	background-color: #FE1313;
+	color:#fff;
+	padding:20px 0;
+}
+/* -- POST -- */
+.tema-uno
+{
+	background-color: #2d8064;
+
+}
+.tema-dos
+{
+	background-color: #018abd;
+}
+.tema-tres
+{
+	background-color: #004581;
+
+}
+.tema-cuatro
+{
+	background-color: #7503BB;
+
+}
+.tema-cinco
+{
+	background-color: #D30000;
+
+}
+.navbar-nav .nav-item .nav-link 
+{
+	color: #fff;
+}
+.article{
+	background-color: #F3F3F3
+}
+.main 
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.post 
+{
+	padding-bottom:20px;
+	margin-bottom:20px;
+	border-bottom:1px solid #999;
+}
+
+.post .post-title a 
+{
+	color:#333;
+}
+
+.post .thumb 
+{
+	margin-right:10px;
+	width:40%;
+}
+
+.post .thumb img 
+{
+	width:100%;
+}
+
+.post .contenedor-botones 
+{
+	width: 100%;
+}
+
+.ejercicios-btn a
+{
+	float: center;
+}
+.siguiente-btn a
+{
+	float: right;
+}
+
+#calendar
+{
+	width: 150px;
+	height: 200px;
+	background-color: cornflowerblue;
+	color: #fff;
+	border-radius: 5%;
+	box-shadow: 0 4px 4px 0 rgba(50, 50, 50, 0.4);
+}
+#calendar>p
+{
+	font-family: Verdana,Arial,sans-serif;
+	margin: 0;
+	color: #fff;
+	text-align: center;
+}
+#calendar-day
+{
+	font-size: 16px;
+}
+#calendar-month-year
+{
+	font-size: 14px;
+}
+#calendar-date
+{
+	font-size: 64px;
+	padding-bottom: 0px;
+}
+/* -- Media Querie -- */
+@media screen and (max-width: 768px) 
+{
+	.post .thumb 
+	{
+		width: 100%;
+		margin-bottom: 20px;
+		margin-right: 0;
+	}
+}

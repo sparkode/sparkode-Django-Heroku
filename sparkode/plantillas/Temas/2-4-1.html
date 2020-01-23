@@ -1,0 +1,71 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.4: Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos. </li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify">
+			<h2 class="post-title">
+				Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos.
+				</h2>
+			El primer objetivo de toda computadora es el manejo de la información o datos. <br>
+			Un dato es la expresión general que describe los objetos Fundamentos de programación con los cuales opera una computadora. 
+			La mayoría de las computadoras pueden trabajar con varios tipos (modos) de datos. Los algoritmos y los programas correspondientes operan sobre esos tipos de datos. <br>
+			El tipo de datos determina cómo se representan los datos en la computadora y los diferentes procesos que dicha computadora realiza con ellos. <br>
+			Existen dos tipos de datos: básicos o simples, incorporados o integrados (estándar) que se incluyen en los lenguajes de programación; definidos por el programador o por el usuario. <br>
+			Los tipos de datos básicos son los siguientes: numéricos (entero, real) lógicos (boolean) carácter (caracter, cadena) <br>
+			Los datos estructurados son un conjunto de partidas de datos simples con relaciones definidas entre ellos. <br>
+			El tipo numérico es el conjunto de los valores numéricos. Estos pueden representarse en dos formas distintas:
+			<li>Tipo numérico entero (integer).</li>
+			<li>Tipo numérico real (real).</li>
+
+			<b>Enteros:</b><br> El tipo entero es un subconjunto finito de los números enteros. Los enteros son números completos, no tienen componentes fraccionarios o decimales y pueden ser negativos o positivos. Ejemplos de números enteros son:
+			<li> 5, 6</li>
+			<li>–15, 4</li>
+			<li> 20, 17</li>
+			<li>1340, 26</li>
+
+			<b>Reales:</b><br>El tipo real consiste en un subconjunto de los números reales. Los números reales siempre tienen un punto decimal y pueden ser positivos o negativos. Un número real consta de un entero y una parte decimal. Los siguientes ejemplos son números reales:
+			<li>0.08, 3739.41</li>
+			<li>3.7452, –52.321</li>
+			<li>–8.12, 3.0</li>
+		</p>
+			
+		</article>
+
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ2/4/N/1" class="btn btn-primary">Ejemplo</a>
+		</div>
+{% endblock %}
+{% block video %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2ErzWQOUyMM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+{% block paginacion %}
+<div class="siguiente-btn">
+	<a href="/tema/2/3/2" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+</div>
+
+	<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/4/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/2">2</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/3">3</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/4">4</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+{% endblock %}
+
+
+
+
+
+

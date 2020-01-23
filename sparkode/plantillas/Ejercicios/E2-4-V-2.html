@@ -1,0 +1,274 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Tema</title>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+	<link rel="stylesheet" href="{% static 'jqueryui/jquery-ui.css' %}">
+	<link rel="stylesheet" href="{% static 'css/estilosejercicioaudi2-1.css' %}">
+	<link rel="stylesheet" href="{% static 'css/Raleway.css' %}">
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+	<script src="{% static 'js/fecha.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="{% static 'js/wordfind.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'js/wordfindgame.js' %}"></script> 
+      <script src="{% static 'javascript/jquery.js' %}"></script>
+  <script src="{% static 'javascript/menu.js' %}"></script>
+  <script src="{% static 'javascript/tema.js' %}"></script>
+  <script src="{% static 'jqueryui/jquery-ui.js' %}"></script>
+	<script>
+  		$( function() {
+    	$( "input" ).checkboxradio();
+  		} );
+  </script>
+
+</head>
+<body>
+	<br>
+	<div class="container">
+		<header>
+			<nav class="navbar sticky-top navbar-expand-lg navbar-light tema-uno ">
+  			<a class="navbar-brand" href="#">
+  				<img src="{% static 'media/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">Sparkode
+  			</a>
+			  <button class="navbar-toggler navbar-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Mi perfil <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/temario/">Temario</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">Progreso</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link disabled" href="#">Examen final</a>
+			      </li>
+			    </ul>
+				
+				<div class="ml-auto p-2 bd-highlight">
+					<ul class="navbar-nav">
+				    	<li class="nav-item dropdown">
+				    		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    			Cerrar<i class="fas fa-door-open"></i>
+				    		</a>
+				    		<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          					<a class="dropdown-item" href="#"><i class="fas fa-door-closed"></i>Cerrar sesión</a>
+						    </div>	
+				    	</li>
+				    </ul>
+				</div>
+			    
+			  </div>
+			</nav>
+
+			<div class="jumbotron jumbotron-fluid j1">
+			  <div class="container">
+			    <h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+			    <p class="lead">--</p>
+			  </div>
+			</div>
+		</header>
+
+		<section class="main container">
+			<div class="row">
+				<section class="posts col-md-10">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href='/../'>Inicio</a></li>
+						<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Tema 2.4: Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos.</li>
+						</ol>
+					</nav>
+					
+					<article class="post clearfix">
+					
+          <!-- FORMULARIO DE PREGUNTAS  ------------------------------------------------------------------- -->
+      <form id="form1" name="form1" method="post" action="/Evaluacion/E2/4/V/2/" class="formulario" onsubmit="alert('Tu puntuación es: '+{{resultado}})">{% csrf_token %}
+
+          <div class="contenido">
+
+            {% if messages %}
+              <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+			
+      <h3> Ejercicio 3. </h3>
+      <h3>Lee el texto y selecciona la respuesta correcta.</h3>
+
+			<div class="widget">
+				 <fieldset>
+   				<legend>Selecciona la respuesta</legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   1------------------------------------------------------------------- -->
+          <p> 1.- ¿Qué tipo de dato es un conjunto finito y ordenado de caracteres y que contiene un solo caracter? </p>
+          </div>
+
+   				<!-- RESPUESTAS DE LA PREGUNTA   1 --------------------------------------------------- -->
+    			<label for="radio-1"><b>A)</b> Caracter</label>
+    			<input type="radio" value="16.67" name="respuesta1" id="radio-1">
+    			
+    			<label for="radio-2"><b>B)</b> Cadena</label>
+    			<input type="radio" value="0" name="respuesta1" id="radio-2">
+    			
+    			<label for="radio-3"><b>C)</b> Booleanos</label>
+    			<input type="radio" value="0" name="respuesta1" id="radio-3">
+  				</fieldset>
+			</div>
+
+      <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   2 ------------------------------------------------------------------- -->
+           <p>2.- ¿Qué tipo de dato es una sucesión de caracteres que se encuentran delimitados por una comilla o dobles comillas, según el tipo de programación?</p>
+          </div>
+          
+          <!-- RESPUESTAS DE LA PREGUNTA   2 --------------------------------------------------- -->
+          <label for="radio-4"><b>A)</b> Reales</label>
+          <input type="radio" value="0" name="respuesta2" id="radio-4">
+
+          <label for="radio-5"><b>B)</b> Caracter</label>
+          <input type="radio" value="0" name="respuesta2" id="radio-5">
+
+          <label for="radio-6"><b>C)</b> Cadena</label>
+          <input type="radio" value="16.67" name="respuesta2" id="radio-6">
+
+          </fieldset>
+      </div>
+
+      <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   3 ------------------------------------------------------------------- -->
+          <p> 3.- ¿Cómo se le llama al valor que no debe cambiar durante la ejecución del programa?</p>
+          </div>
+
+          <!-- RESPUESTAS DE LA PREGUNTA   3 --------------------------------------------------- -->
+          <label for="radio-7"><b>A)</b> Variables</label>
+          <input type="radio" value="0" name="respuesta3" id="radio-7">
+          
+          <label for="radio-8"><b>B)</b> Constantes</label>
+          <input type="radio" value="16.67" name="respuesta3" id="radio-8">
+         
+          <label for="radio-9"><b>C)</b> Enteros</label>
+          <input type="radio" value="0" name="respuesta3" id="radio-9">
+          </fieldset>
+      </div>
+
+      <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   4 ------------------------------------------------------------------- -->
+          <p>4.- ¿Cómo se le llama al objeto o tipo de dato cuyo valor puede cambiar durante el desarrollo del algoritmo o ejecución del programa? </p>
+          </div>
+          <!-- RESPUESTAS DE LA PREGUNTA   4 --------------------------------------------------- -->
+          <label for="radio-10"><b>A)</b> Booleanos</label>
+          <input type="radio" value="0" name="respuesta4" id="radio-10">
+         
+          <label for="radio-11"><b>B)</b> Constantes</label>
+          <input type="radio" value="0" name="respuesta4" id="radio-11">
+          
+          <label for="radio-12"><b>C)</b> Variables</label>
+          <input type="radio" value="16.67" name="respuesta4" id="radio-12">
+          </fieldset>
+      </div>
+            
+            <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   5 ------------------------------------------------------------------- -->
+          <p>5.- ¿Cómo se le llama a las combinaciones de constantes, variables, símbolos de operación, paréntesis y nombre de funciones especiales? </p>
+          </div>
+          <!-- RESPUESTAS DE LA PREGUNTA   5 --------------------------------------------------- -->
+          <label for="radio-13"><b>A)</b> Expresiones</label>
+          <input type="radio" value="16.67" name="respuesta5" id="radio-13">
+         
+          <label for="radio-14"><b>B)</b> Relacionales</label>
+          <input type="radio" value="0" name="respuesta5" id="radio-14">
+          
+          <label for="radio-15"><b>C)</b> Variables</label>
+          <input type="radio" value="0" name="respuesta5" id="radio-15">
+          </fieldset>
+      </div>
+
+            <!-- PREGUNTA   6 ------------------------------------------------------------------- -->
+            <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+          <p>6.- ¿De qué consta una expresión? </p>
+          </div>
+          <!-- RESPUESTAS DE LA PREGUNTA   6 --------------------------------------------------- -->
+          <label for="radio-16"><b>A)</b> Lógicos y cadenas</label>
+          <input type="radio" value="0" name="respuesta6" id="radio-16">
+          
+          <label for="radio-17"><b>B)</b> Enteros y reales</label>
+          <input type="radio" value="0" name="respuesta6" id="radio-17">
+          
+          <label for="radio-18"><b>C)</b> Operandos y operadores</label>
+          <input type="radio" value="16.67" name="respuesta6" id="radio-18">
+
+          <!-- BOTON DE EVALUACION ------------------------------------------------------ -->
+            <legend> ... </legend>
+            <input type="submit" value="Calificar">
+
+          </fieldset>
+      </div>
+		</div>
+  </form>
+
+					</article>
+
+            <nav aria-label="Page">
+              <ul class="pagination justify-content-center">
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/4/V/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/4/V/1">1</a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/4/A/1">2</a></li>
+                  <li class="page-item active"><a class="page-link" href="/ejercicio/E2/4/V/2">3</a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/4/A/2">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+              </ul>
+          </nav>
+				
+        </section>
+
+				<aside class="col-md-2 hidden-xs hidden-sm">
+					<h4>Fuentes relacionadas</h4>
+					<div class="list-group">
+						<a href="#" class="list-group-item active">Fuente 1</a>
+						<a href="#" class="list-group-item">Fuente 2</a>
+						<a href="#" class="list-group-item">Fuente 3</a>
+						<a href="#" class="list-group-item">Fuente 4</a>
+					</div>
+
+					<h4>Calendario</h4>
+					<div class="list-group-item" id="calendar">
+						<p id="calendar-day"></p>
+						<p id="calendar-date"></p>
+						<p id="calendar-month-year"></p>
+					</div>
+				</aside>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

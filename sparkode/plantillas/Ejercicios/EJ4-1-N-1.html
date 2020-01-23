@@ -1,0 +1,79 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+		$( "#accordion" ).accordion({
+			collapsible: true
+		});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 4. Organización de datos.</h1>		
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 4.1: Arreglos.</li>
+{% endblock %}
+
+{% block contenido %}
+		
+	<article class="post clearfix">
+		<h2 class="post-title" align="center">
+			<a href="#">EJEMPLOS</a>
+
+		</h2>
+		<h4>--Algoritmos para la ordenación de elementos en arreglos--</h4>
+		<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+		<div id="accordion">
+		
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+	1.- Selección directa.</p>
+
+	<div><p class="post-contenido text-left">
+
+	<br>Este método consiste en seleccionar el elemento más pequeño de nuestra lista para colocarlo al inicio y así excluirlo de la lista. 
+	<br>Para ahorrar espacio, siempre que vayamos a colocar un elemento en su posición correcta lo intercambiaremos por aquel que la esté 
+	<br>ocupando en ese momento.</p>
+	</div>
+		<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+			2.- Ordenación por burbuja.
+		</p>
+		<div>
+		
+		
+		<p class="post-contenido text-left">
+
+	<br>Este algoritmo consiste en partir el arreglo por la mitad, ordenar la mitad izquierda, ordenar la mitad derecha y mezclar las dos mitades ordenadas en un array 
+	<br>ordenado. Este último paso consiste en ir comparando pares sucesivos de elementos (uno de cada mitad) y poniendo el valor más pequeño en el siguiente hueco.
+		</p>
+
+	</div>
+		<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+			3.- Ordenación por mezcla.
+		</p>
+		<div>
+			
+		
+		
+		<p class="post-contenido text-left">
+
+	Este algoritmo consiste en partir el arreglo por la mitad, ordenar la mitad izquierda, ordenar la mitad derecha y mezclar las dos mitades ordenadas en un array ordenado.<br> Este último paso consiste en ir comparando pares sucesivos de elementos (uno de cada mitad) y poniendo el valor más pequeño en el siguiente hueco.<br>
+		</p>
+
+	</div>
+	</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/4/1/1" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,89 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+	<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.2: Características del lenguaje de programación.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify"><b>Variables y Vectores.</b><br>
+				Podrían calificarse como contenedores de datos y por ello se diferencian según el tipo de dato que son capaces de almacenar. En la mayoría de lenguajes de programación se requiere especificar un tipo de variable concreto para guardar un dato concreto.los mas comunes son:
+			<ul>
+				<li>Variables tipo Char: estas variables contienen un único caracter, es decir, una letra, un signo o un número.</li>
+				<li>Variables tipo Int: contienen un número entero.</li>
+				<li>Variables tipo float: contienen un número decimal.</li>
+				<li>Variables tipo String: contienen cadenas de texto, o lo que es lo mismo, es un vector con varias variables del tipo Char.</li>
+				<li>Variables del tipo Boolean: sólo pueden contener un 0 o un 1. El cero es considerado para muchos lenguajes como la variable del tipo String "False" mientras que el 1 se considera "True".</li>
+			</ul>
+		</p>
+
+			<p><b>Condicionantes.</b></p>
+			<p class="post-contenido text-justify">
+				Son estructuras de código que indican que para que cierta parte del programa se ejecute, deben cumplirse ciertas premisas, como por ejemplo, que dos valores sean iguales, que un valor exista, que un valor sea mayor que otro y similares. Estos condicionantes por lo general solo se ejecutan una vez a lo largo del programa. Los condicionantes más conocidos y empleados en programación son:
+
+				<ul>
+					<li>If: indica una condición para que se ejecute una parte del programa.</li>
+					<li>Else if: siempre va precedido de un "If" e indica una condición para que se ejecute una parte del programa siempre que no cumpla la condición del if previo y si se cumpla con la que el "else if" especifique.</li>
+					<li>Else: siempre precedido de "If" y en ocasiones de "Else If". Indica que debe ejecutarse cuando no se cumplan las condiciones prévias.</li>
+				</ul>
+			</p>
+
+			<p><b>Bucles.</b></p>
+			<p class="post-contenido text-justify">
+				Los bucles son parientes cercanos de los condicionantes, pero ejecutan constantemente un código mientras se cumpla una determinada condición. Los más frecuentes son:
+
+				<ul>
+					<li>For: ejecuta un código mientras una variable se encuentre entre 2 determinados parámetros.</li>
+					<li>While: ejecuta un código mientras se cumpla la condición que solicita.</li>
+				</ul>
+			</p>
+
+			<p><b>Funciones.</b></p>
+			<p class="post-contenido text-justify">
+				Se crearon para evitar tener que repetir constantemente fragmentos de código. Una función podría considerarse como una variable que encierra código dentro de si.
+			</p>
+
+			<p><b>Sintaxis.</b></p>
+			<p class="post-contenido text-justify">
+				La sintaxis de un lenguaje de programación describe las combinaciones posibles de los símbolos que forman un programa sintácticamente correcto. 
+				El significado que se le da a una combinación de símbolos es manejado por su semántica (ya sea formal o como parte del código duro de la referencia de implementación). 
+				Dado que la mayoría de los lenguajes son textuales, este artículo trata de la sintaxis textual.
+			</p>
+
+	</article>
+	<div class="ejercicios-btn">
+		<a href="/ejercicioEj/EJ2/2/N/3" class="btn btn-primary">Ejemplo</a>
+	</div>
+{% endblock %}
+
+{% block paginacion %}
+	<nav aria-label="Page">
+		<ul class="pagination justify-content-center">
+			<li class="page-item"><a class="page-link" href="/tema/2/2/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+			<li class="page-item"><a class="page-link" href="/tema/2/2/1">1</a></li>
+			<li class="page-item"><a class="page-link" href="/tema/2/2/2">2</a></li>
+			<li class="page-item active"><a class="page-link" href="/tema/2/2/3">3</a></li>
+			<li class="page-item disabled"><a class="page-link" href="/tema/2/2/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+		</ul>
+	</nav>
+<!--
+	<div class="ejercicios-btn">
+	<a href="/ejercicio/E2/2/V/1" class="btn btn-primary">Ejercicios</a>
+	</div>
+-->
+
+	<div class="siguiente-btn">
+	<a href="/tema/2/3/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+	</div>	
+{% endblock %}
+
+
+
+

@@ -1,0 +1,91 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 3. Control de flujo. </h1>
+    	{% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.2 Estructuras selectivas: simple, doble y múltple.</li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix">
+			<p class="post-contenido text-justify">
+				<h4 class="post-title">
+					Estructuras selectivas: simple, doble y múltple.
+					
+				</h4>
+				<b>Alternativa múltiple (según_sea, caso de/case). </b> <br>
+				Como su nombre lo indica, permite seleccionar entre varios caminos para llegar al final. En este caso se pueden elegir un camino o acción a 
+				ejecutar de entre varios posibles que se debe de evaluar, llamada selector. <br>
+
+				Sintaxis: <br>
+
+				<ul>
+					<li>switch(selector)</li>
+					<li>{</li>
+					<li>case Etiqueta A:</li>
+					<li>Acción A;</li>
+					<li>break;</li>
+					<li>case Etiqueta B:</li>
+					<li>Acción B;</li>
+					<li>break;</li>
+					<li>case Etiqueta n:</li>
+					<li>Acción n;</li>
+					<li>break;</li>
+					<li>default:</li>
+					<li>Excepción;</li>
+					<li>break;</li>
+					<li>}</li>
+				</ul><br>
+				En la siguiente variable el Selector representa a: Variables, expresiones simples de tipo ordinal, (enteros y caracteres –int y char-).
+				<br><br>
+
+	<img src="{% static 'media/3.2-3.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+				La estructura de decisión múltiple evaluará una expresión que podrá tomar n valores distintos, 1, 2, 3, 4, ..., n. Según que elija uno de estos valores en la condición, se realizará una de las n acciones, o lo que es igual, el flujo del algoritmo seguirá un determinado camino entre los n posibles.<br><br>
+
+				<b><i>Sentencia switch</i></b> (C, C++, Java, C#) <br><br>
+
+				switch (expresión)<br>
+				{<br>
+				case valor1:<br>
+				sentencia1;<br>
+				sentencia2;<br>
+				sentencia3;<br>
+				}<br><br>
+
+				Los diferentes modelos de pseudocódigo de la estructura de decisión múltiple se representan en las Figuras 4.6 y 4.7.
+
+	<img src="{% static 'media/3.2.2.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+	<img src="{% static 'media/3.2.2.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+			</p>
+
+	</article>
+	<div class="siguiente-btn">
+		<a href="/ejercicioEj/EJ3/2/N/2" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+	</div>
+	{% endblock %}
+	
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/3/2/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/2/1">1</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/3/2/2">2</a></li>
+		<li class="page-item disabled"><a class="page-link" href="/tema/3/2/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+		
+		<div class="siguiente-btn">
+			<a href="/tema/3/3/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>	
+	{% endblock %}
+
+
+
+

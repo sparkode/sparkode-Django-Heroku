@@ -1,0 +1,76 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+	{% block subtema %}
+		<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+	{% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 2.1: Conceptos Básicos</li>
+	{% endblock %}
+	
+	{% block contenido %}
+		<article class="post clearfix">
+
+
+			<p class="post-contenido text-justify">
+			Para que un procesador realice un proceso se le debe suministrar en primer lugar un algoritmo adecuado. El procesador debe ser capaz de interpretar el algoritmo, lo que significa:
+			<br>• Comprender las instrucciones de cada paso.
+			<br>• Realizar las operaciones correspondientes.
+			</p>
+
+			<p class="post-contenido text-justify">
+			Un programa se escribe en un lenguaje de programación y
+			las operaciones que conducen a expresar un algoritmo en forma de programa se
+			llaman programación. Así pues, los lenguajes utilizados para escribir programas
+			de computadoras son los lenguajes de programación y programadores son los
+			escritores y diseñadores de programas. El proceso de traducir un algoritmo en
+			pseudocódigo a un lenguaje de programación se denomina codificación, y el
+			algoritmo escrito en un lenguaje de programación se denomina código fuente. En
+			la realidad la computadora no entiende directamente los lenguajes de
+			programación, sino que se requiere un programa que traduzca el código fuente a
+			otro lenguaje que sí entiende la máquina directamente, pero muy complejo para
+			las personas; este lenguaje se conoce como lenguaje máquina y el código
+			correspondiente código máquina. <br>
+
+			<img src="{% static 'media/2.3.1.jpg' %}" class="d-inline-block align-top" alt="">
+			</p>
+
+			<p class="post-contenido text-justify">
+			Hoy en día, la mayoría de los programadores emplean lenguajes de programación como C++, C, C#, Java, Visual Basic, XML, HTML, Perl, PHP, JavaScript, etc.,
+			estos lenguajes se denominan lenguajes de
+			alto nivel y permiten a los profesionales resolver problemas convirtiendo sus
+			algoritmos en programas escritos en alguno de estos lenguajes de programación.
+			Los lenguajes de programación se utilizan para escribir programas. Los programas
+			de las computadoras modernas constan de secuencias de instrucciones que se
+			codifican como secuencias de dígitos numéricos que podrán entender dichas
+			computadoras. El sistema de codificación se conoce como lenguaje máquina que
+			es el lenguaje nativo de una computadora.
+
+			</p>
+		</article>
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ2/1/N/2" class="btn btn-primary">Ejemplo</a>
+		</div>
+	{% endblock %}
+	
+	{% block paginacion %}
+		<nav aria-label="Page">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="/tema/2/1/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/1">1</a></li>
+				<li class="page-item active"><a class="page-link" href="/tema/2/1/2">2</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/3">3</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/4">4</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>                     
+	{% endblock %}
+
+
+
+
+
+
+

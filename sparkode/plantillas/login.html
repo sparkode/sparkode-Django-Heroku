@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/login.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'>
+	<script src= "{% static 'js/jquery.js' %}" ></script>
+	<title>Bienvenido a Software PNL</title>
+			<link rel="icon" href="../static/media/icono48.ico" >
+</head>
+<body>
+	<div id="precarga"><!-- precarga de backgrounds --></div>
+	<header>
+	<h1 style="color: rgb(42, 22, 228);">Bienvenido a Sparkode</h1>
+	</header>
+
+	<center>
+	{% if errores %}
+	<ul style="margin-top: 10px;">
+	   {% for error in errores %}
+		<li style="color: red;">{{ error }}</li>
+	   {% endfor %}
+	</ul>
+	{% endif %}
+	</center>
+
+	<div class="Login">
+
+	<!-- <img src="{% static 'img/user.png' %}" alt=""> esta imagen no la encontré-->
+         <br><br><br>
+        
+
+	<form method="post" action="/login/">{% csrf_token %}
+		<!--WEno por si pasa algo malo con el usuario agregar el siguiente código despues del div 
+		id="form-input"
+		-->
+		<img src="{% static 'media/usuario.png' %}" alt="jj" >
+			<div class="fas fa-user">
+				<input  type="text" name="usuario" placeholder="Usuario">
+			</div>
+			<div class="fas fa-key">
+				<input type="password" name="password" placeholder="Contraseña">
+			</div>
+			<div>
+				<input type="submit" name="entrar" value="Enviar" class="b_login">
+			</div>
+			<br>
+			<a href="/registro/">Crear cuenta </a>
+			<br>
+			<br>
+			<!-- falta realizar esta operacion-->
+			<a href="/recuperar/"> ¿Olvidaste tu contraseña?</a>
+	</form>
+	</div>
+	<footer>
+		
+		<a href="/acercade/" style="color: blanchedalmond;"> Acerca de <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+	</footer>
+	
+</body>
+</html>

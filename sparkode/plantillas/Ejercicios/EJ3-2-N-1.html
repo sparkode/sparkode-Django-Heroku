@@ -1,0 +1,69 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+
+{% block scrips %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jqpuzzle.css' %}" />
+    <script type="text/javascript" src="{% static 'js/jquery-1.7.2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.jqpuzzle.js' %}"></script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 3. Control de flujo. </h1>		
+{% endblock %}
+
+{% block subtema %}
+    <li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tema 3.2: Estructuras selectivas: simple, doble y múltple. </li>
+{% endblock %}
+
+{% block contenido %}
+              
+                <article class="post clearfix">
+                    <script type="text/javascript">
+                        var imagenes = new Array('{% static 'media/diagramas.jpg' %}',);
+
+        //Guarda la ruta de una imagen al azar.
+        var azar = Math.floor((Math.random() * imagenes.length) + 0);
+        var imagen = imagenes[azar];
+        //Seteos del rompecabezas.
+        var settings = {
+            shuffle: true,
+            control: {
+                shufflePieces: true, // display 'Shuffle' button [true|false] 
+                confirmShuffle: false, // ask before shuffling [true|false] 
+                toggleOriginal: true, // display 'Original' button [true|false] 
+                toggleNumbers: true, // display 'Numbers' button [true|false] 
+                counter: true, // display moves counter [true|false] 
+                timer: true, // display timer (seconds) [true|false] 
+                pauseTimer: false
+            }
+        };
+        //Textos que mostraran el rompecabezas.
+        var myTexts = {
+            shuffleLabel: 'Mezclar',
+            toggleOriginalLabel: 'Ver Original',
+            toggleNumbersLabel: 'Numeros',
+            confirmShuffleMessage: 'Desea mezclar la imagen?',
+            movesLabel: 'Movimientos',
+            secondsLabel: 'segundos'
+        };
+        $(document).ready(function() {
+            $("#rompecabezas").attr('src', imagen);
+            $("#rompecabezas").jqPuzzle(settings, myTexts);
+        });
+    </script>
+                </article>
+                <h2>Diseños de algoritmos</h2>
+            <p class="post-contenido text-justify"> Resuelve el Puzzle </p>
+    <img id="rompecabezas" src="" alt="" class="jqPuzzle" />
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/3/2/1" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+
+

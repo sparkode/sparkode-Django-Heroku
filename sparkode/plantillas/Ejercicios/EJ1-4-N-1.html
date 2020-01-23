@@ -1,0 +1,64 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/fecha.js' %}"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li {margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }
+    html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+    .ui-state-highlight {color: blue; height: 1.5em; line-height: 1.2em; }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+    $( "#sortable" ).sortable({
+        placeholder: "ui-state-highlight"
+    });
+    $( "#sortable" ).disableSelection();
+    } );
+    </script>
+{% block scrips %}
+	
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 1. Diseño algorítmico. </h1>			
+{% endblock %}
+
+{% block subtema %}
+    <li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tema 1.4: Diseño de funciones.</li>
+{% endblock %}
+
+{% block contenido %}
+    <article class="post clearfix article">
+            <p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+        1.- Algoritmo que muestra por pantalla el triple de un número real introducido por el usuario</p>
+            <ul id="sortable">
+
+        <li class="ui-state-default">ALGORITMO Multiplicar;</li><br>
+        <li class="ui-state-default">VAR</li><br>
+        <li class="ui-state-default">REAL a, y;</li><br>
+        <li class="ui-state-default">INICIO</li><br>
+        <li class="ui-state-default">ESCRIBIR("Dame un número");</li><br>
+        <li class="ui-state-default">LEER( a );</li><br>
+        <li class="ui-state-default">a <- a * 3;</li><br>
+        <li class="ui-state-default">ESCRIBIR(a);</li><br>
+        <li class="ui-state-default">FIN</li><br>
+        </ul>
+
+    </article>   
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/1/4/1" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+

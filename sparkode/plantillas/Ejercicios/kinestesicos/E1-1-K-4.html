@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Puzzle</title>
+	<script type="text/javascript" src="js/puzzle.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body onload="comprobarnavegador();"> <!--Función de js-->
+<h1>Tema 1:Diseño algorítmico</h1>
+<h2>1.1: Conceptos básicos</h2>
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Advertencia!</strong> Revisa las pocisiones antes de validar!
+</div>
+<p>2.- Ordenar el pseudocódigo que calcula el área de un circulo</p>
+<p id="NumeroPiezas" hidden="true">8</p>
+<p id="calificacion" hidden="false">0</p>
+
+<div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+
+  <div class="col-md-3" id="pieza1"  draggable="true" ondragstart="start(event)" ondragend="end(event)">Inicio</div>
+  <div class="col-md-3"id="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">Contantes Pi = 3.1416</div>
+   <div class="col-md-3"id="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">Variables Radio,area = real</div>
+  <div class="col-md-3"id="pieza4" draggable="true" ondragstart="start(event)" ondragend="end(event)">Imprime "Introduce el radio"</div>
+  <div class="col-md-3"id="pieza5" draggable="true" ondragstart="start(event)" ondragend="end(event)">Leer radio</div>
+   <div class="col-md-3"id="pieza6" draggable="true" ondragstart="start(event)" ondragend="end(event)">area = radio*radio*Pi</div>
+    <div class="col-md-3"id="pieza7" draggable="true" ondragstart="start(event)" ondragend="end(event)">Imprimir "El area del circulo es:",area.</div>
+        <div class="col-md-3"id="pieza8" draggable="true" ondragstart="start(event)" ondragend="end(event)">Fin</div>
+  <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+
+</div>
+
+<p>En el espacio de abajo tendrá que acomodar, arrastrando y soltando.</p>
+
+<div id="puzzle" class="container-fluid puzzle">
+
+	<div class="row-md-3 my" id="Padre" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="border-style: solid; height:420px;"></div>
+		</div>
+
+
+
+<button class="btn btn-primary" type="submit" onclick="array();">Validar</button>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

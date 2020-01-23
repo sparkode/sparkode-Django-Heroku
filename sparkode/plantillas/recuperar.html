@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+	<link rel="stylesheet" href="{% static 'css/Raleway.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>• Recuperar Contraseña •</title>
+		<link rel="icon" href="../static/media/icono48.ico" >
+</head>
+<body> 
+
+        {% if errores %}
+         <ul>
+            {% for error in errores %}
+             <li>{{ error }}</li>
+            {% endfor %}
+         </ul>
+         {% endif %}
+	
+	<form class="user_form" action="/recuperar/"  method="post"> {% csrf_token %}
+			<ul>
+				<br><br>
+				
+				<li class="info">
+					<h3>Introduzca la información de la cuenta: </h3>
+				</li>
+				<li>
+					<label for="user">Nombre de usuario: </label>
+					<input type="text" required name="NUsuario">
+				</li>
+				<li>
+					<label for="email">e-mail: </label>
+					<input type="email" required autocomplete   name="Email">
+				</li>
+				<br><br>
+
+				<input type="submit" name="crear" value="Recuperar Contraseña" class="boton">
+				<br>
+				<br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				<br><br>
+				
+				<a href="/acercade/" > Acerca de <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+				<br>
+				<br>
+				<a href="/login/">¿Ya tienes una cuenta? Ingresar</a>
+			</ul>
+	</form>
+
+
+</body>
+</html>

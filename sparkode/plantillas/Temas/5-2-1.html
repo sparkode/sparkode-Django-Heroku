@@ -1,0 +1,72 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 5. Modularidad. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 5.2: Paso de parámetros o argumentos. </li>
+						
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix article">
+							
+							
+			<p class="post-contenido text-justify">
+					<h2 class="post-title">
+						Paso de parámetros o argumentos.
+					</h2>
+				
+			En ciencias de la computación, un parámetro es una variable utilizada para recibir valores de entrada en una rutina, subrutina o método. Dichos valores, que serán enviados desde la rutina invocante, son llamados argumentos. La subrutina usa los valores asignados a sus parámetros para alterar su comportamiento en tiempo de ejecución. La mayor parte de los lenguajes de programación pueden definir subrutinas que aceptan cero o más argumentos. <br><br>
+
+			Estos dos términos: <i>parámetros</i> y <i>argumentos</i>, son a menudo intercambiados incorrectamente en su uso.
+			<br> El término parámetro, se usa a menudo para referirse a la variable en la declaración del método, mientras que argumento, 
+			se refiere al valor que se envía. Para evitar confusiones, es común ver a un parámetro 
+			como una variable y un argumento como un valor. <br><br>
+
+			Los parámetros aparecen en la declaración de los métodos y los argumentos en las llamadas a los métodos. 
+			En la declaración del método, la variable es un parámetro y en la llamada del método, la variable es el argumento del método.<br>
+
+			Los parámetros se declaran en la cabecera de la declaración de los métodos. Al declararse el parámetro, 
+			se indica el tipo de dato y el identificador correspondiente. Los parámetros o argumentos de un constructor o 
+			de un método pueden ser de cualquier tipo, ya sean tipos primitivos o referencias de objetos (en este caso debe 
+			indicarse el identificador de la clase correspondiente). <br><br>
+
+			<img src="{% static 'media/subrutina.png' %}" alt="25">
+
+			</p>
+		</article>	
+		<div class="ejercicio-btn">
+			<a href="/ejercicioEj/EJ5/2/N/1" class="btn btn-primary">Ejemplo</a>
+		</div>
+   	{% endblock %}
+
+
+
+	{% block video %}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/o7UELj8Dl3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+	
+	{% block paginacion %}
+	<div class="ejercicios-btn">
+		<a href="/tema/5/1/4" style="margin-right: 40px ;" class="btn btn-primary">Subtema Anterior</a>
+	</div>
+		<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/5/2/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/2/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/2/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+	
+	{% endblock %}
+
+
+
+
+

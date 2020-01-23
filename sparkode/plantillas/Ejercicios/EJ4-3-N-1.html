@@ -1,0 +1,59 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+
+{% block scrips %}
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+	<script src="{% static 'js/fecha.js' %}"></script>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="{% static 'js/wordfind.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'js/wordfindgame.js' %}"></script> 
+{% endblock %}
+
+{% block tema %}
+<h1 class="display-4">Tema 4. Organización de datos. </h1>		
+{% endblock %}
+
+{% block subtema %}
+<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.3: Multidimensionales: conceptos básicos, operaciones y aplicaciones. </li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+			<table>
+		<td>
+			<div style="margin-left: 200px;"><p> <font size="10" style="margin-left: 30px;"> Sopa de letras </font> <br> <font size ="4"><u> Instrucciones:</u> De click y arrastre sobre cada una <br> de las letras hasta formar la palabra.</font> </p></div>
+		<div id='juego'></div>
+		<div id='Palabras'></div>
+
+
+		<div><button id='solve'>Resolver el juego</button></div> </td> </table>
+		<script>
+		var words = ['Inicialización','Acceso','Elementos','Arreglos'];
+		var gamePuzzle = wordfindgame.create(words, '#juego', '#Palabras'); 
+
+		var puzzle = wordfind.newPuzzle(words,{height: 18, width:18, fillBlanks: false});
+		wordfind.print(puzzle);   
+		$('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+		</script>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/4/3/1" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+
+
+

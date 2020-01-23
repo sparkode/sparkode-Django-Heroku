@@ -1,0 +1,64 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+	{% block subtema %}
+			<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+	{% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 2.2: Características del lenguaje de programación.</li>
+	{% endblock %}
+
+	{% block contenido %}
+		<article class="post clearfix">
+			<p class="post-contenido text-justify">
+					Un programa de computadora es un conjunto de instrucciones que producirán la ejecución de una determinada tarea. En esencia, un programa es un medio para conseguir un fin. El fin será probablemente definido como la información necesaria para solucionar un problema. <br>
+					El proceso de programación es, por consiguiente, un proceso de solución de problemas y el desarrollo de un programa requiere las siguientes fases:
+
+					<br><b>1.	Definición y análisis del problema.</b><br>
+					Se refiere a la etapa del proceso en la que el programador toma conocimiento del problema antes de proceder a desarrollar una solución. Es un proceso de “introducción”, de naturaleza cognoscitiva y muy difícil de describir.
+					<br><b>2.	Diseño de algoritmos:</b>
+					<ul>
+						<li>Formulación del algoritmo</li>
+						<li>Diagrama de flujo</li>
+						<li>Diagrama N-S</li>
+						<li>Pseudocódigo</li>
+					</ul>
+					
+					<br><b>3.	Codificación del programa.</b><br>
+					Es la construcción de la solución, desarrollada en forma de un programa real (o código)
+					<br><b>4.	Depuración y verificación del programa.</b><br>
+					Se refiere a la revisión y corrección del programa sea en de Ambiente de Desarrollo o Prueba. Es inevitable realizar pruebas mientras va construyendo las componentes de la aplicación.
+					<br><b>5.	Documentación.</b><br>
+					La documentación interna de un programa son los comentarios que el programador puede escribir en el código fuente de un programa y que el compilador no tendrá en cuenta, ya que, no son instrucciones. Los comentarios de un programa son explicaciones o aclaraciones que ayudarán al programador en un futuro, cuando quiera revisar o modificar el código fuente de dicho programa, y todavía serán de más ayuda si la modificación la tiene que realizar un programador distinto al que escribió el código fuente en un primer momento.
+					<br><b>6.	Mantenimiento.</b><br>
+					Se refiere a las modificaciones y  que deben hacerse a los defectos del diseño y evolución del mismo, lo cual puede incluir el desarrollo de funciones adicionales para reunir nuevas necesidades del negocio. <br>
+					<center>
+						<img src="{% static 'media/tn2.2.jpg' %}" class="center-block" alt=""><br>
+					</center>
+
+			</p>
+		</article>
+
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ2/2/N/2" class="btn btn-primary">Ejemplo</a>
+		</div>
+	{% endblock %}
+
+
+
+	{% block paginacion %}
+		<nav aria-label="Page">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="/tema/2/2/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/2/1">1</a></li>
+				<li class="page-item active"><a class="page-link" href="/tema/2/2/2">2</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/2/3">3</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/2/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+
+	{% endblock %}
+
+

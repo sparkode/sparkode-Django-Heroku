@@ -1,0 +1,91 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+			$( function() {
+			$( "#accordion" ).accordion({
+				collapsible: true
+			});
+			} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 2. Introducción a la programación.</h1>		
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.4: Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos.</li>	
+{% endblock %}
+
+{% block contenido %}
+	
+	<article class="post clearfix article">
+							
+			<h2 class="post-title" align="center">
+				<a href="#">EJEMPLOS</a>
+
+			</h2>
+			<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+			<div id="accordion">
+			
+			<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.- El tipo numérico es el conjunto de los valores numéricos. Estos pueden representarse en dos formas distintas:</p>
+		<div>
+		<p>
+		<ol>
+		<li> Tipo numérico entero (integer)</li><br>
+		<li> Tipo numérico real (real)</li><br>
+		</ol>
+
+		</p>
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				2.- Los nombres de las variables elegidas para el algoritmo o el programa deben ser significativos y tener relación con el objeto que representan, como pueden ser los casos siguientes:
+			</p>
+			<div>
+			
+			
+			<p class="post-contenido text-left">
+
+				<ol>
+					<li> NOMBRE para representar nombres de personas</li> <br>
+					<li> PRECIOS para representar los precios de diferentes artículos</li><br>
+					<li> NOTAS para representar las notas de una clase </li><br>
+				</ol>
+
+			</p>				
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				3.- Cada expresión toma un valor que se determina tomando los valores de las variables y constantes implicadas y la ejecución de las operaciones indicadas. Una expresión consta de operandos y operadores. Según sea el tipo de objetos que manipulan, las expresiones se clasifican en:
+			</p>
+			<div>
+				
+			
+			
+			<p class="post-contenido text-left">
+
+				<ol>
+					<li> Aritméticas </li><br>
+					<li> Relacionales </li><br>
+					<li> Lógicas </li><br>
+					<li> Carácter </li><br>
+				</ol>
+
+			</p>
+
+		</div>
+		</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/2/4/4" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+
+

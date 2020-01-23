@@ -1,0 +1,165 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.2: Representación de algoritmos: gráfica y pseudocódigo</li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Atento!</strong> Pulsa click dos veces sobre el texto para poder arrastrarlo
+    </div>
+   <h3>Tipos de errores</h3>
+    <p id="NumeroPiezas" hidden="true">5</p>
+    
+    <script>
+      window.onload = function()
+    {
+      A = document.getElementById('Padre').innerHTML;
+       B = document.getElementById('ConterF').innerHTML;
+    }
+      </script>
+    
+    <div class="col" id="ConterF" style="background-color: rgba(0, 0, 0, 0); border-style: none;">
+
+
+    <div class="col" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      
+      <div class="" ondragstart="start(event)" ondragend="end(event)">
+        <img src="../static/imagenesK/diagrama/30.jpg" class="rounded mx-auto d-block" alt="image"  id="pie1"  draggable="true" ondragstart="start(event)" ondragend="end(event)"><br>
+      </div>
+      
+      <div class="" ondragstart="start(event)" ondragend="end(event)">
+        <img src="../static/imagenesK/diagrama/32.jpg" class="rounded mx-auto d-block" alt="image" id="pie2" draggable="true" ondragstart="start(event)" ondragend="end(event)"><br>
+      </div>
+      
+         <div class="" ondragstart="start(event)" ondragend="end(event)">
+           <img src="../static/imagenesK/diagrama/34.jpg" class="rounded mx-auto d-block" alt="image" id="pie3" draggable="true" ondragstart="start(event)" ondragend="end(event)"><br>
+         </div>
+        
+    
+      <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+    </div>
+    
+    <h3> Descripción del error </h3>
+    <div class="col" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      
+        <div class="" ondragstart="start(event)" ondragend="end(event)">
+          <samp id="pieza1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+              ocurren porque la sintaxis del lenguaje no es correcta.<br> 
+              de cajon este tipo de errores no permiten que la aplicación se ejecute. por ejemplo: <br>
+              • Olvidarnos de un punto y coma at final de una sentencia. <br>
+              • No cerrar llaves en algún bloque de código, método, clase o en alguna estructura de control. <br>
+              • Repetir variables con el mismo nombre aunque sean de diferente tipo. <br>
+          </samp>
+          <div class="col"></div>
+          <div class="" ondragstart="start(event)" ondragend="end(event)">
+            <samp id="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                Estos errores ocurren cuando la aplicación se esta ejecutando, hay muchos factores desde los mas básicos como por ejemplo:<br>
+            • El usuario ingresa valores diferentes a los que Ia aplicación recibe.<br> 
+            • Acceder a una posición en un arreglo Ia cual no existe. <br>
+            • Almacenar cadenas donde se debe almacenar números. <br>
+            • Divisiones por cero. <br>
+            </samp>
+
+          </div>
+
+          <div class="col"></div>
+          <div class="" ondragstart="start(event)" ondragend="end(event)">
+            <samp id="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                Estos son los más difíciles de detectar y corregir y pues bueno porque digo que son difíciles, es que con este tipo de errores la aplicación compila y se ejecuta de forma normal, pero, y entonces d6nde esta el error? El error se da porque la aplicación no muestra los resultados esperados digamos que ya hice el algoritmo y el resultado que debo obtener es 10, pero en la aplicación obtengo 5 o lo peor de todo que de seguro te a pasado, que escribes el código, haces pruebas y los resultados son correctos subes a producción y resulta que para un caso particular no se obtuvo el resultado esperado. 
+        
+            </samp>
+
+          </div>
+
+        </div>
+    </div>
+    </div>
+
+    <p>En el espacio de abajo tendrá que acomodar, arrastrando y soltando.</p>
+    
+    <div id="Padre" class="container-fluid puzzle">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          Tipo de error
+        </div>
+        <div class="col">
+          Descripción
+        </div>
+          
+      </div>
+    
+      <div class="row box">
+    
+    
+        <div class="col drop" id="cajaImagen"  style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+        <div class="col name" id="cajaNombre" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+       
+      </div>
+    
+        <div class="row box">
+        <div class="col drop" id="cajaImagen1" style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+           
+        </div>
+        <div class="col name" id="cajaNombre1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+    
+        
+      
+      </div>
+    
+        <div class="row box">
+        <div class="col drop" id="cajaImagen2" style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          
+        </div>
+        <div class="col name" id="cajaNombre2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+    
+        
+      </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    </div>
+    </div>
+    
+    
+    </div>
+      </div>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	
+
+  <form id="form1" name="form1" method="post" action="/evaluarK/E2/1/K/3" class="formulario" >{% csrf_token %} 
+   
+    <input type="text"  name="calificacion" id="calificacion" hidden= "true">
+      
+    <br>
+  <button class="btn btn-primary" type="submit" onclick="validationk2();">Validar</button>
+
+    <input type="submit" class="btn btn-primary" type="submit"  value="Evaluar">
+	
+		<input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="reset2();"> 
+  </form>
+	{% endblock %}
+
+
+
+
+

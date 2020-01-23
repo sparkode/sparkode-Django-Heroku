@@ -1,0 +1,76 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+
+{% block scrips %}
+    <script>
+        $( function() {
+        $( "#sortable" ).sortable({
+            placeholder: "ui-state-highlight"
+        });
+        $( "#sortable" ).disableSelection();
+        } );
+    </script>
+
+<script>
+    $( function() {
+        $( "#accordion" ).accordion({
+    collapsible: true
+        });
+    } );
+</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 1. Diseño algorítmico. </h1>			
+{% endblock %}
+
+{% block subtema %}
+    <li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tema 1.1: Conceptos básicos</li>
+{% endblock %}
+
+{% block contenido %}
+<h2>Resolución de problemas</h2>
+				<p class="post-contenido text-justify"> Resuelve de manera correcta el diagrama de flujo para un algoritmo que sume dos numeros enteros. </p>
+ 
+				<ul id="sortable">
+				<!-- posibles errores-->
+				  <li class=""><img src="{% static 'media/03.png' %}" id="imagen"> </li>
+				  <li class=""><img src="{% static 'media/05.png' %}" id="imagen"> </li>
+				  <li class=""><img src="{% static 'media/07.png' %}" id="imagen"> </li>
+				  <li class=""><img src="{% static 'media/04.png' %}" id="imagen"> </li>
+				  <li class=""><img src="{% static 'media/06.png' %}" id="imagen"> </li>
+				  <li class=""><img src="{% static 'media/01.png' %}" id="imagen"> </li>
+				  <li class=""><img src="{% static 'media/02.png' %}" id="imagen"> </li>
+				</ul>
+<br>
+              <div id="accordion">
+			
+                    <p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+                Respuesta...</p>
+        
+                <div><br>
+                        <img src="{% static 'media/Respuesta.png' %}" alt="">
+                </div>
+                
+            </div>
+            <br>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/1/1/2" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

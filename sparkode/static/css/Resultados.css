@@ -1,0 +1,21 @@
+body
+{
+	font-family: 'Asap', sans-serif;
+	background-color: rgb(191, 235, 203);
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	margin: 0 auto;
+	text-align: center;
+	background-repeat: no-repeat;
+}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #38cc64;
+    border-radius: 6px;
+    border: 2px solid #5c72eb;
+  }

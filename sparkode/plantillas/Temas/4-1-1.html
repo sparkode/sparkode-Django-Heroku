@@ -1,0 +1,79 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 4. Organización de datos. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.1: Arreglos. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+	<article class="post clearfix article">
+						
+		<h2 class="post-title">
+			Arreglos 
+		</h2>
+		<p class="post-contenido text-justify">
+			
+		Definimos como array o arreglo a la estructura de datos formada por  una secuencia de elementos homogéneos (de igual tipo).  Cada elemento tiene una posición relativa (que puede ser  establecida  por uno o más índices) dentro de la secuencia.
+		La propiedad “ordenado” significa que el elemento primero, segundo, tercero, ..., enésimo de un array puede ser identificado. Un array puede estar compuesto de todos sus elementos de tipo cadena, otro puede tener todos sus elementos de tipo entero, etc. <br><br>
+
+		<b>Características de los arreglos estáticos en C++.</b>
+		<ul>
+			<li>Un arreglo es una colección de datos relacionados de igual tipo e identificados bajo un nombre genérico único. </li>
+			<li>La estructura completa ocupa un segmento de memoria único y sus elementos se almacenan en forma contigua. </li>
+			<li>Para procesar un elemento del arreglo, se debe especificar el nombre de la estructura y uno o más índices que determinan la posición del elemento. </li>
+			<li>Se puede emplear como índice cualquier expresión que arroje un entero dentro del rango establecido (dimensión) para dicho índice. </li>
+			<li>El índice que determina la posición de los elementos de un arreglo comienza siempre con cero. </li>
+			<li>Se debe establecer en la declaración, la cantidad de elementos (dimensión) que puede tener como máximo el arreglo en el programa. </li>
+			<li>C++ admite operar fuera del rango preestablecido por la dimensión, pero con resultados impredecibles. </li>
+		</ul>
+
+		Los arrays se conocen también como matrices —en matemáticas— y tablas —en cálculos financieros—. 
+		El tipo más simple de array es el array unidimensional o vector (matriz de una dimensión). 
+		Un vector de una dimensión denominado NOTAS que consta de n elementos se puede representar por la Imagen 1.<br> 
+
+		<img src="{% static 'media/4-1-1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+		El número de elementos de un vector se denomina rango del vector. Los vectores, como ya se ha comentado, 
+		pueden contener datos no numéricos, es decir, tipo “carácter”. Por ejemplo, un vector que representa las frutas que se venden en un supermercado:
+		<br>
+		<img src="{% static 'media/4-1-1.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+	
+		
+		</p>
+	</article>
+	<div class="siguiente-btn">
+		<a href="/ejercicioEj/EJ4/1/N/1" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+	<div>
+   	{% endblock %}
+
+
+
+	{% block video %}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/7N6rPSOLn2k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+	
+	{% block paginacion %}
+		<div class="siguiente-btn">
+			<a href="/tema/3/1/1" class="btn btn-primary" style="margin-right: 20px;">Tema Anterior</a>
+		</div>
+
+		<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/4/1/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+	{% endblock %}
+
+

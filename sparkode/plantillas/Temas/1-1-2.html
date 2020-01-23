@@ -1,0 +1,62 @@
+{% extends "Temas/BaseTemas.html"%}
+    {% block subtema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+	
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.1: Conceptos básicos</li>
+    {% endblock %}
+    
+	{% block contenido %}
+	</h2>
+	<p class="post-contenido text-justify">
+Las fases de resolución de un problema con computadora son:<br>
+<ul type="circle">
+	<li>Análisis del problema.</li>
+	<li>Diseño del algoritmo</li>
+	<li>Codificación.</li>
+	<li>Compilación y ejecución.</li>
+	<li>Verificación.</li>
+	<li>Depuración.</li>
+	<li>Mantenimiento.</li>
+	<li>Documentación.</li>
+</ul>
+
+
+Las características más sobresalientes de la resolución de problemas son:<br><br>
+
+<b>Análisis.</b> El problema se analiza teniendo presente la especificación de los requisitos dados por el cliente de la empresa o por la persona que encarga el programa.<br><br>
+
+<b>Diseño.</b> Una vez analizado el problema, se diseña una solución que conducirá a un algoritmo que resuelva el problema.<br><br>
+
+<b>Codificación (implementación).</b> La solución se escribe en la sintaxis del lenguaje de alto nivel (por ejemplo,
+Pascal) y se obtiene un programa fuente que se compila a continuación.<br><br>
+
+<b>Ejecución, verificación y depuración.</b> El programa se ejecuta, se comprueba rigurosamente y se eliminan todos los errores (denominados “bugs”, en inglés) que puedan aparecer.<br><br>
+
+<b>Mantenimiento.</b> El programa se actualiza y modifica, cada vez que sea necesario, de modo que se cumplan todas las necesidades de cambio de sus usuarios.<br><br>
+
+<b>Documentación.</b> Escritura de las diferentes fases del ciclo de vida del software, esencialmente el análisis, diseño y codificación, unidos a manuales de usuario y de referencia, así como normas para el mantenimiento.<br><br>
+
+
+Las dos primeras fases conducen a un diseño detallado escrito en forma de algoritmo. Durante la tercera fase (codificación) se implementa el algoritmo en un código escrito en un lenguaje de programación, reflejando las ideas desarrolladas en las fases de análisis y diseño.<br><br>
+
+Las fases de compilación y ejecución traducen y ejecutan el programa. En las fases de verificación y depuración el programador busca errores de las etapas anteriores y los elimina. Comprobará que mientras más tiempo se gaste en la fase de análisis y diseño, menos se gastará en la depuración del programa. Por último, se debe realizar la documentación del programa.<br>
+Antes de conocer cada fase, se considera el concepto y significado de la palabra algoritmo.
+						</p>
+	</p>
+
+	<div class="ejercicios-btn">
+		<a href="/ejercicioEj/EJ1/1/N/2" class="btn btn-primary">Ejemplo</a>
+	</div>
+    {% endblock %}
+
+	{% block paginacion %}
+	    <li class="page-item enable"><a class="page-link" href="/tema/1/1/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/1/1">1</a></li>
+	    <li class="page-item active"><a class="page-link" href="/tema/1/1/2">2</a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/1/3">3</a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/1/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>		
+
+	{% endblock %}

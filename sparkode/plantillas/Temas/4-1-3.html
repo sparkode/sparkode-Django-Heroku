@@ -1,0 +1,102 @@
+
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 4. Organización de datos. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.1: Arreglos. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+			
+		<article class="post clearfix article">
+			<!-- <a href="#" class="thumb pull-left">
+				<img src="" alt="">
+			</a>
+			<h2 class="post-title">
+				<a href="#">Algoritmo </a>
+			</h2> -->
+			<p class="post-contenido text-justify">
+									
+				Las operaciones que se pueden realizar con vectores durante el proceso de resolución de un problema son: <br>
+
+				<ul>
+				<li>Asignación</li>
+				<li>Lectura/Escritura</li>
+				<li>Recorrido (acceso secuencial)</li>
+				<li>Actualizar (añadir, borrar, insertar)</li>
+				<li>Ordenación</li>
+				</ul>
+				<br>
+
+				<h4 class="post-title">
+				<a>Asignación.</a>
+				</h4>
+				La asignación de valores a un elemento del vector se realizará con la instrucción de asignación: <br>
+				A[20] ← 5 		<i> asigna el valor 5 al elemento 20 del vector A.</i> <br>
+				Se puede utilizar también la notación: <br>
+				A ← 8 <br>
+
+				Para indicar la asignación de un mismo valor a cada elemento de un vector A. 
+				Esta notación se considerará con mucho cuidado para evitar confusión con posibles variables simples numéricas de igual nombre (A). <br><br>
+				<h4 class="post-title">
+				<a>Lectura/escritura de datos.</a>
+				</h4> 
+				La lectura/escritura de datos en arrays u operaciones de entrada/salida normalmente se realizan con estructuras repetitivas, aunque puede también hacerse con estructuras selectivas. Las instrucciones simples de lectura/escritura se representarán como: <br>
+				leer (V [5]) 	<i>	<br>leer el elemento 5 del vector V. </i><br><br>
+				<h4 class="post-title">
+				<a>Acceso secuencial al vector (recorrido).</a>
+				</h4> 
+				Se puede acceder a los elementos de un vector para introducir datos (escribir) en él o bien para visualizar su contenido (leer). 
+				A la operación de efectuar una acción general sobre todos los elementos de un vector se la denomina recorrido del vector. 
+				Estas operaciones se realizan utilizando estructuras repetitivas, cuyas variables de control (por ejemplo, <i> i </i>) se utilizan como subíndices 
+				del vector (por ejemplo, <i>S[i]</i>). <br><br>
+				<h4 class="post-title">
+				<a>Actualización de un vector.</a>
+				</h4>
+				La operación de actualizar un vector puede constar a su vez de tres operaciones elementales: <br>
+				<ul>
+				<li> <i>Añadir</i> elementos.</li>
+				<li> <i>Insertar</i> elementos.</li>
+				<li> <i>Borrar</i> elementos.</li>
+				</ul>
+				Se denomina añadir datos a un vector la operación de añadir un nuevo elemento al final del vector. La única condición necesaria para esta operación consistirá en la comprobación de espacio de memoria suficiente para el nuevo vector; dicho de otro modo, que el vector no contenga todos los elementos con que fue definido al principio del programa. <br><br>
+
+				<h4 class="post-title">
+				<a>Arrays de varias dimensiones.</a>
+				</h4>
+				Los vectores examinados hasta ahora se denominan arrays unidimensionales y en ellos cada elemento se define o referencia por un índice o subíndice. Estos vectores son elementos de datos escritos en una secuencia. Sin embargo, existen grupos de datos que son representados mejor en forma de tabla o matriz con dos o más subíndices.<br>
+				Se pueden definir tablas o matrices como arrays multidimensionales, cuyos elementos se pueden referenciar por dos, tres o más subíndices. Los arrays no unidimensionales los dividiremos en dos grandes grupos: <br>
+				<ul>
+				<li>Arrays<i> bidimensionales</i></li>
+				<li>Arrays<i> multidimensionales</i></li>
+				</ul>
+
+			</p> 
+			
+		</article>
+   	{% endblock %}
+
+	{% block paginacion %}
+
+		<li class="page-item"><a class="page-link" href="/tema/4/1/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/2">2</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/4/1/3">3</a></li>
+		<li class="page-item disabled"><a class="page-link" href="/tema/4/1/1"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+		<div class="siguiente-btn">
+			<a href="/tema/4/2/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>
+	{% endblock %}
+
+
+

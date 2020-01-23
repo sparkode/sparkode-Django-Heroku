@@ -1,0 +1,61 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">2. Introducción a la Programación</h1>
+    {% endblock %}
+
+	{% block subtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 2.3: Estructura básica de un programa.</li>					
+	{% endblock  %}	
+
+					 
+         
+    {% block preguntas %}
+	<p>1.- Ordenar de manera correcta lo siguiente:</p>
+	<p id="NumeroPiezas" hidden="true">3</p>
+	
+	<script>
+		window.onload = function()
+	{
+		A = document.getElementById('contenedorPiezas').innerHTML;
+		 B = document.getElementById('Padre').innerHTML;
+	}
+		</script>
+	
+	<div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+		<img src="../static/imagenesK/diagrama/pieza20.jpg" class="rounded " alt="image" id="pieza1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+		<img src="../static/imagenesK/diagrama/pieza21.jpg" class="rounded " alt="image" id="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+		<img src="../static/imagenesK/diagrama/pieza22.jpg" class="rounded " alt="image" id="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+
+	  
+	  <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+	</div>
+	
+	<p>En el espacio de abajo tendrá que acomodar, arrastrando y soltando.</p>
+	
+	<div id="puzzle" class="container-fluid puzzle">
+		<div class="row-md-3 my" id="Padre" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="border-style: solid; height:160px;">
+		
+		</div>
+	<br>
+	</div>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	
+	<form id="form1"  name="form1" method="post" action="/evaluarK/E2/1/K/1" class="formulario" >{% csrf_token %} 
+	
+		<br>
+	
+		<input type="text"  name="calificacion" id="calificacion" hidden="true">
+	
+		<button class="btn btn-primary" type="submit" onclick="array2();">Validar</button>
+
+	
+		<input type="submit" class="btn btn-primary" type="submit"  value="Evaluar">
+	
+		<input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="reset1();"> 
+
+	</form>
+	{% endblock %}
+

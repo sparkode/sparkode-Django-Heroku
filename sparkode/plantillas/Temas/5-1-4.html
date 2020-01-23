@@ -1,0 +1,67 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 5. Modularidad. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 5.1: Declaración y uso de módulos. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix article">
+							
+			<p class="post-contenido text-justify">
+
+				
+				<h4 class="post-title">
+					Variables globales, locales y parámetros.
+				</h4>
+				Las variables globales son aquellas que se definen o declaran fuera del módulo principal y tienen efecto en todos los módulos. Esto es, una variable global puede ser modificada en cualquier módulo incluido el principal.
+				<br>
+
+				Las variables locales son las que se definen dentro de un módulo, y son distintas a las que se definen en otros módulos, a pesar de que pueden tener el mismo nombre. El contexto de estas variables es el módulo donde se declaran, fuera de éstos no son reconocidas o válidas.
+
+				Los parámetros son un mecanismo de comunicación o intercambio de información entre los módulos, inclusive el módulo principal. Se relacionan de acuerdo a su posición y el tipo de dato asociado.
+
+				Existen dos tipos de parámetros:
+
+				<ul>
+					<li><b>Por valor:</b> Son constantes; el valor en sí mismo de los datos que se envían como argumentos en la invocación o llamada al módulo, la cual se realiza, escribiendo únicamente el dato del módulo y sus parámetros en el caso de que tengan.</li><br>
+
+					<img src="{% static 'media/pasoporvalor.png' %}"><br><br>
+					
+					<li><b>Por referencia:</b> Son variables; es copia de la referencia o localidad de memoria donde se encuentran los datos que se envían como argumentos en la invocación.</li><br>
+
+					<img src="{% static 'media/pasoporreferencia.png' %}"><br>
+				</ul>
+			</p>
+			
+		</article>
+		<div class="ejercicio-btn">
+			<a href="/ejercicioEj/EJ5/1/N/3" class="btn btn-primary">Ejemplo</a>
+		</div>
+   	{% endblock %}
+	
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/5/1/3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/3">3</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/5/1/4">4</a></li>
+		<li class="page-item disabled"><a class="page-link" href="/tema/5/1/4"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+		<div class="siguiente-btn">
+			<a href="/tema/5/2/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>
+	{% endblock %}
+
+
+
+

@@ -1,0 +1,94 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 5. Modularidad.  </h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">ema 5.2: Paso de parámetros o argumentos.   </li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Atento!</strong> Utiliza letras minusculas, utilizando la estructura iterativa 'desde' y en español
+    </div>
+  
+    <script>
+      window.onload = function()
+    {
+      A = document.getElementById('Padre').innerHTML;
+
+    }
+      </script>
+
+    
+    <p>Completa las palabras faltante.</p>
+    <br>
+    <div id="puzzle" class="container-fluid puzzle">
+      <div class="row">
+        <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="int a, int b">
+          <samp>
+            int a, int b
+          </samp>
+      </div>
+  
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="int c">
+        <samp>
+          int c
+        </samp>
+    </div>
+  
+    <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="int d">
+      <samp>
+        int d
+      </samp>
+  </div>
+
+  
+  <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="int a">
+    <samp>
+      int a
+    </samp>
+</div>
+
+      </div>
+      <br>
+      <div class="container" id="Padre">
+    <div class="row">
+        <div>void suma (</div>
+  <div class="col-2"><input type="text" id="res1" class="form-control form-control-sm"></div>
+  <div>)</div>
+  
+    </div>
+    <div class="row">{</div>
+
+    <div class="col-2">int aux = a+b;  </div>
+    <div class="row">}</div>
+
+    </div>
+    
+    
+    </div>
+      </div>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	<br>
+	
+
+  <form id="form1" name="form1" method="post" action="/evaluarK/E5/2/K/2" class="formulario" >{% csrf_token %} 
+  <input type="text"  name="calificacion" id="calificacion" hidden= "true"> 
+  <button class="btn btn-primary" type="submit" onclick="valid5k2();">Validar</button>
+
+  <input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="resetA();"> 
+  <input type="submit" class="btn btn-primary"  value="Evaluar">
+  </form>
+	{% endblock %}
+
+
+
+
+

@@ -1,0 +1,84 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 4. Organización de datos. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.3: Multidimensionales: conceptos básicos, operaciones y aplicaciones. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix article">
+							
+			<br>
+			<h2 class="post-title">
+				Multidimensionales: conceptos básicos, operaciones y aplicaciones. 
+			</h2>
+			Un array puede ser definido de tres dimensiones, cuatro dimensiones, hasta de n-dimensiones. 
+			Los conceptos de rango de subíndices y número de elementos se pueden ampliar directamente desde array de una y 
+			dos dimensiones a estos array de orden más alto. En general, un array de n-dimensiones requiere que los valores de los n 
+			subíndices pueda ser especificados a fin de identificar un elemento individual del array. Si cada componente de un array tiene n subíndices, 
+			el array se dice que es solo de n-dimensiones.  <br><br>
+
+			<h4 class="post-title">
+				Conceptos básicos.
+			</h4>
+			<p class="post-contenido text-justify">
+				
+			Los arreglos multidimensionales tienen más de una dimensión. 
+			Este también es un tipo de dato estructurado, que está compuesto por n dimensiones. 
+			Para hacer referencia a cada componente del arreglo es necesario utilizar n índices, uno para cada dimensión. <br><br>
+
+			<h4 class="post-title">
+				Operaciones.
+			</h4>
+			Para manejar un arreglo, las operaciones a efectuarse son:
+			<ul>
+				<li> Declaración del arreglo</li>
+				<li> Creación del arreglo</li>
+				<li> Inicialización de los elementos del arreglo</li>
+				<li> Acceso a los elementos del arreglo</li>
+			</ul><br>
+			
+			<h4 class="post-title">
+				Aplicaciones.
+			</h4>
+			Se necesita manejar, en un arreglo, la posición todos los caracteres escritos en una enciclopedia. 
+			El arreglo deberá tener las siguientes dimensiones:
+			Una para manejar el renglón en la página, otra para la columna en la página, otra para la hoja en el volumen y otra para el volumen en la enciclopedia. Cada página tiene 30 renglones y 80 columnas. Cada volumen tiene 500 páginas. La enciclopedia tiene 18 volúmenes. <br><br>
+
+
+			</p>
+		</article>
+
+		<div class="siguiente-btn">
+			<a href="/ejercicioEj/EJ4/3/N/1" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+		<div>
+   	{% endblock %}
+
+
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/4WSmS3ey5ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			{% endblock %}
+
+	
+	{% block paginacion %}
+		<div class="ejercicios-btn">
+			<a href="/tema/4/2/1" style="margin-right: 40px ;" class="btn btn-primary">Subtema Anterior</a>
+		</div>
+
+		<div class="siguiente-btn">
+			<a href="/tema/4/4/1" class="btn btn-primary">Siguiente Subtema</a>
+		</div>
+	{% endblock %}
+
+
+

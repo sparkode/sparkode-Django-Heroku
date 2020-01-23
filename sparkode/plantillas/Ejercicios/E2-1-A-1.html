@@ -1,0 +1,377 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Tema</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+  <link rel="stylesheet" href="{% static 'jqueryui/jquery-ui.css' %}">
+  <link rel="stylesheet" href="{% static 'css/estilosejercicioaudi2-1.css' %}">
+  <link rel="stylesheet" href="{% static 'css/Raleway.css' %}">
+  <script src="{% static 'js/jquery.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+  <script src="{% static 'js/fecha.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="{% static 'js/wordfind.js' %}"></script> 
+    <script type="text/javascript" src="{% static 'js/wordfindgame.js' %}"></script> 
+      <script src="{% static 'javascript/jquery.js' %}"></script>
+  <script src="{% static 'javascript/menu.js' %}"></script>
+  <script src="{% static 'javascript/tema.js' %}"></script>
+  <script src="{% static 'jqueryui/jquery-ui.js' %}"></script>
+ 
+  <script>
+    /*  $( function() {
+      $( "input" ).checkboxradio();
+      } );
+  </script>
+    
+</head>
+<body>
+  <br>
+  <div class="container">
+    <header>
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light tema-uno ">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'media/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">Sparkode
+        </a>
+        <button class="navbar-toggler navbar-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mi perfil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/temario/">Temario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Progreso</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Examen final</a>
+            </li>
+          </ul>
+        
+        <div class="ml-auto p-2 bd-highlight">
+          <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Cerrar<i class="fas fa-door-open"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#"><i class="fas fa-door-closed"></i>Cerrar sesión</a>
+                </div>  
+              </li>
+            </ul>
+        </div>
+          
+        </div>
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid j1">
+        <div class="container">
+          <h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+          <p class="lead">--</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="main container">
+      <div class="row">
+        <section class="posts col-md-10">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href='/../'>Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tema 2.1: Conceptos básicos</li>
+            </ol>
+          </nav>
+          
+          <article class="post clearfix">
+      <!-- FORMULARIO DE PREGUNTAS  ------------------------------------------------------------------- -->
+      <form id="form1" name="form1" method="post" action="/Evaluacion/E2/1/A/1/" class="formulario" onsubmit="alert('Tu puntuación es: '+{{resultado}})">{% csrf_token %}
+      
+          <div class="contenido">
+
+            {% if messages %}
+              <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+
+      <h3>Ejercicio 2.</h3>
+      <h3>Lee el texto y selecciona la respuesta correcta.</h3>
+
+      <div class="widget">
+         <fieldset>
+          <legend>Selecciona la respuesta</legend>
+          <div class="audioejemplo">
+          <!-- PREGUNTA   1------------------------------------------------------------------- -->
+          <p> 1.- 
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/pregunta1.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/pregunta1.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+          </p>
+          </div>
+          <!-- RESPUESTAS DE LA PREGUNTA   1 --------------------------------------------------- -->
+          
+          <label for="radio-1"><b>A)</b> </label>
+          <input type="radio" value="16.67" name="respuesta1" id="radio-1">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/respuesta1.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/respuesta1.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+          
+          <label for="radio-2"><b>B)</b> </label>
+          <input type="radio" value="0" name="respuesta1" id="radio-2">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/respuesta2.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/respuesta2.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+<br>
+          <label for="radio-3"><b>C)</b> </label>
+          <input type="radio" value="0" name="respuesta1" id="radio-3">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/respuesta3.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_1/respuesta3.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          </fieldset>
+      </div>
+<hr>
+      <div class="widget">
+         <fieldset>
+          <legend>    </legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   2 ------------------------------------------------------------------- -->
+           <p>2.-
+              <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/pregunta2.mp3' %}" preload="none" controls>
+                <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/pregunta2.mp3' %}" type="audio/mp3" id="sound">
+              </audio> 
+           </p>
+          </div>
+
+            <!-- RESPUESTAS DE LA PREGUNTA   2 ----------------------------------------------------- -->
+          <label for="radio-4"><b>A)</b> </label>
+          <input type="radio" value="0" name="respuesta2" id="radio-4">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/respuesta3.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/respuesta3.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          
+          <label for="radio-5"><b>B)</b> </label>
+          <input type="radio" value="0" name="respuesta2" id="radio-5">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/respuesta2.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/respuesta2.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+    
+          <label for="radio-6"><b>C)</b> </label>
+          <input type="radio" value="16.67" name="respuesta2" id="radio-6">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/respuesta1.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_2/respuesta1.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          </fieldset>
+      </div>
+<hr>
+      <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   3 ------------------------------------------------------------------- -->
+          <p> 3.-
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/pregunta3.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/pregunta3.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+          </p>
+          </div>
+          
+          <!-- RESPUESTAS DE LA PREGUNTA   3 ------------------------------------------------------ -->
+
+          <label for="radio-7"><b>A)</b> </label>
+          <input type="radio" value="16.67" name="respuesta3" id="radio-7">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/respuesta1.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/respuesta1.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+
+          <label for="radio-8"><b>B)</b> </label>
+          <input type="radio" value="0" name="respuesta3" id="radio-8">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/respuesta2.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/respuesta2.mp3' %}" type="audio/mp3" id="sound">
+            </audio>          
+
+          
+          <label for="radio-9"><b>C)</b> </label>
+          <input type="radio" value="0" name="respuesta3" id="radio-9">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/respuesta3.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_3/respuesta3.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          </fieldset>
+      </div>
+<hr>
+      <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+          
+          <!-- PREGUNTA   4 ------------------------------------------------------------------- -->
+          <p>4.-
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/pregunta4.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/pregunta4.mp3' %}" type="audio/mp3" id="sound">
+            </audio> 
+          </p>
+          </div>
+
+
+          <!-- RESPUESTAS DE LA PREGUNTA   4 ------------------------------------------------------ -->
+
+          <label for="radio-10"><b>A)</b> </label>
+          <input type="radio" value="0" name="respuesta4" id="radio-10">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/respuesta2.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/respuesta2.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+
+          <label for="radio-11"><b>B)</b> </label>
+          <input type="radio" value="16.67" name="respuesta4" id="radio-11">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/respuesta1.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/respuesta1.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          
+          <label for="radio-12"><b>C)</b> </label>
+          <input type="radio" value="0" name="respuesta4" id="radio-12">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/respuesta3.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_4/respuesta3.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+            </fieldset>
+          </div>
+<hr>
+        <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+          
+          <!-- PREGUNTA   5 ------------------------------------------------------------------- -->
+          <p>5.-
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/pregunta5.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/pregunta5.mp3' %}" type="audio/mp3" id="sound">
+            </audio> 
+          </p>
+          </div>
+
+
+          <!-- RESPUESTAS DE LA PREGUNTA   5 ------------------------------------------------------ -->
+
+          <label for="radio-13"><b>A)</b> </label>
+          <input type="radio" value="0" name="respuesta5" id="radio-13">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/respuesta2.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/respuesta2.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+
+          <label for="radio-14"><b>B)</b> </label>
+          <input type="radio" value="16.67" name="respuesta5" id="radio-14">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/respuesta1.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/respuesta1.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          
+          <label for="radio-15"><b>C)</b> </label>
+          <input type="radio" value="0" name="respuesta5" id="radio-15">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/respuesta3.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_5/respuesta3.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+          </fieldset>
+        </div>
+<hr>
+        <div class="widget">
+         <fieldset>
+          <legend> </legend>
+          <div class="audioejemplo">
+          
+          <!-- PREGUNTA   6 ------------------------------------------------------------------- -->
+          <p>6.-
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/pregunta6.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/pregunta6.mp3' %}" type="audio/mp3" id="sound">
+            </audio> 
+          </p>
+          </div>
+
+
+          <!-- RESPUESTAS DE LA PREGUNTA   6 ------------------------------------------------------ -->
+
+          <label for="radio-16"><b>A)</b> </label>
+          <input type="radio" value="0" name="respuesta6" id="radio-16">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/respuesta3.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/respuesta3.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+
+          <label for="radio-17"><b>B)</b> </label>
+          <input type="radio" value="0" name="respuesta6" id="radio-17">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/respuesta2.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/respuesta2.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          
+          <label for="radio-18"><b>C)</b> </label>
+          <input type="radio" value="16.67" name="respuesta6" id="radio-18">
+            <audio id="audio" src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/respuesta1.mp3' %}" preload="none" controls>
+              <source src="{% static 'media/EjercicioAuditivo/2.1/Pregunta_6/respuesta1.mp3' %}" type="audio/mp3" id="sound">
+            </audio>
+
+          <!-- BOTON DE EVALUACION ------------------------------------------------------ -->
+            <legend> ... </legend>
+            <input type="submit" value="Calificar">
+
+          </fieldset>
+      </div>
+    </div>
+  </form>
+          </article>
+
+          <nav aria-label="Page">
+              <ul class="pagination justify-content-center">
+                  <li class="page-item"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/1/V/1">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="/ejercicio/E2/1/A/1">2</a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/1/K/1">3</a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/1/K/2">4</a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/1/K/3">5</a></li>
+                  <li class="page-item"><a class="page-link" href="/ejercicio/E2/1/K/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+              </ul>
+          </nav>
+             
+        </section>
+
+        <aside class="col-md-2 hidden-xs hidden-sm">
+          <h4>Fuentes relacionadas</h4>
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Fuente 1</a>
+            <a href="#" class="list-group-item">Fuente 2</a>
+            <a href="#" class="list-group-item">Fuente 3</a>
+            <a href="#" class="list-group-item">Fuente 4</a>
+          </div>
+
+          <h4>Calendario</h4>
+          <div class="list-group-item" id="calendar">
+            <p id="calendar-day"></p>
+            <p id="calendar-date"></p>
+            <p id="calendar-month-year"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

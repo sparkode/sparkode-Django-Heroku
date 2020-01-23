@@ -1,0 +1,48 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.3 Diseño de algoritmos.</li>
+	{% endblock %}
+    
+	{% block contenido %}
+		<h2 class="post-title">
+			Algoritmo.
+		</h2>
+		<p class="post-contenido text-justify">					
+			El diseño del algoritmo es independiente del lenguaje de programación en el que se vaya a codificar posteriormente.
+			Una computadora no tiene capacidad para solucionar problemas más que cuando se le proporcionan los sucesivos pasos a realizar. Estos pasos sucesivos que indican las instrucciones a ejecutar por la máquina constituyen, como ya conocemos, el algoritmo.<br><br>
+
+			La información proporcionada al algoritmo constituye su entrada y la información producida por el algoritmo constituye su salida.
+			<br><br>
+			Los problemas complejos se pueden resolver más eficazmente con la computadora cuando se rompen en subproblemas que sean más fáciles de solucionar que el original. Es el método de divide y vencerás, consiste en dividir un problema complejo en otros más simples. 
+			<br><br>
+			Así, el problema de encontrar la superficie y la longitud de un círculo se puede dividir en tres problemas más simples o subproblemas (Figura 2.15).
+			<br><br>
+			<img src="/static/media/1.3.1.jpg" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+		</p>
+
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ1/3/N/1" class="btn btn-primary">Ejemplo</a>
+		</div>
+    {% endblock %}
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/i3BTFDaf9O0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+	
+	{% block paginacion %}
+	<div class="siguiente-btn">
+		<a href="/tema/1/2/3" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+	</div>
+	
+		<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item "><a class="page-link" href="/tema/1/3/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/3/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>                     
+	{% endblock %}
+

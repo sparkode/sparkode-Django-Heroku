@@ -1,0 +1,57 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.4: Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos. </li>						
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify">
+		<b>EXPRESIONES</b> <br>	
+		Las expresiones son combinaciones de constantes, variables, símbolos de operación, paréntesis y nombres de funciones especiales. Las mismas ideas son utilizadas en notación matemática tradicional; por ejemplo: <br>
+		a + (b + 3) + √c <br>
+		Cada expresión toma un valor que se determina tomando los valores de las variables y constantes implicadas y la ejecución de las operaciones indicadas. Una expresión consta de operandos y operadores. Según sea el tipo de objetos que manipulan, las expresiones se clasifican en:
+		<li>Aritméticas.</li>
+		<li>Relacionales.</li>
+		<li>Lógicas.</li>
+		<li>Carácter.</li> <br>
+
+		<b>Operadores de relación</b> <br>
+
+		Los operadores relacionales o de relación permiten realizar comparaciones de valores de tipo numérico o carácter. <br>
+		Los operadores de relación sirven para expresar las condiciones en los algoritmos. <br>
+		El formato general para las comparaciones es: expresión1 operador de relación expresión2 y el resultado de la operación será verdadero o falso. Así, por ejemplo, si A = 4 y B = 3, entonces A > B es verdadero <br>
+		<img src="{% static 'media/R.png' %}" class="center-block" alt="aqui "><br>
+		</p>
+		<p class="post-contenido text-justify">
+		
+			</p>
+	</article>
+
+	<div class="siguiente-btn">
+		<a href="/ejercicioEj/EJ2/4/N/2" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+	</div>
+{% endblock %}
+{% block video %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2ErzWQOUyMM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+{% block paginacion %}
+	<li class="page-item"><a class="page-link" href="/tema/2/4/3"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/2">2</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/3">3</a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/4/4">4</a></li>
+	<li class="page-item disabled"><a class="page-link" href="/tema/2/4/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+	<div class="siguiente-btn">
+		<a href="/tema/2/5/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+	</div>
+{% endblock %}

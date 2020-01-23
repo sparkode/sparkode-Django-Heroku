@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+<script src="{% static 'js/Chart.js' %}" --> type="text/javascript"> </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="{% static 'css/Resultados.css' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title style="color: rgb(61, 34, 209);">Resultados</title>
+  <link rel="icon" href="../static/media/icono48.ico" >
+</head>
+<body>
+<center>
+<h1>Resultados</h1>
+
+<canvas id="myChart2" style="height:400px; width: 400px;" ></canvas>
+<br>
+<script src="{% static 'js/Chart.js' %}"></script>
+<script>
+
+
+var ctx2 = document.getElementById('myChart2').getContext('2d');
+
+var chart = new Chart(ctx2, {
+    type: 'doughnut',
+    data:{     	
+          labels: ['Visual {{ dato.Visual }}%','Kinestesico {{ dato.Kinestesico }}%','Auditivo {{ dato.Auditivo }}%'],
+		      datasets: [
+            {		
+              label: 'Tipo de Aprendizaje',		      
+					    backgroundColor: ['#42a5f5', 'red', 'green','blue','red'],
+              data: [{{ dato.Visual }},{{ dato.Auditivo }}, {{ dato.Kinestesico }}],
+				    }
+        ],
+			},
+    options: { responsive: false, 
+              tooltips: {
+                enabled: false
+              },
+              legend:{
+                labels:{
+                fontSize : 20
+                }
+              }              
+    	}
+});
+
+function redireccionarPagina() {
+  window.location = '/principal/';
+}
+//setTimeout("redireccionarPagina()", 300000);
+
+</script>
+<form>
+
+<input class="boton_personalizado" type="button" value="Continuar" onClick="redireccionarPagina()" > 
+
+</form>
+</center>
+</body>
+</html>    

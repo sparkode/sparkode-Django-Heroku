@@ -1,0 +1,95 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 5. Modularidad. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 5.3: Implementación. </li>
+						
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		
+		<article class="post clearfix article">
+							
+							
+			<p class="post-contenido text-justify">
+					<h2 class="post-title">
+						Implementación. 
+					</h2>
+			Un programa grande que resuelva un problema complejo siempre ha de dividirse en módulos para ser más manejable. 
+			Aunque la división no garantiza un sistema bien organizado será preciso encontrar reglas que permitan conseguir 
+			esa buena organización. <br><br>
+
+			<h4 class="post-title">
+				<a>Usar nombres significativos para identificadores.</a>
+			</h4>
+
+			Los identificadores que representan los nombres de módulos, subprogramas, funciones, tipos, variables y otros elementos, deben ser elegidos apropiadamente para conseguir programas legibles.<br>
+			Deben utilizar letras mayúsculas y minúsculas. Cuando un identificador consta de dos o más palabras, cada palabra debe comenzar con una letra mayúscula. Una excepción son los tipos de datos definidos por el usuario, que suelen comenzar con una letra minúscula. <br><br>
+
+			Así identificadores idóneos son:<br>
+
+			<ul>
+				<li><i>SalarioMes</i></li>
+				<li><i>Nombre</i></li>
+				<li><i>MensajeUsuario</i></li>
+				<li><i>MensajesDatosMal</i></li>
+			</ul> <br>
+
+			Algunas reglas que se pueden seguir son:<br>
+
+			<ul>
+				<li>
+					Usar nombres para nombrar objetos de datos, tales como variables,
+					 constantes y tipos. Utilizar <i>Salario </i>mejor que <i>APagar</i> o <i>Pagar</i>
+				</li>
+				<li>
+					Utilizar verbos para nombrar procedimientos.<i> LeerCaracter, 
+					LeerSigCar, CalcularSigMov </i> son procedimientos que realizan estas acciones mejor que <i> SigCar </i> o <i> SigMov </i> (siguiente movimiento).
+				</li>
+				<li>
+					Utilizar formas del verbo “ser” o “estar” para funciones lógicas. <i> SonIguales, 
+					EsCero, EsListo </i> y <i> EsVacio </i> se utilizan como variables o funciones lógicas.
+				</li>
+			</ul> <br>
+
+			</p>
+		</article>		
+		<div class="ejercicio-btn">
+			<a href="/ejercicioEj/EJ5/3/N/1" class="btn btn-primary">Ejemplo</a>
+		</div>
+   	{% endblock %}
+
+
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/BQf13adNwpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+	
+	{% block paginacion %}
+	<div class="siguiente-btn">
+		<a href="/tema/5/2/2" class="btn btn-primary" style="margin-right: 40px;">Subtema Anterior</a>
+	</div>
+
+	<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/5/3/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/5/3/2">2</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/5/3/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+		
+	{% endblock %}
+
+
+
+
+
+

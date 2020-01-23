@@ -1,0 +1,79 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+			$( "#accordion" ).accordion({
+		collapsible: true
+			});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>		
+{% endblock %}
+
+{% block subtema %}
+    <li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tema 2.3: Estructura básica de un programa.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+							
+			<h2 class="post-title" align="center">
+				<a href="#">EJEMPLOS</a>
+
+			</h2>
+			<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+			<div id="accordion">
+			
+			<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.- ¿Cuáles son las partes de un bloque de programa?</p>
+
+		<div>
+
+		<p>
+		1. Entrada.<br><br>
+
+        2. Programa.<br><br>
+
+        2. Salida.<br><br>
+
+		</p>
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				2.- ¿Está formado por las instrucciones que modifican los objetos a partir de su estado inicial (datos de entrada) hasta el estado final (resultados)?
+			</p>
+			<div>
+			
+			
+			<p class="post-contenido text-left">
+
+		1. Proceso algoritmico.
+			</p>
+
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				3.- ¿Como son llamados los conjunto de instrucciones que toman los datos finales (resultados) de la memoria central y los envían a los dispositivos externos?
+			</p>
+			<div>
+				
+			
+			
+			<p class="post-contenido text-left">
+
+		1. Salida de resultados.
+			</p>
+
+		</div>
+		</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/2/3/2" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}

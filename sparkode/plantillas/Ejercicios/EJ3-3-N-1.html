@@ -1,0 +1,81 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+  
+{% block scrips %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<style>
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li {margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 2em; }
+html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+.ui-state-highlight {color: blue; height: 1.5em; line-height: 1.2em; }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+$( function() {
+  $( "#sortable" ).sortable({
+    placeholder: "ui-state-highlight"
+  });
+  $( "#sortable" ).disableSelection();
+} );
+</script>
+
+<script>
+    $( function() {
+        $( "#accordion" ).accordion({
+    collapsible: true
+        });
+    } );
+</script>
+{% endblock %}
+
+{% block tema %}
+    <h1 class="display-4">Tema 3. Control de flujo. </h1>
+{% endblock %}
+
+{% block subtema %}
+<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+<li class="breadcrumb-item active" aria-current="page">Tema 3.3: Estructuras iterativas: repetir mientras, hasta, desde. </li>
+{% endblock %}
+
+{% block contenido %}
+<article class="post clearfix article">
+    <p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+1.- Ordena las siguientes linea de código para hacer un ciclo while.</p>
+    <ul id="sortable">
+        <li class="ui-state-default">• }</li><br>     
+<li class="ui-state-default">• {</li><br>
+<li class="ui-state-default">• sentencia ;</li><br>
+<li class="ui-state-default">• while (expresión 2) </li><br>
+<li class="ui-state-default">• expresión 3;</li><br>
+
+
+</ul>
+  </article> 
+  
+  <div id="accordion">
+			
+    <p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+Respuesta...</p>
+
+<div>
+        <img src="{% static 'media/Respuesta6.png' %}" alt="">
+</div>
+<br><br><br>
+
+</div>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/3/3/1" class="btn btn-primary" style="margin-right: 400px;">Regresar al tema</a>
+	</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+{% block subtema %}
+			<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.2: Características del lenguaje de programación.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify">
+			<h2 class="post-title">
+				Características del lenguaje de programación.
+				</h2>
+			Un lenguaje de programación es un idioma artificial diseñado para expresar procesos que pueden ser llevadas a cabo por máquinas como las computadoras. Pueden usarse para crear programas que controlen el comportamiento físico y lógico de una máquina, para expresar algoritmos con precisión, o como modo de comunicación humana. Está formado por un conjunto de símbolos y reglas sintácticas y semánticas que definen su estructura y el significado de sus elementos y expresiones. Al proceso por el cual se escribe, se prueba, se depura, se compila y se mantiene el código fuente de un programa informático se le llama programación.
+		</p>
+	<p>También la palabra programación se define como el proceso de creación de un programa de computadora, mediante la aplicación de procedimientos lógicos, a través de los siguientes pasos:
+		<ul>
+			<li>El desarrollo lógico del programa para resolver un problema en particular.</li>
+			<li>Escritura de la lógica del programa empleando un lenguaje de programación específico (codificación del programa).</li>
+			<li>Ensamblaje o compilación del programa hasta convertirlo en lenguaje de máquina.</li>
+			<li>Prueba y depuración del programa.</li>
+			<li>Desarrollo de la documentación.</li>
+			<li>Existe un error común que trata por sinónimos los términos 'lenguaje de programación' y 'lenguaje informático'. Los lenguajes informáticos engloban a los lenguajes de programación y a otros más.</li>
+		</ul>
+	</p>
+
+		<p>Un estándar de lenguaje de programas es un grupo de reglas que describen como deben escribirse las sentencias y comandos de programación. La regla de que los nombres variables tienen que comenzar con una letra es un ejemplo de un estándar. Una variable es un elemento que puede tomar diferentes valores.</p>
+
+		<p>Los lenguajes de programación tienen una estructura compleja que se compone de varias partes: sintáxis, semántica, elementos del lenguaje, nivel de abstracción, paradigma, estructuras de control para ordenar la ejecución de los programas, tipos de datos (números, letras, etc.), y funciones o procedimientos (unidades) que contienen un conjunto de instrucciones, entre otras.</p>
+
+		<p>No hay un único tipo de lenguajes, sino que se clasifican según las características que posean y según el paradigma y conceptos que soporten.</p>
+
+	</article>
+
+	<div class="ejercicios-btn">
+		<a href="/ejercicioEj/EJ2/2/N/1" class="btn btn-primary">Ejemplo</a>
+	</div>
+{% endblock %}
+
+{% block video %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OcJFz59o4h8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+	{% block paginacion %}
+	<div class="siguiente-btn">
+		<a href="/tema/2/1/4" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+	</div>
+	
+		<nav aria-label="Page">
+			<ul class="pagination justify-content-center">
+				<li class="page-item disabled"><a class="page-link" href="/tema/2/2/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+				<li class="page-item active"><a class="page-link" href="/tema/2/2/1">1</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/2/2">2</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/2/3">3</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/2/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+	{% endblock %}

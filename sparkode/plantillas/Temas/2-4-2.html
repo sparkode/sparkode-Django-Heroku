@@ -1,0 +1,59 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.4: Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos. </li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify">
+			<b>Datos lógicos (booleanos).</b>
+			El tipo lógico —también denominado booleano— es aquel dato que sólo puede tomar uno de dos va lores: cierto o verdadero (true) y falso (false).<br>
+			<b>Datos tipo carácter y tipo cadena</b><br>
+			El tipo carácter es el conjunto finito y ordenado de caracteres que la computadora reconoce. Un dato tipo carácter contiene un solo carácter. Los caracteres que reconocen las diferentes 
+			computadoras no son estándar; sin embargo, la mayoría reconoce los siguientes caracteres alfabéticos y numéricos:
+			<li>Caracteres alfabéticos (A, B, C, ..., Z) (a, b, c, ..., z)</li>
+			<li>Caracteres numéricos (1, 2, ..., 9, 0)</li>
+			<li>Caracteres especiales (+, -, *, /, ^, ., ;, <, >, $, ...)</li><br>
+			Una cadena (string) de caracteres es una sucesión de caracteres que se encuentran delimitados por una comilla (apóstrofo) o dobles comillas, 
+			según el tipo de lenguaje de programación.
+			<li>'Hola Mortimer'</li>
+			<li>'12 de octubre de 1492'</li>
+			<li>'Sr. McKoy</li>
+		</p>
+		<p class="post-contenido text-justify">
+		<b>CONSTANTES Y VARIABLES.</b><br>
+		Los programas de computadora contienen ciertos valores que no deben cambiar durante la ejecución del programa tales valores se llaman constantes. <br>
+		Sólo existen dos constantes lógicas o boolean: verdadero y falso. <br>
+		La mayoría de los lenguajes de programación permiten diferentes tipos de constantes: enteras, reales, caracteres y boolean o lógicas, y representan datos de esos tipos. <br>
+		Una variable es un objeto o tipo de datos cuyo valor puede cambiar durante el desarrollo del algoritmo o ejecución del programa. Dependiendo del lenguaje,
+		 hay diferentes tipos de variables, tales como enteras, reales, carácter, lógicas y de cadena. <br>
+
+		Una variable se identifica por los siguientes atributos: nombre que lo asigna y tipo que describe el uso de la variable. <br> 
+		Los nombres de las variables, a veces conocidos como identificadores, suelen constar de varios caracteres alfanuméricos, de los cuales el primero normalmente es una letra. <br>
+
+		Los nombres de las variables elegidas para el algoritmo o el programa deben ser significativos y tener relación con el objeto que representan, como pueden ser los casos siguientes:<br>
+		<li>NOMBRE para representar nombres de personas</li>
+		<li>PRECIOS para representar los precios de diferentes artículos</li>
+		<li>NOTAS para representar las notas de una clase</li>
+			</p>
+	</article>
+{% endblock %}
+
+
+{% block paginacion %}
+	<li class="page-item"><a class="page-link" href="/tema/2/4/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/1">1</a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/4/2">2</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/3">3</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/4">4</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+{% endblock %}

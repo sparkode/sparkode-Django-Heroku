@@ -1,0 +1,87 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 4. Organización de datos. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.4: Estructuras o registros.</li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		
+			<article class="post clearfix article">
+				<!-- <a href="#" class="thumb pull-left">
+					<img src="" alt="">
+				</a>  -->
+				
+				<p class="post-contenido text-justify">
+					<h2 class="post-title">
+						Estructuras o registros.
+					</h2>
+					Una estructura es un conjunto de datos que no son necesariamente del mismo tipo. 
+					No hay limitaciones en el tipo ni cantidad de variables que pueda contener una estructura, 
+					la única limitación es que una estructura no puede contenerse a sí misma como miembro. <br>
+
+					Una estructura se declara con la palabra reservada struct y se declara utilizando los mismos pasos necesarios 
+					para utilizar cualquier variable. Primero, se debe declarar el registro y a continuación se asignan 
+					valores a los miembros o elementos individuales del registro o estructura. <br>
+
+			<img src="{% static 'media/4-4-1.png' %}" width="500" height="170" class="d-inline-block align-top" alt=""><br>
+
+
+					<h4 class="post-title">
+					<a href="#">Estructuras de datos homogéneas y heterogéneas</a>
+					</h4>
+					Los registros (estructuras) y los arrays son tipos de datos estructurados. 
+					La diferencia entre estos dos tipos de estructuras de datos son los tipos de elementos que ellos contienen. <br>
+
+					
+					<ul>
+					<li> Un array es una estructura de datos homogénea, que significa que cada uno de sus componentes deben ser del mismo tipo.</li>
+					<li> Un registro es una estructura de datos heterogénea, que significa que cada uno de sus componentes pueden ser de tipos de datos diferentes</li>
+					<li> <i>Borrar</i> elementos</li>
+					</ul>
+
+					Por consiguiente, un array de registros es una estructura de datos cuyos elementos son de los mismos tipos heterogéneos.
+					
+			</article>
+			<div class="siguiente-btn">
+				<a href="/ejercicioEj/EJ4/4/N/1" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+			<div>
+   	{% endblock %}
+
+
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/U7raAvSTRjM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+	{% endblock %}
+
+	
+	{% block paginacion %}
+	<!--
+		<a class="page-link" href="/ejercicio/E4" style="margin-right:40px ;"><i class="fa fa-arrow-right" aria-hidden="false"></i> Ejercicios</a>
+		-->	
+		<div class="siguiente-btn">
+			<a href='/tema/4/3/1' class="btn btn-primary" style="margin-right:40px ;">Subtema Anterior</a>
+		</div>
+		
+		<div class="siguiente-btn">
+			<a href='/ejercicio/E4' class="btn btn-primary" style="margin-right:40px ;">Ejercicios</a>
+		</div>
+
+		<div class="siguiente-btn">
+			<a href='/../' class="btn btn-primary">Finalizar</a>
+		</div>
+		
+	{% endblock %}
+
+
+

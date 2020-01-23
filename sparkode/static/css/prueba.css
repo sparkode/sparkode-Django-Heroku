@@ -1,0 +1,90 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body
+{
+	background: #E6E6E6;
+	font-family: 'Raleway', sans-serif;
+}
+
+.menu
+{
+	width: 85%;
+	max-width: 1000px;
+	margin:auto;
+	background: #AFF625;
+	display:block;
+	padding: 15px;
+	color:#2CD5D3;
+	font-size: 20px;
+}
+
+	.menu i
+	{
+		margin-right: 20px;
+		text-decoration: none;
+	}
+	.menu a
+	{
+		text-decoration: none;
+	}
+
+	.menu:hover
+	{
+		background: #73F2AF;
+	}
+
+.contenido1
+{
+	width: 100%;
+	max-width: 1000px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background: rgb(204, 204, 255);
+	border-radius: 20px;
+}
+
+.menud
+{
+	width: 35%;
+	height: 100%;
+	margin: 0;
+	left: -100%;
+	position: fixed;
+	background: #024959;
+}
+
+	.menud ul
+	{
+		overflow: hidden;
+		list-style: none;
+	}
+	.menud ul li
+	{
+		display: block;
+		float: none;
+		border-bottom: 1px solid rgba(255,255,255,.3);
+	}
+	.menud ul li a
+	{
+		color: #fff;
+		padding: 20px;
+		display: block;
+		text-decoration: none;
+		font-size: 20px;
+	}
+	.menud ul li a:hover
+	{
+		background: #037E8C;
+	}
+	.menud ul li a i
+	{
+		margin-right: 10px;
+	}	

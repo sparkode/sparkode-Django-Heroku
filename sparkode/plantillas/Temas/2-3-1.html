@@ -1,0 +1,72 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.3: Estructura básica de un programa.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify">
+			<h2 class="post-title">
+				Estructura básica de un programa.
+				</h2>
+				<b>INTRODUCCIÓN</b><br>
+				Un programa puede considerarse como una secuencia lógica de acciones
+				(instrucciones) que manipulan un conjunto de objetos (datos) para obtener unos
+				resultados que serán la solución al problema que resuelve dicho programa. <br>
+				Todo programa, en general, contiene dos bloques bien diferenciados para la
+				descripción de los dos aspectos anteriormente citados:<br>
+				<li>Bloque de declaraciones. En él se especifican todos los objetos que utiliza
+				el programa (constantes. variables. tablas. registros, archivos, etc.)
+				indicando sus características. Este bloque se encuentra localizado siempre
+				por delante del comienzo de las acciones.</li>
+				<li>Bloque de instrucciones. Constituido por el conjunto de operaciones que se
+				han de realizar para la obtención de los resultados deseados.</li>
+		</p>
+
+			<p class="post-contenido text-justify">
+				Las partes principales de un programa están relacionadas con sus dos bloques ya
+				mencionados. Dentro del bloque de instrucciones podemos diferenciar tres partes
+				fundamentales. <br>
+
+				<img src="{% static 'media/2.3.1.jpg' %}" class="center-block" alt=""><br>
+			</p>
+			
+	</article>
+
+	<div class="ejercicios-btn">
+		<a href="/ejercicioEj/EJ2/3/N/1" class="btn btn-primary">Ejemplo</a>
+	</div>
+{% endblock %}
+{% block video %}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/HSoDtSAtXks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+
+{% block paginacion %}
+	
+<div class="siguiente-btn">
+	<a href="/tema/2/2/3" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+</div>
+
+	<nav aria-label="Page">
+		<ul class="pagination justify-content-center">
+			<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+			<li class="page-item active"><a class="page-link" href="/tema/2/3/1">1</a></li>
+			<li class="page-item"><a class="page-link" href="/tema/2/3/2">2</a></li>
+
+			<li class="page-item"><a class="page-link" href="/tema/2/3/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+		</ul>
+	</nav>
+{% endblock %}
+
+
+
+

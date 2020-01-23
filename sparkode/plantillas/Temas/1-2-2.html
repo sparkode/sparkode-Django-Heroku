@@ -1,0 +1,53 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico </h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.2: Representación de algoritmos: gráfica y pseudocódigo.</li>
+    {% endblock %}
+    
+	{% block contenido %}
+<p class="post-contenido text-justify"><br>
+El pseudocódigo original utiliza, para representar las acciones sucesivas, palabras reservadas en inglés (similares a sus homónimas en los lenguajes de programación) tales como start, end, stop, if-then-else, while-end, repeat-until, etc. <br><br>
+
+Una representación en pseudocódigo de un problema de cálculo del salario neto de un trabajador es la siguiente:<br><br>
+
+start<br>
+//cálculo de impuesto y salarios<br>
+read nombre, horas, precio<br>
+salario ← horas * precio<br>
+tasas ← 0,25 * salario<br>
+salario_neto ← salario – tasas<br>
+write nombre, salario, tasas, salario<br>
+end<br><br>
+
+
+El algoritmo comienza con la palabra <b>start</b> y finaliza con la palabra <b>end</b>, en inglés (en español, inicio, fin). Entre estas palabras, sólo se escribe una instrucción o acción por línea. La línea precedida por // se denomina <b>comentario</b>. Es una información al lector del programa y no realiza ninguna instrucción ejecutable, sólo tiene efecto de documentación interna del programa. Algunos autores suelen utilizar corchetes o llaves.<br><br>
+
+Por fortuna, aunque el pseudocódigo nació como un sustituto del lenguaje de programación y, por consiguiente, sus palabras reservadas se conservaron o fueron muy similares a las del idioma inglés, el uso del pseudocódigo se ha extendido en la comunidad hispana con términos en español como inicio, fin, parada, leer, escribir, si-entonces- si_no, mientras, fin_mientras, repetir, hasta_que, etc. 
+Sin duda, el uso de la terminología del pseudocódigo en español ha facilitado y facilitará considerablemente el aprendizaje y uso diario de la programación.<br>
+Así pues, en los pseudocódigos citados anteriormente deberían ser sustituidas las palabras start, end, read, write, por inicio, fin, leer, escribir, respectivamente.<br>
+
+	</p>
+    {% endblock %}
+
+	{% block video %}
+		<!-- Es un ejemplo, no un ejercicio -->
+			<div class="ejercicios-btn">
+				<a href="/ejercicioEj/EJ1/2/N/2" class="btn btn-primary">Ejemplo</a>
+			</div>
+	{% endblock %}
+	
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/1/2/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/2/1">1</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/1/2/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/2/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/2/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>                            
+	{% endblock %}
+
+
+		

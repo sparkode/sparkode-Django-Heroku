@@ -1,0 +1,96 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 3. Control de flujo. </h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.3: Estructuras iterativas: repetir mientras, hasta, desde.  </li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Atento!</strong> Utiliza letras minusculas, utilizando la estructura iterativa 'desde' y en español
+    </div>
+  
+    <script>
+      window.onload = function()
+    {
+      A = document.getElementById('Padre').innerHTML;
+
+    }
+      </script>
+    
+    <p>Completa las palabras faltante.(calcular la suma de los N primeros enteros. )</p>
+    <br>
+    <div id="puzzle" class="container-fluid puzzle">
+      <div class="row">
+        <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="desde">
+          <samp>
+            desde
+          </samp>
+      </div>
+  
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="hasta">
+        <samp>
+          hasta
+        </samp>
+    </div>
+  
+    <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="hacer">
+      <samp>
+        hacer
+      </samp>
+  </div>
+
+  
+  <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)" draggable="true" id="fin_desde">
+    <samp>
+      fin_desde
+    </samp>
+</div>
+
+      </div>
+      <br>
+    <div class="container" id="Padre">
+    <div class="row">
+    <div class="col-1"><input type="text" id="res1" class="form-control form-control-sm"> </div>
+    <div class="col-1">    i ← 1   </div>
+    <div class="col-1"><input type="text" id="res2" class="form-control form-control-sm"></div>
+    <div class="col-1">   N   </div>
+    <div class="col-1"><input type="text" id="res3" class="form-control form-control-sm"></div>
+
+
+    </div>
+    <div class="row"> &lt &nbsp acciones &gt</div>
+    <div class="col-2"><input type="text" id="res4" class="form-control form-control-sm">  </div>
+
+    </div>
+    
+    
+    </div>
+      </div>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	<br>
+	<!--<script type="text/javascript" src="../static/jsK/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../static/jsK/bootstrap.min.js"></script> -->
+
+  <form id="form1" name="form1" method="post" action="/evaluarK/E3/3/K/3" class="formulario" >{% csrf_token %} 
+    <input type="text"  name="calificacion" id="calificacion" hidden= "true">
+  <input type="submit" class="btn btn-primary"  value="Evaluar">
+  <button class="btn btn-primary" type="submit" onclick="valid3k1();">Validar</button>
+
+  <input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="resetA();"> 
+
+  </form>
+	{% endblock %}
+
+
+
+
+

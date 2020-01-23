@@ -1,0 +1,75 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+			$( "#accordion" ).accordion({
+		collapsible: true
+			});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>		
+{% endblock %}
+
+{% block subtema %}
+    <li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tema 2.4: Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos. </li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+							
+			<h2 class="post-title" align="center">
+				<a href="#">EJEMPLOS</a>
+
+			</h2>
+			<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+			<div id="accordion">
+			
+			<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.- ¿Cuál es el objetivo que tiene toda computadora?
+
+		<div>
+
+		<p>
+		1. El manejo de la información o datos.
+
+		</p>
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				2.-  Son números completos, no tienen componentes fraccionarios o decimales y pueden ser negativos o positivos:
+			</p>
+			<div>
+			
+			
+			<p class="post-contenido text-left">
+
+		1. Los enteros.
+			</p>
+
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				3.- Estos siempre tienen un punto decimal y pueden ser positivos o negativos:
+			</p>
+			<div>
+				
+			
+			
+			<p class="post-contenido text-left">
+
+		1. Los números reales.
+			</p>
+
+		</div>
+		</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/2/4/1" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}

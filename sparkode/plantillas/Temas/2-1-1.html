@@ -1,0 +1,66 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 2. Introducción a la programación. </h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 2.1: Conceptos básicos</li>
+    {% endblock %}
+    
+	{% block contenido %}
+		<article class="post clearfix"> 
+
+
+				<p class="post-contenido text-justify">
+					<h2 class="post-title">
+						Conceptos básicos. 
+						</h2>
+					En programación se debe separar la diferencia entre el diseño del algoritmo y su implementación en un lenguaje específico. Por ello, se debe distinguir claramente entre los conceptos de programación y el medio en que ellos se implementan en un lenguaje específico.
+				</p>
+
+				<p class="post-contenido text-justify">
+					Los lenguajes de programación —como los restantes lenguajes— tienen elementos básicos que se utilizan como bloques constructivos, así como reglas para las que esos elementos se combinan.  Solamente las instrucciones sintácticamente correctas pueden ser interpretadas por la computadora y los programas que contengan errores de sintaxis son rechazados por la máquina. Los elementos básicos constitutivos de un programa o algoritmo son:
+					<br>• Palabras reservadas (inicio, fin, si-entonces..., etc.).
+					<br>• Identificadores (nombres de variables esencialmente, procedimientos, funciones, nombre del programa, etc.).
+					<br>• Caracteres especiales (coma, apóstrofo, etc.).
+					<br>• Constantes.
+					<br>• Variables.
+					<br>• Expresiones.
+					<br>• Instrucciones.
+				</p>
+				<p class="post-contenido text-justify">
+				Además de estos elementos básicos, existen otros elementos que forman parte de los programas, cuya comprensión y funcionamiento será vital para el correcto diseño de un algoritmo y naturalmente la codificación del programa.
+				<br>Estos elementos son:
+				<br>• Bucles.
+				<br>• Contadores.
+				<br>• Acumuladores.
+				<br>• Interruptores.
+				<br>• Estructuras: secuenciales, selectivas, repetitivas.
+				<br>El amplio conocimiento de todos los elementos de programación y el modo de su integración en los programas constituyen las técnicas de programación que todo buen programador debe conocer.
+				</p>
+		</article>
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ2/1/N/1" class="btn btn-primary">Ejemplo</a>
+		</div>
+
+    {% endblock %}
+
+	{% block video %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fY_0reSuEuU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% endblock %}
+	
+	{% block paginacion %}
+	<div class="siguiente-btn">
+		<a href="/tema/1/1/1" class="btn btn-primary" style="margin-left: 20px;">Tema Anterior</a>
+	</div>	
+	
+				<li class="page-item disabled"><a class="page-link" href="/tema/2/1/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+				<li class="page-item active"><a class="page-link" href="/tema/2/1/1">1</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/2">2</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/3">3</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/4">4</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+	{% endblock %}

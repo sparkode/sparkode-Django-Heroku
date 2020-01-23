@@ -1,0 +1,77 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+			$( "#accordion" ).accordion({
+		collapsible: true
+			});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 1. Diseño algorítmico. </h1>			
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 1.1: Conceptos básicos</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+							
+			<h2 class="post-title" align="center">
+				<a href="#">EJEMPLOS</a>
+
+			</h2>
+			<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+			<div id="accordion">
+			
+			<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.- ¿Cuáles son los componentes principales de una computadora?.</p>
+
+		<div>
+
+		<p>
+		1.  Hardware<br><br>
+
+		2.  Software.
+
+		</p>
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				2.- ¿Cuáles son las operaciones que debe realizar el hardware?
+			</p>
+			<div>
+			
+			
+			<p class="post-contenido text-left">
+
+		1.  Son especificadas por una lista de instrucciones, llamadas programas, o software.
+			</p>
+
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				3.- Es un conjunto de instrucciones de programa detalladas que controlan y coordinan los componentes hardware de una computadora y controlan las operaciones de un sistema informático:
+			</p>
+			<div>
+				
+			
+			
+			<p class="post-contenido text-left">
+
+		1.  El software de una computadora.
+			</p>
+
+		</div>
+		</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/1/1/1" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}

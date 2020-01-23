@@ -1,0 +1,102 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+			$( "#accordion" ).accordion({
+		collapsible: true
+			});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 1. Diseño algorítmico. </h1>			
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 1.2: Representación de algoritmos: gráfica y pseudocódigo.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+							
+			<h2 class="post-title" align="center">
+				<a href="#">EJEMPLOS</a>
+
+			</h2>
+			<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+			<div id="accordion">
+			
+			<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.- Escribir un Pseudocódigo de un programa que permita leer la edad y peso de una persona y posteriormente imprimirla.</p>
+
+		<div>
+
+		<p>
+		1. Inicio<br><br>
+
+		2. Variables edad, peso.<br><br>
+
+		3. Imprimir "Escribir los datos (Edad, Peso):"<br><br>
+
+		4. Leer Edad, Leer Peso.<br><br>
+
+		5. Visualizar "Tu peso es: ", peso, " y tu edad es: ", edad.<br><br>
+
+		6. Fin.<br><br>
+		</p>
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				2.- Escribir un Pseudocódigo que calcule el área de un triángulo recibiendo como entrada el valor de base y altura.
+			</p>
+			<div>
+			
+			
+			<p class="post-contenido text-left">
+
+		1. Inicio<br><br>
+		2. Variables Altura, Base, Area.<br><br>
+
+		3. Imprimir "Introduce la base y la altura: "<br><br>
+		4. Leer base y altura.<br><br>
+
+		5. Area= (base*altura)/2.<br><br>
+
+		6. Imprimir "El area es: ", Area<br><br>
+
+		7. Fin.<br><br>
+			</p>
+
+		</div>
+			<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+				3.- Escribir Pseudocódigo que calcule el área de un círculo.
+			</p>
+			<div>
+				
+			
+			
+			<p class="post-contenido text-left">
+
+		1. Inicio<br><br>
+		2. Constantes Pi= 3.1416<br><br>
+		3. Variables Radio, area = real<br><br>
+		4. Imprime "Introduce el radio: "<br><br>
+		5. Leer radio.<br><br>
+		6. area= radio*radio*Pi<br><br>
+		7. Imprimir "El área del circulo es: ", area.<br><br>
+		8. Fin.<br><br>
+			</p>
+
+		</div>
+		</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/1/2/2" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+

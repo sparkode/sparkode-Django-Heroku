@@ -1,0 +1,237 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.2: Representación de algoritmos: gráfica y pseudocódigo</li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Atento!</strong> 
+    </div>
+    <p>1.-Ordena la siguiente tabla:</p>
+    <p id="NumeroPiezas" hidden="true">5</p>
+    
+    <script>
+      window.onload = function()
+    {
+      A = document.getElementById('Padre').innerHTML;
+       B = document.getElementById('ConterF').innerHTML;
+    }
+      </script>
+
+    <h3>Nombres</h3>
+    <div class="col" id="ConterF" style="background-color: rgba(0, 0, 0, 0); border-style: none;">
+    <div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      
+      <div class="col-md-2 img"ondragstart="start(event)" ondragend="end(event)">
+        <samp id="pieza1"  draggable="true" ondragstart="start(event)" ondragend="end(event)">
+          Inicio/Final  
+        </samp>
+      </div>
+      
+      <div class="col-md-2 img"ondragstart="start(event)" ondragend="end(event)">
+        <samp id="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+          Linea de flujo
+        </samp>
+      </div>
+    
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)">
+         <samp id="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+           Entrada/Salida
+       </samp>
+     </div>
+      
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)">
+       <samp id="pieza4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+         Proceso
+      </samp>
+    </div>
+      
+      <div class="col-md-2 img">
+       <samp id="pieza5" draggable="true" ondragstart="start(event)" ondragend="end(event)"> 
+         Decisión
+      </samp>
+     </div>
+      
+      <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+    
+    </div>
+    <!---->
+    <h3>Funciones</h3>
+    
+    <div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        <div class="col-md-2 img"ondragstart="start(event)" ondragend="end(event)">
+          <samp class="data"  id="piez1"  draggable="true" ondragstart="start(event)" ondragend="end(event)">
+          Representa el inicio y el final de un proceso.
+        </samp>
+      </div>
+    
+      <div class="col-md-2 img"ondragstart="start(event)" ondragend="end(event)">
+          <samp id="piez2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            Indica el orden de ejecución de las operaciones. La flecha indica la siguiente función.
+          </samp>
+      </div>
+     
+      <div class="col-md-2 img"ondragstart="start(event)" ondragend="end(event)">
+           <samp id="piez3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+             Representa la lectura de datos en la entrada y la impresión de datos en la salida
+         </samp>
+     </div>
+    
+      <div class="col-md-2 img"ondragstart="start(event)" ondragend="end(event)">
+          <samp id="piez5" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+           Nos permite analizar la situación, con base a los valores de verdadero o falso.
+         </samp>
+      </div>
+    
+      <div class="col-md-2 img"ondragstart="start(event)" ondragend="end(event)">
+        <samp id="piez4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+          Definición de variables
+        </samp>
+      </div>
+    
+      <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+    </div>
+    <!---->
+    
+    
+    <h3>Simbolos</h3>
+    <div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)">
+        <img src="../static/imagenesK/diagrama/pieza1.jpg" class="rounded mx-auto d-block" alt="image"  id="pie1"  draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      </div>
+      
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)">
+        <img src="../static/imagenesK/diagrama/pieza2.jpg" class="rounded mx-auto d-block" alt="image" id="pie2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      </div>
+      
+         <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)">
+           <img src="../static/imagenesK/diagrama/pieza3.jpg" class="rounded mx-auto d-block" alt="image" id="pie3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+         </div>
+    
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)">
+        <img src="../static/imagenesK/diagrama/pieza4.jpg" class="rounded mx-auto d-block" alt="image" id="pie4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      </div>
+    
+      <div class="col-md-2 img" ondragstart="start(event)" ondragend="end(event)">
+        <img src="../static/imagenesK/diagrama/pieza5.jpg" class="rounded mx-auto d-block" alt="image" id="pie5" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+      </div>
+      <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+    </div>
+  </div>
+
+    <p>En el espacio de abajo tendrá que acomodar, arrastrando y soltando.</p>
+    
+    <div id="Padre" class="container-fluid puzzle">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          Simbolo
+        </div>
+        <div class="col">
+          Nombre
+        </div>
+            <div class="col">
+          Funcion
+        </div>
+      </div>
+    
+      <div class="row box">
+    
+    
+        <div class="col drop" id="cajaImagen"  style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+        <div class="col name" id="cajaNombre" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+        <div class="col funcion" id="cajaFuncion" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+         
+        </div>
+      </div>
+    
+        <div class="row box">
+        <div class="col drop" id="cajaImagen1" style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+           
+        </div>
+        <div class="col name" id="cajaNombre1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+    
+        <div class="col funcion" id="cajaFuncion1" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+         
+        </div>
+      
+      </div>
+    
+        <div class="row box">
+        <div class="col drop" id="cajaImagen2" style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+          
+        </div>
+        <div class="col name" id="cajaNombre2" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        </div>
+    
+        <div class="col funcion" id="cajaFuncion2"2 ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+         
+        </div>
+      </div>
+    
+      <div class="row box">
+        <div class="col drop" id="cajaImagen3" style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+      
+        </div>
+        <div class="col name" id="cajaNombre3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+         
+        </div>
+        <div class="col funcion" id="cajaFuncion3" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        
+        </div>
+      </div>
+    
+      <div class="row box">
+        <div class="col drop" id="cajaImagen4" style="width: 380px;height:98px " ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+     
+        </div>
+        <div class="col name" id="cajaNombre4" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+        
+        </div>
+        <div class="col funcion" id="cajaFuncion4" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+         
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    </div>
+    </div>
+    
+    
+    </div>
+      </div>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+
+  <form id="form1" name="form1" method="post" action="/evaluarK/E1/1/K/3" class="formulario" >{% csrf_token %} 
+    <br>
+
+    <input type="text"  name="calificacion" id="calificacion" hidden= "true">
+  <input type="submit" class="btn btn-primary"  value="Evaluar">
+  <button class="btn btn-primary" type="submit" onclick="validation();">Validar</button>
+
+  <input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="reset2();"> 
+  
+  </form>
+	{% endblock %}
+
+
+
+
+

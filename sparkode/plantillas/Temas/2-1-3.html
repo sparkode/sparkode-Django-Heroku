@@ -1,0 +1,92 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+	<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.1: Conceptos Básicos</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+
+
+		<p class="post-contenido text-justify">
+		Cada lenguaje de programación tiene un conjunto o “juego” de instrucciones
+		(acciones u operaciones que debe realizar la máquina) que la computadora podrá
+		entender directamente en su código máquina o bien se traducirán a dicho código
+		máquina. Las instrucciones básicas y comunes en casi todos los lenguajes de
+		programación son:
+
+		<br>• Instrucciones de entrada/salida: instrucciones de transferencia de información
+			entre dispositivos periféricos y la memoria central, tales como "leer de..." o bien "escribir en.…".
+		<br>• Instrucciones de cálculo: instrucciones para que la computadora pueda realizar
+			operaciones aritméticas.
+		<br>• Instrucciones de control: instrucciones que modifican la secuencia de la
+		ejecución del programa. Además de estas instrucciones y dependiendo del
+		procesador y del lenguaje de programación existirán otras que conformarán el
+		conjunto de instrucciones y junto con las reglas de sintaxis permitirán escribir los
+		programas de las computadoras. Los principales tipos de lenguajes de
+		programación son:
+		<br>• Lenguajes máquina.
+		<br>• Lenguajes de bajo nivel (ensambladores).
+		<br>• Lenguajes de alto nivel.
+		</p>
+
+		<p class="post-contenido text-justify">
+		<b>Traductores de lenguaje.</b><br>
+		Los traductores de lenguaje son programas que
+		traducen a su vez los programas fuente escritos en lenguajes de alto nivel a
+		código máquina. Los traductores se dividen en compiladores e intérpretes.
+		<br><b>Intérpretes.</b><br> 
+		Un intérprete es un traductor que toma un programa fuente, lo traduce
+		y, a continuación, lo ejecuta. Los programas intérpretes clásicos como BASIC,
+		prácticamente ya no se utilizan, más que en circunstancias especiales. Sin
+		embargo, está muy extendida la versión interpretada del lenguaje Smalltalk, un
+		lenguaje orientado a objetos puro.
+		<br>
+		<center>
+			<img src="{% static 'media/interprete.png' %}" class="d-inline-block align-top" alt="">
+		</center>
+		</p>
+		<p class="post-contenido text-justify">
+		<b>Compiladores. </b><br> 
+		Un compilador es un programa que traduce los programas fuente
+		escritos en lenguaje de alto nivel a lenguaje máquina.
+		<br>El programa compilado y depurado (eliminados los errores del código fuente) se
+		denomina programa ejecutable porque ya se puede ejecutar directamente y
+		cuantas veces se desee; sólo deberá volver a compilarse de nuevo en el caso de
+		que se modifique alguna instrucción del programa. Los traductores de
+		lenguajes típicos más utilizados son: C, C++, Java, C#, Pascal, FORTRAN y
+		COBOL.
+		<br><b>La compilación y sus fases. </b><br>La compilación es el proceso de traducción de programas fuente a programas objeto. El programa objeto obtenido de la
+		compilación ha sido traducido normalmente a código máquina. Para conseguir el
+		programa máquina real se debe utilizar un programa llamado montador o enlazador (linker). El proceso de montaje conduce a un programa en lenguaje
+		máquina directamente ejecutable.
+
+		</p>
+	</article>
+
+	<div class="ejercicios-btn">
+		<a href="/ejercicioEj/EJ2/1/N/3" class="btn btn-primary">Ejemplo</a>
+	</div>
+{% endblock %}
+	
+	
+{% block paginacion %}
+	<nav aria-label="Page">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="/tema/2/1/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/1">1</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/2">2</a></li>
+				<li class="page-item active"><a class="page-link" href="/tema/2/1/3">3</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/4">4</a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/1/4"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+			</ul>
+	</nav>                            
+{% endblock %}

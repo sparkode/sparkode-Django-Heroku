@@ -1,0 +1,81 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 3. Control de flujo. </h1>
+    	{% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.3: Estructuras iterativas: repetir mientras, hasta, desde. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix">
+							
+			<p class="post-contenido text-justify">
+				<h4 class="post-title">
+					<a>Estructuras iterativas: repetir mientras, hasta, desde.</a>
+				</h4>
+
+			Las estructuras que repiten una secuencia de instrucciones un número determinado de veces se denominan bucles y 
+			se denomina iteración al hecho de repetir la ejecución de una secuencia de acciones. <br>
+
+	<img src="{% static 'media/3.3.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br><br>
+
+			<h4 class="post-title">
+				<a>Estructura mientras ("while"). </a>
+			</h4>
+										
+			La estructura repetitiva mientras es aquella en que el cuerpo del bucle se repite mientras se cumple una determinada condición. Cuando se ejecuta la instrucción mientras, la primera cosa que sucede es que se evalúa la condición (una expresión booleana). Si se evalúa falsa, no se toma ninguna acción y el programa prosigue en la siguiente instrucción del bucle. <br> 
+			Si la expresión booleana es verdadera, entonces se ejecuta el cuerpo del bucle, después de lo cual se evalúa de nuevo la expresión booleana. Este proceso se repite una y otra vez mientras la expresión booleana (condición) sea verdadera.<br><br>
+
+			
+	<img src="{% static 'media/3.3.1.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br><br>
+
+
+			<h4 class="post-title">
+				<a>Estructura hacer-mientras ("do-while"). </a>
+			</h4>
+			El bucle <b>mientras</b> al igual que el bucle <b>desde</b> evalúa la expresión al comienzo del bucle de repetición; siempre se utilizan para crear bucle pre-test. Los bucles pre-test se denominan también bucles controlados por la entrada. <br><br>
+			En numerosas ocasiones se necesita que el conjunto de sentencias que componen el cuerpo del bucle se ejecuten al menos una vez sea cual sea el valor de la expresión o condición de evaluación. Estos bucles se denominan bucles post-test o bucles controlados por la salida. Un caso típico es el bucle <b><i>hacer-mientras</i></b> (do-while) existente en lenguajes como C/C++, Java o C#. <br>
+
+			El bucle hacer-mientras es análogo al bucle mientras y el cuerpo del bucle se ejecuta una y otra vez mientras la condición (expresión booleana) sea verdadera. <br>Existe, sin embargo, una gran diferencia y es que el cuerpo del bucle está encerrado entre las palabras reservadas hacer y mientras, de modo que las sentencias de dicho cuerpo se ejecutan, al menos una vez, antes de que se evalúe la expresión booleana. En otras palabras, el cuerpo del bucle siempre se ejecuta, al menos una vez, incluso aunque la expresión booleana sea falsa. <br>
+
+	
+	<img src="{% static 'media/3.3.1.2.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br><br>
+									
+			</p>
+		</article>
+		
+		<div class="siguiente-btn">
+			<a href="/ejercicioEj/EJ3/3/N/1" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+		</div>
+   	{% endblock %}
+
+	{% block video %}
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/-Ynb2m4oU2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   {% endblock %}
+	
+	{% block paginacion %}
+	<div class="ejercicios-btn">
+		<a href="/tema/3/2/2" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+	</div>
+
+		<li class="page-item disabled"><a class="page-link" href="/tema/3/3/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/3/3/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/3/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/3/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/3/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+	{% endblock %}
+
+
+
+
+
+

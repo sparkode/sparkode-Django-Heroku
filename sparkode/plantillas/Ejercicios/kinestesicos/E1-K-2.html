@@ -1,0 +1,57 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.1: Conceptos básicos</li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+
+<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Advertencia!</strong> Revisa las pocisiones antes de validar!
+</div>
+<p>2.- Ordenar de manera correcta la primera fase de la resolución de un problema:</p>
+<p id="NumeroPiezas" hidden="true">5</p> 
+
+<script>
+	window.onload = function()
+{
+	A = document.getElementById('contenedorPiezas').innerHTML;
+	 B = document.getElementById('Padre').innerHTML;
+}
+	</script>
+
+<div class="row" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+  <div class="col-md-3" id="pieza1"  draggable="true" ondragstart="start(event)" ondragend="end(event)">Inicio</div>
+  <div class="col-md-2"id="pieza4" draggable="true" ondragstart="start(event)" ondragend="end(event)">Desarrollo</div>
+     <div class="col-md-2"id="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">Cabecera</div>
+  <div class="col-md-3"id="pieza5" draggable="true" ondragstart="start(event)" ondragend="end(event)">Fin</div>
+  <div class="col-md-2"id="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">Definición de variables</div>
+  <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+</div>
+
+<p>En el espacio de abajo tendrá que acomodar, arrastrando y soltando.</p>
+
+<div id="puzzle" class="container-fluid puzzle">
+
+	<div class="row-md-3 my" id="Padre" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="border-style: solid; height:420px;"></div>
+		</div>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	
+	<form id="form1" name="form1" method="post" action="/evaluarK/E1/1/K/2" class="formulario" >{% csrf_token %} 
+		<br>	
+	<input type="text"  name="calificacion" id="calificacion" hidden="true">
+	<input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="reset1();"> 
+	<button class="btn btn-primary" type="submit" onclick="array();">Validar</button>
+
+  <input type="submit"	class="btn btn-primary"  value="Evaluar">
+	</form>
+	{% endblock %}

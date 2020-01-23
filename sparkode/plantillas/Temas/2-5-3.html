@@ -1,0 +1,67 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.5: Traducción de un programa: compilación, enlace, ejecución y errores.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<P class="post-contenido text-justify"><b>COMPILACIÓN DEL PROGRAMA:</b><br>
+			Una vez que el programador acaba de escribir el programa en su terminal y lo almacena en un archivo debe traducirlo a 
+			código ejecutable por la maquina. Este proceso se llama en su conjunto compilación del código fuente en C. <br>
+		
+			#include < stdio.h > <br>
+
+			Hace que se inserte el fichero stdio.h en el lugar donde aparece esa línea. Como el lector puede ver si examina el fichero stdio.h,
+			 lo que hay en el son declaraciones de prototipos de funciones y de tipos de datos, perfectamente validos en C. <br>
+			
+			El compilador se encarga de la etapa de preproceso, justo antes de iniciar la compilación. Por lo tanto, 
+			esta etapa pasa normalmente desapercibida, aunque puede indicársele al compilador que solo efectue el preproceso, 
+			para ver cómo queda el programa después de él. La forma de solicitárselo depende de cada compilador en concreto. 
+			Una vez finalizado el pre-proceso, nuestro programa queda listo para que pueda comenzarse su traducción a código ejecutable.</p>
+		
+		</P>
+
+		<p class="post-contenido text-justify"><b>ENLACE:</b><br>
+			La siguiente etapa de compilación es el enlace con las funciones presentes en las librerías de funciones. Si nuestro programa utiliza solo funciones ANSI, no suele ser 
+			necesario indicarle al compilador en que librerías están esas funciones. Sin embargo, hay excepciones. Por ejemplo si utilizamos funciones matemáticas de la 
+			librería estándar
+			 en nuestro programa (es decir en el programa aparece #include < math.h >, opción –lm. 
+			Sin embargo, si utilizamos funciones definidas en una librería propia o bien en una librería no estándar, debemos indicárselo al compilador mediante algún parámetro.</p>
+		<p>Las etapas por las que debe pasar un programa escrito en un lenguaje de programación, hasta poder ser ejecutable son: 
+			<li class="post-contenido text-justify">Programa fuente: Programa escrito en un lenguaje de alto nivel (texto ordinario que contiene las sentencias del programa en 
+				un lenguaje de programación). Necesita ser traducido a código máquina para poder ser ejecutado.</li>
+			<li class="post-contenido text-justify">Compilador: Programa encargado de traducir los programas fuentes escritos en un lenguaje de alto nivel a lenguaje máquina y 
+				de comprobar que las llamadas a las funciones de librería se realizan correctamente.</li>
+			<li class="post-contenido text-justify">Programa (o código) objeto: Es el programa fuente traducido (por el compilador) a código máquina. Aún no es directamente ejecutable.</li>
+			<li class="post-contenido text-justify">Programa Ejecutable: Traducción completa a código máquina, realizada por el enlazador, del programa fuente y 
+				que ya es directamente ejecutable.</li>
+			<li class="post-contenido text-justify">Montador o enlazador (Linker): Es el programa encargado de insertar al programa objeto el código máquina de las funciones de las 
+				librerías (archivos de biblioteca) usadas en el programa y realizar el proceso de montaje, que producirá un programa ejecutable .exe.  
+				Las librerías son una colección de código (funciones) ya programado y traducido a código máquina, listo para utilizar en un programa y que facilita la 
+				labor del programador.</li>
+		</p>
+
+	</article>
+{% endblock %}
+{% block video %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/L3BugKxfzqI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+{% block paginacion %}
+	<li class="page-item"><a class="page-link" href="/tema/2/5/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/2">2</a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/5/3">3</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/4">4</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/4"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+{% endblock %}
+
+

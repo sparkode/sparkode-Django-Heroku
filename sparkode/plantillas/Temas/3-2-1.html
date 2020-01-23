@@ -1,0 +1,89 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 3. Control de flujo. </h1>
+    	{% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.2: Estructuras selectivas: simple, doble y múltple. </li>
+    {% endblock %}
+
+
+    
+	{% block contenido %}
+		
+		<article class="post clearfix article">
+							
+			<p class="post-contenido text-justify">
+				<h2 class="post-title">
+					Estructuras selectivas: simple, doble y múltple.
+					</h2>
+			<br>
+			En las estructuras selectivas se evalúa una condición y en función del resultado de la misma se realiza una opción u otra.
+
+			Las condiciones se especifican usando expresiones lógicas. La representación de una estructura selectiva se hace con palabras en pseudocódigo 
+			(if, then, else o bien en español si, entonces, si_no), con una figura geométrica en forma de rombo o bien con un triángulo en el interior de una caja rectangular. <br>
+
+			Las estructuras selectivas o alternativas pueden ser:
+			<ul>
+				<li><i>Simples</i></li>
+				<li><i>Dobles</i></li>
+				<li><i>Múltiples</i></li>
+			</ul><br>
+
+			<h4 class="post-title">
+				Alternativa simple (si-entonces/if-then). 
+			</h4>
+										
+			La estructura alternativa simple si-entonces ejecuta una determinada acción cuando se cumple una determinada condición. 
+			La selección si-entonces evalúa la condición y:<br>
+
+			<ul>
+				<li> Si la condición es verdadera, entonces ejecuta la acción S1 (o acciones caso de ser S1 una acción compuesta y constar de varias acciones).</li>
+				<li> Si la condición es falsa, entonces no hacer nada.</li>
+			</ul>
+
+			Las representaciones gráficas de la estructura condicional simple se muestran en la Figura 4.4.<br>
+
+			<img src="{% static 'media/3.2.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+			<br>
+			<h4 class="post-title">
+				Alternativa doble (si-entonces-sino/if-then-else). 
+			</h4>
+			La estructura anterior es muy limitada y normalmente se necesitará una estructura que permita elegir entre dos opciones o alternativas posibles, en función del cumplimiento o no de una determinada condición. Si la condición C es verdadera, se ejecuta la acción S1 y, si es falsa, se ejecuta la acción S2. <br>
+
+			<img src="{% static 'media/3.2.1.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+			<br>
+			
+			</p>
+		</article>
+
+		<div class="siguiente-btn">
+			<a href="/ejercicioEj/EJ3/2/N/1" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+		</div>
+   	{% endblock %}
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/v7Us1kUYyCw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+	
+	{% block paginacion %}
+	<div class="ejercicios-btn">
+		<a href="/tema/3/1/1" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+	</div>	
+	
+		<li class="page-item disabled"><a class="page-link" href="/tema/3/2/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/3/2/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/2/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/2/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>	
+	{% endblock %}
+
+
+
+

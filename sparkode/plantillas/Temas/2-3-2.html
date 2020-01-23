@@ -1,0 +1,62 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+	{% block subtema %}
+			<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+	{% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 2.3: Estructura básica de un programa.</li>
+	{% endblock %}
+
+	{% block contenido %}
+		<article class="post clearfix">
+			<p class="post-contenido text-justify">
+				<b>ENTRADA DE DATOS.</b><br>
+				La constituyen todas las instrucciones que toman los datos de entrada desde un
+				dispositivo externo y los almacenan en la memoria central para que puedan ser
+				procesados. <br>
+				<img src="{% static 'media/2.3.1.jpg' %}" class="center-block" alt=""><br>
+				También se consideran dentro de esta parte las instrucciones de depuración de
+				los datos de entrada, es decir, las que se encargan de comprobar la corrección de
+				los mismos.
+			</p>
+
+			<p class="post-contenido text-justify">
+				<b>PROCESO O ALGORITMO.</b><br>
+				Está formado por las instrucciones que modifican los objetos a partir de su estado inicial (datos de entrada) 
+				hasta el estado final (resultados), dejando los objetos que lo contienen disponibles en la memoria central. <br>
+				<img src="{% static 'media/2.3.2.jpg' %}" class="center-block" alt=""><br> 
+			</p>
+
+			<p class="post-contenido text-justify">
+				<b>SALIDA DE RESULTADOS.</b><br>
+				Conjunto de instrucciones que toman los datos finales (resultados) de la memoria central y los envían a los dispositivos externos. <br> 
+				<img src="{% static 'media/2.3.3.jpg' %}" class="center-block" alt=""><br>
+				Se incluyen también todas las órdenes e instrucciones para dar formato a los resultados y controlar el dispositivo (saltos de página, borrar pantalla, etc.). 
+			</p>
+		</article>	
+		
+	<div class="ejercicios-btn">
+		<a href="/ejercicioEj/EJ2/3/N/2" class="btn btn-primary">Ejemplo</a>
+	</div>
+	{% endblock %}
+
+
+	{% block paginacion %}
+		<nav aria-label="Page">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="/tema/2/3/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+				<li class="page-item"><a class="page-link" href="/tema/2/3/1">1</a></li>
+				<li class="page-item active"><a class="page-link" href="/tema/2/3/2">2</a></li>
+				<li class="page-item disabled"><a class="page-link" href="/tema/2/3/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+			</ul>
+		</nav>
+
+		<div class="siguiente-btn">
+			<a href="/tema/2/4/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>
+
+	{% endblock %}
+

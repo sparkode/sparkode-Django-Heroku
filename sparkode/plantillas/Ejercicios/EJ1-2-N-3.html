@@ -1,0 +1,66 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+			$( "#accordion" ).accordion({
+		collapsible: true
+			});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 1. Diseño algorítmico. </h1>			
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 1.2: Representación de algoritmos: gráfica y pseudocódigo.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+			<a href="#" class="thumb pull-left">
+				<img src="" alt="">
+			</a>
+			<h2 class="post-title">
+				<a href="#">EJEMPLOS ALGORITMOS</a>
+			</h2>
+			<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		1.- Hacer un diagrama de flujo que permita leer 2 números diferentes y nos diga cual es el mayor de los 2 números.</p><br>
+			<p style="text-align: center;">
+			<img src="{% static 'media/1.2-1.jpg' %}" width="300" height="400" class="d-inline-block align-top" alt=""><br>
+			</p>
+
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+		2.- Crear un diagrama de flujo de procesos en el que se almacenen 3 números en 3 variables A, B y C. El diagrama debe decidir cual es el mayor y cual es el menor</p><br>
+
+		<p style="text-align: center;">
+			<img src="{% static 'media/e1.2-2.jpg' %}" width="400" height="400" class="d-inline-block align-top" alt=""><br>
+			</p>
+
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/1/2/3" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

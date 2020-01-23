@@ -1,0 +1,44 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.1: Conceptos básicos</li>						
+    {% endblock %}
+    
+	{% block contenido %}
+		<p class="post-contenido text-justify"><br>
+		La palabra algoritmo se deriva de la traducción al latín de la palabra Alkhô-warîzmi, nombre de un matemático y astrónomo árabe que escribió un tratado sobre manipulación de números y ecuaciones en el siglo IX. Un algoritmo es un método para resolver un problema mediante una serie de pasos precisos, definidos y finitos.<br><br>
+
+		 Características de un algoritmo:<br><br>
+		<ul type="circle">
+			<li>Preciso (indica el orden de realización en cada paso).</li>
+			<li>Definido (si se sigue dos veces, obtiene el mismo resultado cada vez).</li>
+			<li>Finito (tiene fin; un número determinado de pasos).</li>
+		</ul>
+		
+
+ Análisis del problema<br><br>
+
+La primera fase de la resolución de un problema con computadora es el análisis del problema. Esta fase requiere una clara definición, donde se contemple exactamente lo que debe hacer el programa y el resultado o solución deseada.<br>
+<img src="/static/media/1.2-2.jpg" width="300" height="370" class="d-inline-block align-top" alt=""><br>
+
+<div class="ejercicios-btn">
+	<a href="/ejercicioEj/EJ1/1/N/3" class="btn btn-primary">Ejemplo</a>
+</div>
+    {% endblock %}
+	
+	{% block paginacion %}
+	    <li class="page-item enable"><a class="page-link" href="/tema/1/1/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/1/1">1</a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/1/2">2</a></li>
+	    <li class="page-item active"><a class="page-link" href="/tema/1/1/3">3</a></li>
+	    <li class="page-item disabled"><a class="page-link" href="/tema/1/2/1"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>                   
+	
+		<div class="siguiente-btn">
+			<a href="/tema/1/2/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>		
+	{% endblock %}

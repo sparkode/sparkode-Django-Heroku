@@ -1,0 +1,273 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body
+{
+	background:#088A85;
+	font-family: 'Raleway', sans-serif;
+}
+
+.contenido
+{
+	width: 90%;
+	max-width: 1000px;
+	margin:auto;
+	background: rgb(204, 204, 255);
+	border-radius: 20px;
+}
+
+.contenido1
+{
+	width: 100%;
+	max-width: 1000px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background:#fff;
+	padding: 20px;
+	border-radius: 3px;
+}
+	.contenido1 .descripcion
+	{
+		display: inline-block;
+		position: initial;
+		margin: 10px;
+		width: 350px;
+	}
+		.contenido1 .descripcion h1
+		{
+			color: #490483;
+			margin-bottom: 30px;
+			font-size: 40px;
+		}
+		.contenido1 .descripcion h3
+		{
+			margin-bottom: 10px;
+		}
+		.contenido1 .descripcion ul li
+		{
+			list-style: none;
+			margin-bottom: 10px;
+			text-align: justify;
+		}
+		.contenido1 .descripcion ul li i
+		{
+			color: #10A5EB;
+			margin-right: 10px;
+		}
+	.contenido1 .video
+	{
+		display: inline;
+		position: relative;
+	}
+
+	.contenido1 .botones
+	{
+
+	}
+		.contenido1 .botones a
+		{
+			display:inline-block;
+			text-align: center;
+			padding-top: 10px;
+			text-decoration: none;
+			background: #3971F0;
+			color: #fff;
+			width: 150px;
+			height: 40px;
+			margin: 10px;
+			border-radius: 4px;
+			border-bottom: 4px solid #004EAF;
+		}
+		.contenido1 .botones a:hover
+		{
+			background: #3971A0;
+		}
+
+.contenido2
+{
+	width: 100%;
+	max-width: 1000px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	border-radius: 3px;
+}
+	.contenido2 h3
+	{
+		font-size: 30px;
+		border-bottom: 1px solid #fff;
+	}
+	.contenido2 a
+	{
+		position: initial;
+		display:inline-block;
+		text-align: center;
+		padding: 10px 15px;
+		text-decoration: none;
+		background: #fff;
+		width: 290px;
+		height: 290px;
+		margin: 20px 10px;
+		border-radius: 4px;
+	}
+	.contenido2 a:hover
+	{
+
+	}
+		.contenido2 a h4
+		{
+			color:#000;
+		}
+.pie
+{
+	background: #fff;
+	width: 100%;
+	padding: 5px;
+}
+	.pie .facebook
+	{
+		display: inline-block;
+		text-decoration: none;
+		color: #1531DC;
+		font-size: 30px;
+		margin: 5px;
+	}
+	.pie .twitter
+	{
+		display: inline-block;
+		text-decoration: none;
+		color: #3DD4FF;
+		font-size: 30px;
+		margin: 5px;
+	}
+	.pie .googleplus
+	{
+		display: inline-block;
+		text-decoration: none;
+		color: #DB0404;
+		font-size: 30px;
+		margin: 5px;
+	}
+	.pie .logo
+	{
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		width:auto;
+		left: 35%;
+	}
+		.pie .logo p
+		{
+			font-size: 20px;
+			color: #0FA299;
+		}
+
+header nav
+{
+	background: #2CD5D3;
+	-webkit-transition:all ease .5s;
+	-o-transition:all ease .5s;
+	transition: all ease .5s;
+}
+
+	header nav ul
+	{
+		list-style:none;
+		overflow: hidden;
+	}
+
+		header nav ul li
+		{
+			float: left;
+		}
+
+			header nav ul li a
+			{
+				background: #CCFEF4;
+				display:block;
+				padding: 15px;
+				color:#2CD5D3;
+				text-decoration: none;
+				font-size: 20px;
+			}
+			header nav ul li a:hover
+			{
+				background: #73F2AF;
+			}
+			header nav ul .tema
+			{
+				display: block;
+				width:auto;
+				padding: 10px;
+				font-size:  25px;
+				color: #FFF;
+			}
+			header nav ul .logout
+			{
+				float: right;
+			}
+
+.menu-fixed
+{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	width: 100%;
+	max-width: 1000px;
+	box-shadow: 0px 4px 3px rgba(0,0,0,0.3);
+}
+
+	.menu-fixed ul li a
+	{
+		padding: 10px 15px;
+	}
+	header nav ul .tema
+	{
+		padding: 5px 10px;
+	}
+
+.menud
+{
+	width: 25%;
+	height: 100%;
+	margin: 0;
+	left: -100%;
+	position: absolute;
+	background: #024959;
+}
+
+	.menud ul
+	{
+		overflow: hidden;
+		list-style: none;
+	}
+	.menud ul li
+	{
+		display: block;
+		float: none;
+		border-bottom: 1px solid rgba(255,255,255,.3);
+	}
+	.menud ul li a
+	{
+		background: #024959;
+		padding: 20px;
+		display: block;
+		text-decoration: none;
+		font-size: 20px;
+	}
+	.menud ul li a:hover
+	{
+		background: #037E8C;
+	}
+	.menud ul li a i
+	{
+		margin-right: 10px;
+	}	

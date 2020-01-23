@@ -1,0 +1,79 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 4. Organización de datos.  </h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.1: Arreglos. </li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Atento!</strong> Utiliza letras minusculas, utilizando la estructura iterativa 'desde' y en español
+    </div>
+  
+    <h6>Llene el arreglo bidimensional, según la imagen</h6>
+    <br>
+   
+    <div id="puzzle" class="container-fluid puzzle">
+    <div class="row">
+        <img src="../static/imagenesK/puzzle/k1.jpg" class="rounded float-right " alt="image" id="pieza1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+    </div>
+    <div class="row">
+        indice [<div class="col-1"><input type="text" id="res1" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res2" class="form-control form-control-sm"> </div>] = 1
+    </div>
+    <div class="row">
+      indice [<div class="col-1"><input type="text" id="res3" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res4" class="form-control form-control-sm"> </div>] = 2
+  </div>
+  <div class="row">
+    indice [<div class="col-1"><input type="text" id="res5" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res6" class="form-control form-control-sm"> </div>] = 3
+</div>
+<div class="row">
+  indice [<div class="col-1"><input type="text" id="res7" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res8" class="form-control form-control-sm"> </div>] = 4
+</div>
+<div class="row">
+  indice [<div class="col-1"><input type="text" id="res9" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res10" class="form-control form-control-sm"> </div>] = 5
+</div>
+<div class="row">
+  indice [<div class="col-1"><input type="text" id="res11" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res12" class="form-control form-control-sm"> </div>] = 6
+</div>
+<div class="row">
+  indice [<div class="col-1"><input type="text" id="res13" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res14" class="form-control form-control-sm"> </div>] = 7
+</div>
+<div class="row">
+  indice [<div class="col-1"><input type="text" id="res15" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res16" class="form-control form-control-sm"> </div>] = 8
+</div>
+<div class="row">
+  indice [<div class="col-1"><input type="text" id="res17" class="form-control form-control-sm"> </div>,<div class="col-1"><input type="text" id="res18" class="form-control form-control-sm"> </div>] = 9
+</div>
+
+
+    </div>
+    
+    
+    </div>
+      </div>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	<br>
+  
+    <button class="btn btn-primary" type="submit" onclick="validarray();">Validar</button>
+  
+	<!--<script type="text/javascript" src="../static/jsK/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../static/jsK/bootstrap.min.js"></script> -->
+
+  <form id="form1" name="form1" method="post" action="/evaluarK/E4/1/K/2" class="formulario" >{% csrf_token %} 
+    <input type="text"  name="calificacion" id="calificacion" hidden= "true">
+  <input type="submit" class="btn btn-primary"  value="Evaluar">
+  </form>
+	{% endblock %}
+
+
+
+
+

@@ -1,0 +1,144 @@
+{% extends "Ejercicios/BaseEVisual.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 4. Organización de datos</h1>
+    {% endblock %}
+
+	{% block subtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.2: Unidimensionales: conceptos básicos, operaciones y aplicaciones.</li>					
+	{% endblock  %}	
+
+					
+         
+    {% block preguntas %}
+ <!-- FORMULARIO DE PREGUNTAS  ------------------------------------------------------------------- -->
+      <form id="form1" name="form1" method="post" action="/evaluar/E4/2/V/2" class="formulario" onsubmit="alert('Tu puntuación es: '+{{resultado}})">{% csrf_token %} 
+
+          <div class="contenido">
+
+          	{% if messages %}
+          		<ul class="messages">
+          			{% for message in messages %}
+          			<li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          			{% endfor %}
+          		</ul>
+          	{% endif %}
+			
+			<h3>Ejercicio 1.</h3>
+      <h3>Lee el texto y selecciona la respuesta correcta.</h3>
+
+			<div class="widget">
+				 <fieldset>
+   				<legend>Selecciona la respuesta</legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   1------------------------------------------------------------------- -->
+          <p>1. ¿Cuál no es una operación a efectuarse, para manejar un arreglo?</p>
+          </div>
+
+   				<!-- RESPUESTAS DE LA PREGUNTA   1 --------------------------------------------------- -->
+    			<label for="radio-1"><b>A)</b> Declaración del arreglo.</label>
+    			<input type="radio" value="A" name="respuesta1" id="radio-1">
+    			
+    			<label for="radio-2"><b>B)</b> Acceso a los elementos del arreglo</label>
+    			<input type="radio" value="B" name="respuesta1" id="radio-2">
+    			
+    			<label for="radio-3"><b>C)</b> Eliminación del arreglo</label>
+    			<input type="radio" value="C" name="respuesta1" id="radio-3">
+  				</fieldset>
+			</div>
+
+      <div class="widget">
+         <fieldset>
+          <legend> 	  </legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   2 ------------------------------------------------------------------- -->
+           <p>2. De los siguientes ejemplos, ¿cuál sería un ejemplo correcto de asignación de un elemento de un arreglo?</p>
+          </div>
+          
+          <!-- RESPUESTAS DE LA PREGUNTA   2 --------------------------------------------------- -->
+          <label for="radio-4"><b>A)</b> arreglo[índice] = valor;</label>
+          <input type="radio" value="A" name="respuesta2" id="radio-4">
+
+          <label for="radio-5"><b>B)</b> arreglo[] = valor;</label>
+          <input type="radio" value="B" name="respuesta2" id="radio-5">
+
+          <label for="radio-6"><b>C)</b> arreglo-índice-= valor;</label>
+          <input type="radio" value="C" name="respuesta2" id="radio-6">
+
+          </fieldset>
+      </div>
+
+      <div class="widget">
+         <fieldset>
+          <legend> 	</legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   3 ------------------------------------------------------------------- -->
+          <p> 3.- ¿En qué consiste el tipo de acceso a los arreglos unidimensionales es el acceso directo?</p>
+          </div>
+
+          <!-- RESPUESTAS DE LA PREGUNTA   3 --------------------------------------------------- -->
+          <label for="radio-7"><b>A)</b> Acceder a cualquier elemento del arreglo sin tener que consultar a elementos anteriores o posteriores, esto mediante el uso de un vector bidimensional.</label>
+          <input type="radio" value="A" name="respuesta3" id="radio-7">
+          
+          <label for="radio-8"><b>B)</b> Acceder a cualquier elemento del arreglo sin tener que consultar a elementos anteriores o posteriores, esto mediante el uso de un índice para cada elemento del arreglo que nos da su posición relativa.</label>
+          <input type="radio" value="B" name="respuesta3" id="radio-8">
+         
+          <label for="radio-9"><b>C)</b> No podemos acceder a cualquier elemento del arreglo sin tener que consultar a elementos anteriores o posteriores.</label>
+          <input type="radio" value="C" name="respuesta3" id="radio-9">
+          </fieldset>
+      </div>
+
+      <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+            <!-- PREGUNTA   4 ------------------------------------------------------------------- -->
+          <p>4.- De acuerdo al siguiente código, ¿cuál sería la  forma de pasar un arreglo en una función dentro del main()? <br><img src="..\static\media\E4-2-V-1.png"></em></p>
+          </div>
+          <!-- RESPUESTAS DE LA PREGUNTA   4 --------------------------------------------------- -->
+          <label for="radio-10"><b>A)</b> comer(taco);</label>
+          <input type="radio" value="A" name="respuesta4" id="radio-10">
+         
+          <label for="radio-11"><b>B)</b> comer(tacos[]); </label>
+          <input type="radio" value="B" name="respuesta4" id="radio-11">
+          
+          <label for="radio-12"><b>C)</b> comer(tacos[índice]);</label>
+          <input type="radio" value="C" name="respuesta4" id="radio-12">
+          </fieldset>
+      </div>
+
+            <!-- PREGUNTA   5 ------------------------------------------------------------------- -->
+            <div class="widget">
+         <fieldset>
+          <legend></legend>
+          <div class="audioejemplo">
+          <p>5.- Si contáramos con dos listas con datos enteros, y deseáramos asignar a la primera lista la suma de ambas listas, ¿cuál sería la solución correcta? <br>Ejemplo: lista1[0]=1, lista2[0]=3, como resultado lista1[0]=4</p>
+          </div>
+          <!-- RESPUESTAS DE LA PREGUNTA   5 --------------------------------------------------- -->
+          <label for="radio-13"><b>A)</b> lista1[índice]= lista1[índice]++;</label>
+          <input type="radio" value="A" name="respuesta5" id="radio-13">
+          
+          <label for="radio-14"><b>B)</b> lista1[índice]= lista1[índice]+ lista2[índice;</label>
+          <input type="radio" value="B" name="respuesta5" id="radio-14">
+          
+          <label for="radio-15"><b>C)</b> lista2[índice]= lista1[índice]+ lista2[índice; </label>
+          <input type="radio" value="C" name="respuesta5" id="radio-15">
+
+          <!-- BOTON DE EVALUACION ------------------------------------------------------ -->
+            <legend> ... </legend>
+            <input type="submit" value="Calificar">
+
+          </fieldset>
+      </div>
+		</div>
+  </form>
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	    <li class="page-item"><a class="page-link" href="/ejercicio/E4"><i class="fa fa-arrow-right" aria-hidden="true"></i> Siguiente Ejercicio</a></li>
+			</ul>
+		</nav>
+		<div class="ejercicios-btn">
+            <a href="/tema/4/2/1" class="btn btn-primary">Regresar al tema</a>
+        </div>
+	{% endblock %}

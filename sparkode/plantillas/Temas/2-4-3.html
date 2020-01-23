@@ -1,0 +1,56 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.4: Elementos del lenguaje: tipos de datos, literales, constantes, variables, identificadores, parámetros, operadores y salida de datos. </li>						
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<p class="post-contenido text-justify">
+		<b>Operadores lógicos.</b><br> 
+		Los operadores lógicos o booleanos básicos son: not (no), and (y) y or (o). La siguiente tabla recoge el funcionamiento de dichos operadores: <br>
+		<img src="{% static 'media/operadores.PNG' %}" class="center-block" ><br>
+		En las expresiones lógicas se pueden mezclar operadores de relación y lógicos. Así, por ejemplo,(1 < 5) y (5 < 10) es verdadera <br>
+		(5 > 10) o ('A' < 'B') es verdadera, ya que 'A' < 'B'   
+
+		</p>
+
+		<p class="post-contenido text-justify">
+		<b>LA OPERACIÓN DE ASIGNACIÓN.</b> <br>
+		La operación de asignación es el modo de almacenar valores a una variable. <br>
+		Se representa con el símbolo u operador ← (en la mayoría de los lenguajes de programación, como C, C++, Java, el signo de la operación asignación es =).
+		 La operación de asignación se conoce como instrucción o sentencia de asignación cuando se refiere a un lenguaje de programación. 
+		 El formato general de una operación de asignación es <nombre de la variable> ← <expresión> expresión es igual a expresión, variable o constante. <br>
+		<b>Ejemplo:</b>
+		<li>A ← 5 significa que a la variable A se le ha asignado el valor 5.</li>
+		La acción de asignar es destructiva, ya que el valor que tuviera la variable antes de la asignación se pierde y se reemplaza por el nuevo valor. 
+		Así, en la secuencia de operaciones.
+		<li>A ← 25</li>
+		<li>A ← 134</li>
+		<li>A ← 5 cuando éstas se ejecutan, el valor último que toma A será 5 (los valores 25 y 134 han desaparecido).</li>
+
+		</p>
+
+	</article>
+{% endblock %}
+
+
+{% block paginacion %}
+	<li class="page-item"><a class="page-link" href="/tema/2/4/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/1">1</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/2">2</a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/4/3">3</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/4">4</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/4/4"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+{% endblock %}
+
+
+
+

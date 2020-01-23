@@ -1,0 +1,275 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body
+{
+	background: #088A85;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+body article
+{
+	background: #FFFFFF;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+
+.contenido
+{
+	width: 85%;
+	max-width: 1000px;
+	margin:auto;
+}
+
+	.contenido p, .contenido h2, .contenido h3
+	{
+		
+		padding: 10px;
+	}
+	.contenido .ejercicios
+	{
+		padding: 10px;
+		background:#01DFAA;
+		font-size: 20px;
+		float: right;
+		color: #FFFFFF;
+		border-radius: 4px;
+		text-decoration: none;
+	}
+	.contenido .ejercicios:hover
+	{
+		background: #73F2AF;
+	}
+	.contenido  .anterior
+	{
+		padding: 10px;
+		background: #01DFAA;
+		font-size: 20px;
+		float:left;
+		color:  #FFFFFF;
+		border-radius: 4px;
+		text-decoration: none;
+	}
+	.contenido .anterior:hover
+	{
+		background: #73F2AF;
+	}
+	.contenido .siguiente
+	{
+		padding: 10px;
+		background:  #01DFAA;
+		font-size: 20px;
+		float: right;
+		color: #FFFFFF;
+		border-radius: 4px;
+		text-decoration: none;
+	}
+	.contenido .siguiente:hover
+	{
+		background: #73F2AF;
+	}
+
+
+header nav
+{
+	background: #2CD5D3;
+	margin-bottom: 10px;
+	-webkit-transition:all ease .5s;
+	-o-transition:all ease .5s;
+	transition: all ease .5s;
+}
+
+	header nav ul
+	{
+		list-style:none;
+		overflow: hidden;
+	}
+
+		header nav ul li
+		{
+			float: left;
+		}
+
+			header nav ul li a
+			{
+				background: #CCFEF4;
+				display:block;
+				padding: 15px;
+				color:#2CD5D3;
+				text-decoration: none;
+				font-size: 20px;
+			}
+			header nav ul li a:hover
+			{
+				background: #73F2AF;
+			}
+			header nav ul .tema
+			{
+				display: block;
+				width:auto;
+				padding: 10px;
+				font-size:  25px;
+				color: #FFF;
+			}
+			header nav ul .logout
+			{
+				float: right;
+			}
+
+.menu-fixed
+{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	width: 100%;
+	max-width: 1000px;
+	box-shadow: 0px 4px 3px rgba(0,0,0,0.3);
+}
+
+	.menu-fixed ul li a
+	{
+		padding: 10px 15px;
+	}
+	header nav ul .tema
+	{
+		padding: 5px 10px;
+	}
+
+
+
+#Articulo
+{
+	width: 1000px;
+	padding: 20px 40px;
+	background: #A9DEA9;
+	height: 650px;
+}
+
+
+table {
+   width: 100%;
+   height: 200px;
+   /*rder: 3px solid #000;*/
+   border-spacing: 0px;
+   /* border-collapse: collapse;*/  /*Unifica los bordesd de una tabla */
+}
+td,th {
+   width: auto;
+   text-align: justify;
+  /*order: 1px solid black;*/
+   padding: .3em;
+   /*background: #8a8a8a;*/
+   color: black;
+
+}
+
+h2
+{
+	color:white;
+}
+
+#de
+{
+	height: 100px;
+}
+
+.col1
+{
+  width: 50px;
+}
+
+.col2
+{
+  width: 400px;
+  vertical-align: top;
+}
+
+.col3
+{
+  width: 300px;
+}
+
+.col4
+{
+width: 50px;
+}
+
+.bor {
+background-color: azure;
+
+padding: 10px;
+/*para Firefox*/
+-moz-border-radius: 15px 15px 15px 15px;
+/*para Safari y Chrome*/
+-webkit-border-radius: 15px 15px 15px 15px;
+/* para Opera */
+border-radius: 15px 15px 15px 15px;
+}
+
+
+
+
+#ret
+{
+	height: 300px;
+
+
+}
+
+.de2
+{
+	width: 50px;
+}
+
+#M1
+{
+	width: 620px;
+
+}
+
+
+.menud
+{
+	width: 25%;
+	height: 100%;
+	margin: 0;
+	left: -100%;
+	position: fixed;
+	background: #024959;
+}
+
+	.menud ul
+	{
+		overflow: hidden;
+		list-style: none;
+	}
+	.menud ul li
+	{
+		display: block;
+		float: none;
+		border-bottom: 1px solid rgba(255,255,255,.3);
+	}
+	.menud ul li a
+	{
+		color: #fff;
+		padding: 20px;
+		display: block;
+		text-decoration: none;
+		font-size: 20px;
+	}
+	.menud ul li a:hover
+	{
+		background: #037E8C;
+	}
+	.menud ul li a i
+	{
+		margin-right: 10px;
+	}	

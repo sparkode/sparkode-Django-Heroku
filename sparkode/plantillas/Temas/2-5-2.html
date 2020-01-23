@@ -1,0 +1,69 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+
+
+{% block subtema %}
+<h1 class="display-4">Tema 2. Introducción a la programación.</h1>
+{% endblock %}
+
+{% block temaSubtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.5: Traducción de un programa: compilación, enlace, ejecución y errores.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix">
+		<P class="post-contenido text-justify"> <b>Etapas del Proceso de Compilación: </b><br>El proceso de traducción se compone internamente de varias etapas o fases,
+			 que realizan distintas operaciones lógicas. Es útil pensar en estas fases como en piezas separadas dentro del traductor, y pueden en realidad escribirse 
+			 como operaciones codificadas separadamente, aunque en la práctica a menudo se integren juntas.
+		</P>
+
+		<p class="post-contenido text-justify"></p>
+		
+		<p></p>
+		<p class="post-contenido text-justify"><b>ANÁLISIS LÉXICO:</b><br>
+			
+			El analizador léxico opera bajo petición del analizador sintáctico con el fin de que este pueda avanzar en la gramática. Tiene como propósito agrupar las expresiones en fichas.</p>
+
+			<p class="post-contenido text-justify"><b> FUNCIONES DEL ANÁLISIS LÉXICO:</b> 
+				<li>Eliminación de espacios en blanco</li>
+				<li>Reconocimiento de identificadores y palabras clave</li>
+				<li>Reconocimiento de constantes</li>
+				<li>Mejorar la portabilidad del compilador</li>
+			</p>
+
+			<p class="post-contenido text-justify"><b>ANÁLISIS SINTÁCTICO:</b><br>Esta fase se puede practicar, siempre y cuando la anterior haya sido realizada correctamente,
+				 en este analizador se agrupan los componentes para construir frases, verifica que el lenguaje fuente cumpla con las especificaciones que necesita el 
+				 compilador donde se va a ejecutar. Es la fase más importante en el proceso de compilación.<br>
+			
+			<b>GENERACIÓN CÓDIGO INTERMEDIO:</b><br>
+			Los compiladores deben analizar y generar secuencias de instrucciones iguales a un programa fuente con el fin de aprovechar mucho más la memoria del equipo, 
+			en esta etapa se genera un código con el fin de que este sea optimizando en la siguiente etapa. <br>
+
+			<b>OPTIMIZACIÓN DE CÓDIGO:</b><br>
+			Con esta fase se mejora el código fuente con el fin de mejorar en la velocidad de ejecución y se aprovechen al máximo los recursos de la máquina, 
+			una vez se ha optimizado el código queda listo para ser entendible por la máquina. <br>
+
+			<b>PROCESO:</b><br>
+			Lo primero que el compilador de C hace es pasar nuestro programa por el preprocesador. El preprocesador se encarga de interpretar cada una de las directivas que aparecen en el programa y de expandir las macros. Respecto a las directivas, son todos a aquellas líneas que comienzan con un símbolo #. Hay un conjunto de directivas que son parte del estándar ANSI se comentan en el apéndice.
+			
+			</p>
+
+	</article>
+
+	<div class="siguiente-btn">
+		<a href="/ejercicioEj/EJ2/5/N/2" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+	</div>
+{% endblock %}
+
+{% block paginacion %}
+	<li class="page-item"><a class="page-link" href="/tema/2/5/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/1">1</a></li>
+	<li class="page-item active"><a class="page-link" href="/tema/2/5/2">2</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/3">3</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/4">4</a></li>
+	<li class="page-item"><a class="page-link" href="/tema/2/5/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+{% endblock %}
+
+
+

@@ -1,0 +1,85 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 5. Modularidad. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 5.1: Declaración y uso de módulos. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix article">
+							
+			<p class="post-contenido text-justify">
+
+				En particular un módulo puede ser de dos tipos: funciones o procedimientos, las funciones se caracterizan porque siempre devuelven un valor mientras que los procedimientos pueden devolver 0,1 o <i>n</i> valores en forma de lista de parámetros. <br>
+
+				<h4 class="post-title">
+				Funciones.
+				</h4>
+
+				La declaración de una función se conoce también como prototipo de la función. En el prototipo de una función
+				se tienen que especificar los parámetros de la función, así como el tipo de dato que devuelve. Los prototipos de las funciones que se 
+				utilizan en un programa se incluyen generalmente en la cabecera del programa y presentan la siguiente sintaxis: <br><br>
+
+				<img src="{% static 'media/5-1-1-funciones.png' %}"><br><br>
+
+				En el prototipo de una función no se especifican las sentencias que forman parte de la misma, sino sus características. Por ejemplo:<br><br>
+
+				<img src="{% static 'media/5-1-1-funcion.png' %}"><br><br>
+
+				En este caso se declara la función <i> cubo </i> que recibe como parámetro una variable de tipo entero <i> (numero) </i> y devuelve un valor del mismo tipo.<br><br>
+
+
+				<h4 class="post-title">
+				Procedimientos.<br>
+				</h4>
+
+				<strong>Declaración de un procedimiento.</strong><br>
+
+				<img src="{% static 'media/declaracionproce.png' %}"><br><br>
+
+				La declaración de un procedimiento se realiza en dos partes: prototipo e implementación. El prototipo de un procedimiento sirve para declarar el nombre del procedimiento y los parámetros que recibe. Un procedimiento puede recibir o no parámetros, ejecuta instrucciones, pero nunca retorna ningún valor.  <br><br>
+
+				<img src="{% static 'media/procedimientos.png' %}"><br><br>
+
+				Esta declaración no indica a la computadora que ejecute las instrucciones dadas, sino que indica a la computadora cuáles son estas instrucciones y dónde están localizadas cuando sea necesario.<br><br>
+
+				<img src="{% static 'media/5-1-1-declaracion.png' %}" width="550" height="200"><br><br>
+
+				<b>Llamada al procedimiento.</b><br>
+
+				Los procedimientos se llaman dentro de un programa o de otro procedimiento directamente por su nombre, de acuerdo a los formatos 1 o 2.<br><br>
+
+				<img src="{% static 'media/llamadaproced.png' %}"><br>
+
+			</p>
+
+			<div class="ejercicios-btn">
+				<a href="/ejercicioEj/EJ5/1/N/2" class="btn btn-primary">Ejemplo</a>
+			</div>
+
+		</article>	
+		
+   	{% endblock %}
+
+	
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/5/1/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/2">2</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/5/1/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/4">4</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/4"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+	{% endblock %}
+
+
+
+

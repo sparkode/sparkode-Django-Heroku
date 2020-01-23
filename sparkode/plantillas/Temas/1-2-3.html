@@ -1,0 +1,50 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.2: Representación de algoritmos: gráfica y pseudocódigo.</li>						
+    {% endblock %}
+    
+	{% block contenido %}
+		<h2 class="post-title">
+			Diagramas de flujo.
+		</h2>
+		<p class="post-contenido text-justify">							
+			Un diagrama de flujo (flowchart) es una de las técnicas de representación más antiguas y a la vez las más utilizadas. Un diagrama de flujo utiliza símbolos estándar y que tiene pasos de algoritmos escritos en cajas unidas por flechas, denominas líneas de flujo, que indica la secuencias que debe ejecutar
+			<br>
+ 			<img src="/static/media/simbolos.jpg" width="600" height="350" class="d-inline-block align-top" alt="">
+ 			<img src="/static/media/simbolos2.jpg" width="600" height="100" class="d-inline-block align-top" alt="">
+ 			<img src="/static/media/simbolos3.jpg" width="600" height="350" class="d-inline-block align-top" alt=""><br>
+			•	Cabecera: En esta sección se encuentran las variables y constantes. <br>
+			•	Definición de variables: En esta sección se declaran las variables a utilizar en el programa junto con su tipo de versión. <br>
+			•	Desarrollo: En esta sección se encuentran todas las instrucciones correspondientes al programa.  <br>
+		</p>
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ1/2/N/3" class="btn btn-primary">Ejemplo</a>
+		</div>
+    {% endblock %}
+
+	{% block video %}
+
+		<!--NOTA: no sé cada cuanto pusieron los ejercicios, pero debe ser al final del tema, no?, lo dejo por ahora, pero sin reparar	
+		<div class="siguiente-btn">
+			<a href="/tema/1/3/1" class="btn btn-primary">Siguiente tema</a>
+
+			<a href="/ejercicio/E1/2/V/1" class="btn btn-primary">Ejercicios</a>
+		</div>-->
+	{% endblock %}
+	{% block paginacion %}
+	    <li class="page-item"><a class="page-link" href="/tema/1/2/2"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/2/1">1</a></li>
+	    <li class="page-item"><a class="page-link" href="/tema/1/2/2">2</a></li>
+	    <li class="page-item active"><a class="page-link" href="/tema/1/2/3">3</a></li>
+		<li class="page-item disabled"><a class="page-link" href="/tema/1/3/1"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>							                      
+	
+		<div class="siguiente-btn">
+			<a href="/tema/1/3/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>	
+	{% endblock %}					

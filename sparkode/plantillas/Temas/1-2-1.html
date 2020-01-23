@@ -1,0 +1,61 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.2: Representación de algoritmos: gráfica y pseudocódigo.</li>
+    {% endblock %}
+    
+	{% block contenido %}
+		<p class="post-contenido text-justify">
+							
+		<br>
+		Para representar un algoritmo se debe utilizar algún método que permita independizar dicho algoritmo del lenguaje de programación elegido. Esto permitirá que un algoritmo pueda ser codificado indistintamente en cualquier lenguaje.<br><br>
+
+		Para conseguir este objetivo se precisa que el algoritmo sea representado gráfica o numéricamente, de modo que las sucesivas acciones no dependan de la sintaxis de ningún lenguaje de programación, sino que la descripción pueda servir fácilmente para su transformación en un programa, es decir, su codificación.<br><br>
+
+		Los métodos usuales para representar un algoritmo son:<br><br>
+		<ul type="1">
+			<li>Diagrama de flujo.</li>
+			<li>Diagrama N-S (Nassi-Schneiderman).</li>
+			<li>Lenguaje de especificación de algoritmos: pseudocódigo.</li>
+		</ul>
+		
+		<h2 class="post-title">
+		Pseudocódigo: 
+		</h2><br>
+
+		El pseudocódigo es un lenguaje de especificación (descripción) de algoritmos. El uso de tal lenguaje hace el paso de codificación final (esto es, la traducción a un lenguaje de programación) relativamente fácil.<br><br>
+
+		La ventaja del pseudocódigo es que en su uso, en la planificación de un programa, el programador se puede concentrar en la lógica y en las estructuras de control y no preocuparse de las reglas de un lenguaje específico. <br><br>
+
+		Es también fácil modificar el pseudocódigo si se descubren errores o anomalías en la lógica del programa, mientras que en muchas ocasiones suele ser difícil el cambio en la lógica, una vez que está codificado en un lenguaje de programación. Otra ventaja del pseudocódigo es que puede ser traducido fácilmente a lenguajes estructurados como Pascal, C, C++, Java, C#, etc.<br><br>
+
+		</p>
+
+
+		<div class="ejercicios-btn">
+			<a href="/ejercicioEj/EJ1/2/N/1" class="btn btn-primary">Ejemplo</a>
+		</div>
+    {% endblock %}
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/NL_28Iiuu7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+	
+	{% block paginacion %}
+	<div class="siguiente-btn">
+		<a href="/tema/1/1/3" class="btn btn-primary" style="margin-right: 20px;">Subtema Anterior</a>
+	</div>
+	
+		<li class="page-item disabled"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/1/2/1">1</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/2/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/2/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/2/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>							                       
+
+	{% endblock %}
+					

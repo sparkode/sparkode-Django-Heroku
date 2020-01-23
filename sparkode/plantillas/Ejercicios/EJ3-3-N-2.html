@@ -1,0 +1,105 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+			$( "#accordion" ).accordion({
+		collapsible: true
+			});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 3. Control de flujo.</h1>		
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 3.3: Estructuras iterativas: repetir mientras, hasta, desde.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+							
+		<h2 class="post-title" align="center">
+			<a href="#">EJEMPLOS</a>
+
+		</h2>
+		<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+		<div id="accordion">
+		
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+	1.- Leer por teclado un número que represente una cantidad de números que a su vez se leerán también por teclado. </p>
+	<div>
+	<p>
+	Calcular la suma de todos esos números.
+
+	<ul>
+		<li> <b> algoritmo </b> suma_numeros </li><br>
+		<li><b>var</b></li><br>
+		<li><b> entero: </b>N, TOTAL</li><br>
+		<li><b> real: </b>numero, SUMA </li><br>
+		<li><b> inicio </b></li><br>
+		<li><b> leer</b>(N)</li><br>
+		<li> {leer numero total N}</li><br>
+		<li> TOTAL ← N </li><br>
+		<li> SUMA ← 0</li><br>
+		<li> <b> mientras </b> TOTAL > 0 <b> hacer </b> </li><br>
+		<li><b>leer</b> (numero)</li><br>
+		<li>SUMA ← SUMA + numero</li><br>
+		<li>TOTAL ← TOTAL - 1</li><br>
+		<li><b> fin_mientras </b></li><br>
+		<li><b> escribir</b>('La suma de los', N, 'números es', SUMA)</li><br>
+		<li><b>fin</b></li><br>
+	</ul>
+	
+	</p>
+	</div>
+		<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+			2.- Obtener un algoritmo que lea un número (por ejemplo, 198) y obtenga el número inverso (por ejemplo, 891).
+		</p>
+		<div>
+		
+		<p class="post-contenido text-left">
+			<table>
+				<tr>
+					<td>
+			<ul>
+				<li> <b> algoritmo </b> invertirnumero </li><br>
+				<li><b>var</b></li><br>
+				<li><b> entero: </b>num, digitoSig</li><br>
+				<li><b> inicio </b></li><br>
+				<li> num ← 198</li><br>
+				<li><b>escribir</b> ('Número: ← ', num)</li><br>
+			</ul>
+		</td>
+		<td>
+			<ul>
+				<li><b>escribir</b> ('Número en orden inverso: ')</li><br>
+				<li><b>hacer</b></li><br>
+				<li> digitoSig = num <b>MOD</b> 10</li><br>
+				<li><b>escribir</b>(digitoSig)</li><br>
+				<li> num = num <b>DIV</b> 10</li><br>
+				<li><b>mientras</b> num > 0</li><br>
+				<li><b>fin</b></li>
+			</ul>
+		</td>
+		</tr>
+		</table>
+		</p>				
+	</div>
+	</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/3/3/2" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+
+
+

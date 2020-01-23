@@ -1,0 +1,66 @@
+{% extends "Temas/BaseTemas.html"%}
+    
+	{% block subtema %}
+	    <h1 class="display-4">Tema 1. Diseño algorítmico</h1>
+    {% endblock %}
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 1.4: Diseño de funciones.</li>
+    {% endblock %}
+    
+	{% block contenido %}
+		<h2 class="post-title">
+			Funciones en C++.
+		</h2>
+		<p class="post-contenido text-justify">
+			Una función está formada por un conjunto de sentencias que realizan una determinada tarea y que podemos invocar mediante un nombre.<br>
+Un programa C++ está formado por una o más funciones.<br>
+Utilizando funciones podemos construir programas modulares. Además consiguen que no se repita el mismo código en varias partes del programa: en lugar de escribir el mismo código cuando se necesite, por ejemplo para validar una fecha, se hace una llamada a la función que lo realiza.<br>
+Todo programa C++ tiene una función llamada main. La función main es el punto de entrada al programa y también el punto de salida.
+La estructura general de una función es la siguiente:<br><br>
+
+[tipo_devuelto] nombre_funcion([tipo parametro1][, tipo parametro2][, ....])<br>
+{<br>
+    // instrucciones<br>
+   [return valor;]<br>
+}<br><br>
+
+Los elementos que aparecen entre corchetes son opcionales.
+Después del nombre de la función y siempre entre paréntesis puede aparecer una lista de parámetros, también llamados argumentos, separados por comas. Estos parámetros se conocen como parámetros formales.
+Los parámetros formales son los datos que recibe la función para operar con ellos. Una función puede recibir cero o más parámetros. Se debe especificar para cada parámetro su tipo.
+Una función puede devolver un dato a quien la ha llamado. Esto se realiza mediante la instrucción return. El tipo del dato devuelto debe coincidir con el tipo_devuelto que se ha indicado antes del nombre de la función.<br><br>
+Ejemplo de función C++: función que sume dos números enteros
+<br><br>
+//Función C++ para sumar dos números<br>
+int suma(int a, int b)<br>
+{<br>
+         int c;<br>
+         c = a + b;<br>
+         return c;<br>
+}<br>
+Esta función se llama suma y recibe dos números enteros a y b. La función suma los dos números y guarda el resultado en c. Finalmente devuelve mediante la instrucción return la suma calculada.
+						</p>
+
+						<div class="ejercicios-btn">
+							<a href="/ejercicioEj/EJ1/4/N/2" class="btn btn-primary">Ejemplo</a>
+						</div>
+    {% endblock %}
+
+	
+	{% block paginacion %}
+		<li class="page-item enable"><a class="page-link" href="/tema/1/4/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/1/4/1">1</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/1/4/2">2</a></li>
+		<li class="page-item disabled"><a class="page-link" href="/ejercicio/E1"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+	   
+		<div class="siguiente-btn">
+			<a href="/ejercicio/E1" class="btn btn-primary" style="margin-left: 20px;">Ejercicios</a>
+		</div>	
+
+		<div class="siguiente-btn">
+			<a href='/../' class="btn btn-primary" style="margin-left: 20px;">Finalizar</a>
+		</div>
+	
+	{% endblock %}
+

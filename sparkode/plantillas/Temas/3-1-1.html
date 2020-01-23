@@ -1,0 +1,89 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 3. Control de flujo. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.1: Estructuras secuenciales. </li>
+    	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix article">
+			<p class="post-contenido text-justify">
+				<h2 class="post-title">
+					Estructuras secuenciales.
+					</h2>
+			Una estructura secuencial es aquella en la que una acción (instrucción) sigue a otra en secuencia. 
+			Las tareas se suceden de tal modo que la salida de una es la entrada de la siguiente y así sucesivamente hasta el final del proceso. 
+			La estructura secuencial tiene una entrada y una salida. Su representación gráfica se muestra en las Figuras 4.1, 4.2. <br>
+
+			<img src="{% static 'media/3.1.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+			El flujo normal de control de todos los programas es el secuencial. Este término significa que las sentencias se ejecutan en secuencia, 
+			una después de otra, en el orden en que se sitúan dentro del programa. <br>
+
+			Un algoritmo con estructura secuencial utiliza solo las operaciones básicas: asignación, escritura y lectura.<br><br>
+
+			
+			<h4 class="post-title">
+				Asignación:
+			</h4>
+			La asignación consiste, en el paso de valores o resultados a una zona de la memoria. Dicha zona será reconocida con el nombre de la variable que recibe el valor. La asignación se puede clasificar de la siguiente forma: <br>
+
+			<ul>
+				<li>Simples: Consiste en pasar un valor constante a una variable (a = 15).</li>
+				<li>Contador: Consiste en usarla como un verificador del numero de veces que se realiza un proceso (a = a + 1).</li>
+				<li>Acumulador: Consiste en usarla como un sumador en un proceso (a = a + b).</li>
+				<li>De trabajo: Donde puede recibir el resultado de una operación matemática que involucre muchas variables (a = c + b*2/4).</li>
+			</ul> <br>
+
+			<h4 class="post-title">
+				Escritura o salida de datos:
+			</h4>
+			Consiste en mandar por un dispositivo de salida (p.ej. monitor o impresora) un resultado o mensaje. 
+			Esta instrucción presenta en pantalla el mensaje escrito entre comillas o el contenido de la variable. Este proceso se representa así como sigue: <br>
+
+		<img src="{% static 'media/3.1-1.jpg' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br><br>
+
+			Las estructuras secuenciales cuentan con unas series de características:<br>
+
+			<ul>
+				<li>Es importante que los pasos lleven numeración.</li>
+				<li>Siempre debe se debe señalar el comienzo del algoritmo con la palabra INICIO.</li>
+				<li>Cuando se termine el algoritmo se debe indicar con la palabra FIN.</li>
+				<li>Cada paso debe especificar el proceso a realizar.</li>
+				<li>Todos los pasos deben llevar una secuencia.</li>
+			</ul>
+
+			</p>
+
+		</article>
+		<div class="ejercicio-btn">
+			<a href="/ejercicioEj/EJ3/1/N/1" class="btn btn-primary">Ejemplo</a>
+		</div>
+   	{% endblock %}
+
+{% block video %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ayb4N0Tkuq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		{% endblock %}
+
+	
+	{% block paginacion %}
+	<div class="siguiente-btn">
+		<a href="/tema/2/1/1" class="btn btn-primary" style="margin-right: 40px;">Tema Anterior</a>
+	</div>
+
+		<div class="siguiente-btn">
+			<a href="/tema/3/2/1" class="btn btn-primary">Siguiente Subtema</a>
+		</div>	
+	{% endblock %}
+
+
+

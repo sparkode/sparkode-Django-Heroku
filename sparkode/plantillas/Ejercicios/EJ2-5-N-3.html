@@ -1,0 +1,86 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+
+{% block scrips %}
+	<script>
+		$( function() {
+		$( "#accordion" ).accordion({
+			collapsible: true
+		});
+		} );
+	</script>
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 2. Introducción a la programación.</h1>		
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 2</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 2.5: Traducción de un programa: compilación, enlace, ejecución y errores.</li>
+{% endblock %}
+
+{% block contenido %}
+	<article class="post clearfix article">
+							
+		<h2 class="post-title" align="center">
+			<a href="#">EJEMPLOS</a>
+
+		</h2>
+		<h3 >Presiona la pregunta para visualizar la respuesta</h3>
+		<div id="accordion">
+		
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+	1.- La construcción de un compilador involucra la división del proceso en una serie de fases que variará con su complejidad. Generalmente estas fases se agrupan en dos tareas: el análisis del programa fuente y la síntesis del programa objeto.</p>
+	<div>
+	<p>
+	1. Análisis<br><br>
+	2. Síntesis<br><br>
+	3. Back-end<br><br>
+	4. Front-end 
+	</p>
+	</div>
+		<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+			2.- Las etapas por las que debe pasar un programa escrito en un lenguaje de programación, hasta poder ser ejecutable son:
+		</p>
+		<div>
+		
+		
+		<p class="post-contenido text-left">
+
+	1. Programa fuente: Programa escrito en un lenguaje de alto nivel (texto ordinario que contiene las sentencias del programa en un lenguaje de programación). Necesita ser traducido a código máquina para poder ser ejecutado.<br><br>
+	2. Compilador: Programa encargado de traducir los programas fuentes escritos en un lenguaje de alto nivel a lenguaje máquina y de comprobar que las llamadas a las funciones de librería se realizan correctamente.<br><br>
+	3. Programa (o código) objeto: Es el programa fuente traducido (por el compilador) a código máquina. Aún no es directamente ejecutable.<br><br>
+	4. Programa Ejecutable: Traducción completa a código máquina, realizada por el enlazador, del programa fuente y que ya es directamente ejecutable.<br><br>
+	5. Montador o enlazador (Linker): Es el programa encargado de insertar al programa objeto el código máquina de las funciones de las librerías (archivos de biblioteca) usadas en el programa y realizar el proceso de montaje, que producirá un programa ejecutable .exe. Las librerías son una colección de código (funciones) ya programado y traducido a código máquina, listo para utilizar en un programa y que facilita la labor del programador.
+		</p>				
+	</div>
+		<p  class="post-contenido text-justify " style="color: #020ace; font-size: 150%" >
+			3.- Los errores que se pueden producir en la fase de compilación son:
+		</p>
+		<div>
+			
+		
+		
+		<p class="post-contenido text-left">
+
+	1. Errores fatales: Son raros. Indican errores internos del compilador. Cuando ocurre la compilación se detiene inmediatamente.<br><br>
+	2. Errores de sintaxis: Son los errores típicos de sintaxis. No detienen la compilación, sino que al finalizar ésta se mostrará la lista con todos los errores encontrados. Algunos errores suelen ser consecuencia de otros cometidos con anterioridad. Con este tipo de errores no se puede obtener un programa objeto y por lo tanto tampoco el ejecutable.<br><br>
+	3. Advertencias o avisos (warnings): Indican que hay líneas de código sospechosas que, a pesar de no infringir ninguna regla sintáctica, el compilador las encuentra susceptibles de provocar un error. Cuando se detecta un warning la compilación no se detiene. Si en un programa fuente sólo se detectan warnings, se podrá obtener un programa objeto, que tras el linkado dará lugar a un programa ejecutable. as advertencias no indican errores, sino que llaman la atención al programador sobre los posibles usos incorrectos del lenguaje. Las advertencias, a diferencia de los errores no detienen el proceso de compilación, pero casi siempre señalan un error oculto.
+		</p>
+
+	</div>
+	</div>
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/2/5/4" class="btn btn-primary">Regresar</a>
+	</div>
+{% endblock %}
+
+
+
+
+
+

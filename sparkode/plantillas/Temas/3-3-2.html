@@ -1,0 +1,56 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 3. Control de flujo. </h1>
+    	{% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 3</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 3.3: Estructuras iterativas: repetir mientras, hasta, desde.</li>
+    {% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix">
+				<p class="post-contenido text-justify">
+					<h4 class="post-title">
+						<a href="#">Estructura desde/para ("for").</a>
+					</h4>
+
+					La estructura <i>desde</i> ejecuta las acciones del cuerpo del bucle un número especificado de veces y de modo 
+					automático controla el número de iteraciones o pasos a través del cuerpo del bucle. Las herramientas de 
+					programación de la estructura <i>desde</i> o <i>para</i>. <br>
+
+					Un bucle desde (for) se representa con los símbolos de proceso y de decisión mediante un contador. Así, por ejemplo, en el caso de un bucle de lectura de cincuenta números para tratar de calcular su suma:<br>
+
+
+		<img src="{% static 'media/3.3.2.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+					Diagrama de flujo, estructura, <b>desde</b> <br>
+
+		<img src="{% static 'media/3.3.2.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+					
+					Es posible representar el bucle con símbolos propios por ejemplo calcular la suma de los N primeros enteros.
+
+		<img src="{% static 'media/3.3.2.2.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+				</p>
+
+		</article>
+		<div class="ejercicio-btn">
+			<a href="/ejercicioEj/EJ3/3/N/2" class="btn btn-primary">Ejemplo</a>
+		</div>	
+   	{% endblock %}
+
+	
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/3/3/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/3/1">1</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/3/3/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/3/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/3/3/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+	{% endblock %}

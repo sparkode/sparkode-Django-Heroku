@@ -1,0 +1,65 @@
+{% extends "Ejercicios/kinestesicos/BasePuzzle.html" %}
+
+	{% block tema %}
+	    <h1 class="display-4">Tema 4. Organización de datos.  </h1>
+    {% endblock %}
+
+  {% block subtema %}
+  <!--Saber el correcto tema-->
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.4: Estructuras o registros. </li>					
+	{% endblock  %}	
+
+         
+    {% block preguntas %}
+    <p id="NumeroPiezas" hidden="true">3</p>
+
+    <script>
+      window.onload = function()
+    {
+      B = document.getElementById('Padre').innerHTML;
+      A = document.getElementById('contenedorPiezas').innerHTML;
+
+    }
+      </script>
+
+    <div  class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Atento!</strong> Utiliza letras minusculas, utilizando la estructura iterativa 'desde' y en español
+    </div >
+    
+   <div class="container-fluid" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" id="contenedorPiezas">
+    
+    <img src="../static/imagenesK/puzzle/s1.jpg" class="rounded mx-auto d-block " alt="image" id="pieza1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+    <img src="../static/imagenesK/puzzle/s2.jpg" class="rounded mx-auto d-block " alt="image" id="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+    <img src="../static/imagenesK/puzzle/s3.jpg" class="rounded mx-auto d-block " alt="image" id="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+    <img src="../static/imagenesK/puzzle/s4.jpg" class="rounded mx-auto d-block " alt="image" id="pieza4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+
+   </div>
+	  
+      <div class="col-md-1"id="none" draggable="false" ondragstart="start(event)" ondragend="end(event)"><--></div>
+      <p>En el espacio de abajo tendrá que acomodar, arrastrando y soltando.</p>
+	
+      <div id="puzzle" class="container-fluid puzzle">
+
+        <div class="row-md-3 my" id="Padre" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="border-style: solid; height:420px;"></div>
+            </div>
+      
+    
+	{% endblock %}
+	{% block sigienteEjercicioOVolver %}
+	<br>
+  
+
+  <form id="form1" name="form1" method="post" action="/evaluarK/E4/2/K/3" class="formulario" >{% csrf_token %} 
+    <input type="text"  name="calificacion" id="calificacion" hidden= "true">
+    <input type="button"	class="btn btn-primary" value="Reset" id="reset" onclick="reset1();"> 
+    <button class="btn btn-primary" type="submit" onclick="array();">Validar</button>
+    <input type="submit" class="btn btn-primary"  value="Evaluar">
+  </form>
+	{% endblock %}
+
+
+
+
+

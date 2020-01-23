@@ -1,0 +1,42 @@
+<!--
+Drag and drop
+Las clases son de bootstrap, no las borren y/o modifiquen
+Los estilos del css aún no los aplico en la hoja que esta en el css
+los estoy aplicando de forma enbebida, por las pruebas
+puzzle DnD 1 de 12
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Puzzle</title>
+	<script type="text/javascript" src="js/modernizr.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<script type="text/javascript" src="js/puzzle.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+</head>
+<body onload="comprobarnavegador();"> <!--Función de js-->
+
+<h1>Estructura if </h1>
+	
+	
+		<div class="col-sm" id="contenedorPiezas" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="border-style: solid;">
+			<img id="pieza3" src="imagenes/puzzle/pieza3.jpg" alt="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)"class="img-fluid">
+			<img id="pieza2" src="imagenes/puzzle/pieza2.jpg" alt="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)"class="img-fluid">
+			<img id="pieza4" src="imagenes/puzzle/pieza4.jpg" alt="pieza4" draggable="true" ondragstart="start(event)" ondragend="end(event)"class="img-fluid">
+			<img id="pieza1" src="imagenes/puzzle/pieza1.jpg" alt="pieza1" draggable="true" ondragstart="start(event)" ondragend="end(event)"class="img-fluid">
+			<img id="pieza5" src="imagenes/puzzle/pieza5.jpg" alt="pieza5" draggable="true" ondragstart="start(event)" ondragend="end(event)"class="img-fluid">
+			<img id="pieza6" src="imagenes/puzzle/pieza6.jpg" alt="pieza6" draggable="true" ondragstart="start(event)" ondragend="end(event)"class="img-fluid">
+		</div>
+		<h2>Acomoda la instruccion</h2>
+		<div id="puzzle" class="container">
+			<div class="contenedorPieza" id="uno" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="float: left; width: 128px ;height: 128px; border-style: solid; "></div>
+			<div class="contenedorPieza" id="dos" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)" style="float: left;width: 128px ;height: 128px; border-style: solid;"></div>
+			<div class="contenedorPieza" id="tres" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"style="clear: both; width: 128px ;height: 128px; border-style: solid;"></div>
+			<div class="contenedorPieza" id="cuatro" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)"style="clear: both; width: 128px ;height: 128px;border-style: solid;"></div>
+		</div>	
+
+<script src="/static/js/bootstrap.js"></script> <!--Asi lo pide el bootstrap, no lo suban-->
+</body>
+</html>

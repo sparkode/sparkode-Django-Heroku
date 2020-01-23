@@ -1,0 +1,71 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 4. Organización de datos. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.1: Arreglos. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		
+		<article class="post clearfix article">
+			<!-- <a href="#" class="thumb pull-left">
+				<img src="" alt="">
+			</a>
+			<h2 class="post-title">
+				<a href="#">Algoritmo </a>
+			</h2> -->
+			<p class="post-contenido text-justify">
+				<h4 class="post-title">
+				Clasificación de los Arreglos
+				</h4>
+				En base al número de índices que determinan la posición de un elemento en el arreglo podemos definir: <br><br>
+				
+
+				<ul>
+				<li><b>Arreglos lineales o unidimensionales:</b> La posición de un elemento la determina un único índice. También conocidos como listas o vectores. <br>
+					Ejemplo: En el caso de un arreglo lineal v de 200 elementos de tipo int: <br> </li>
+			<img src="{% static 'media/4.1.1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+				<li><b>Arreglos bidimensionales:</b> Se requieren 2 índices para posicionar un elemento en la colección. También conocidos como tablas o matrices. <br> 
+					Ejemplo: Observemos gráficamente el caso de un arreglo de números de punto flotante (float) de 5 filas por 12 columnas: <br> </li>
+			<img src="{% static 'media/4.1.1-1.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+				<li><b>Arreglos multidimensionales:</b> Se requieren más de 2 índices para posicionar un elemento en la colección. También conocidos como tablas o matrices multidimensionales. <br>
+					Ejemplo: arreglo de reales tri-dimensional. Analice algunos casos donde se requiera la necesidad de platear estructuras como la de la figura. <br> </li>
+			<img src="{% static 'media/4.1.1-2.png' %}" align="justify-content-center" class="d-inline-block align-top" alt=""><br>
+
+				</ul>
+				<br>
+
+				Los vectores se almacenan en la memoria central de la computadora en un orden adyacente. Así, un vector de cincuenta números denominado NUMEROS se representa gráficamente por cincuenta posiciones de memoria sucesivas. <br>
+
+			</p>
+			
+		</article>
+
+		<div class="siguiente-btn">
+			<a href="/ejercicioEj/EJ4/1/N/2" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+		<div>
+   	{% endblock %}
+
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/4/1/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/1">1</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/4/1/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/4/1/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+	{% endblock %}
+
+
+
+
+

@@ -1,0 +1,95 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 5. Modularidad. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 5.1: Declaración y uso de módulos. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix article">
+							
+			<p class="post-contenido text-justify">
+
+			<h4 class="post-title">
+				<a>Llamadas a módulos.</a>
+			</h4>
+
+			Un programa modular contará con un programa principal y uno o varios módulos. El programa principal llama o invoca a los módulos, 
+			cediendo a éstos el control del flujo del programa. <br>
+
+			Para nombrar a un módulo se seguirán las mismas pautas que con las variables. 
+			Se buscará que los nombres sean interpretables y claros. Se evitará que sean similares entre sí o con las variables que existan en el programa.<br>
+
+			La numeración de las líneas del módulo es independiente de la del algoritmo principal, pudiendo repetirse si se quiere. 
+			Se entiende que el módulo se encuentra dentro del programa pero no se ejecuta hasta que es llamado desde el algoritmo 
+			principal de acuerdo con esta estructura.<br><br>
+
+			<img src="{% static 'media/5-1-2.png' %}"> <br><br>
+
+			Cuando se llama a un módulo la ejecución del algoritmo principal se detiene y el flujo se desvía al módulo. 
+			Una vez se llega al fin del módulo, la ejecución en el algoritmo principal continúa por la sentencia inmediatamente 
+			posterior a la instrucción Llamar. Un módulo puede ser llamado cuantas veces se quiera. Es posible llamar a un módulo desde otro módulo: 
+			el efecto es el mismo al comentado anteriormente.<br><br>
+
+			<h4 class="post-title">
+				<a>Características que deben tener los módulos.</a>
+			</h4>
+
+			<ul type="a">
+				<li>Deben estar jerarquizados.</li>
+				<li>Deben ser pequeños y sencillos.</li>
+				<li>Deben ocultar los detalles poco importantes a módulos superiores en jerarquía.</li>
+				<li>Debe usar tanto módulos de más baja jerarquía como sea necesario </li>
+				<li>Deben usar estructuras de datos y control adecuados</li>
+				<li>Deben ser legibles, es decir, que no solo el autor pueda entenderlos, 
+					sino cualquiera que tenga acceso a ellos con un conocimiento fundamental de programación.</li>
+			</ul>
+
+			La programación modular se representa por medio de bloques donde cada uno hace referencia a un módulo. <br><br>
+
+			<img src="{% static 'media/prog_modular.png' %}"><br><br>
+
+			La ordenación de módulos y algoritmo principal debe obedecer a la intención de facilitar la lectura y 
+			compresión del programa, al igual que los nombres que se usen. La representación gráfica de un módulo en el diagrama 
+			de flujo se muestra con el símbolo: <br><br>
+			
+			<img src="{% static 'media/5-1-1-modulo.png' %}"><br><br>
+
+			Si existen llamadas a módulos en un diagrama de flujo, habrá de existir, a continuación del diagrama del algoritmo principal, otros diagramas explicativos de cada módulo (un diagrama por módulo). La representación será: <br><br>
+
+			<img src="{% static 'media/5-1-1-diagmodul.png' %}"> <br>
+
+			</p>
+
+			<div class="ejercicios-btn">
+				<a href="/ejercicioEj/EJ5/1/N/1" class="btn btn-primary">Ejemplo</a>
+			</div>
+
+		</article>
+		
+   	{% endblock %}
+
+	
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/5/1/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/1">1</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/5/1/2">2</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/3">3</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/4">4</a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/1/3"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+		
+	{% endblock %}
+
+
+
+
+

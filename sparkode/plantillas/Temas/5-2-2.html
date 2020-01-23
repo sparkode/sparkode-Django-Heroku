@@ -1,0 +1,63 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 5. Modularidad. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 5.2: Paso de parámetros o argumentos. </li>
+						
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+		<article class="post clearfix article">
+							
+			<p class="post-contenido text-justify">
+				<h4 class="post-title">
+				Paso de argumentos.
+				</h4>
+				A continuación se enlistan las formas de paso de argumentos: <br><br>
+				
+				<ol>
+					<li>
+						<b>Paso por valor.</b><br>
+						El paso de parámetros por valor consiste en copiar el contenido de la variable que queremos pasar en otra dentro del ámbito local de la subrutina, consiste en copiar el contenido de la memoria del argumento que se quiere pasar a otra dirección de memoria, correspondiente al argumento dentro del ámbito de dicha subrutina.
+					</li>
+					<li>
+						<b>Paso por referencia.</b><br>
+						El paso de parámetros por referencia consiste en proporcionar a la subrutina a la que se le quiere pasar el argumento la dirección de memoria del dato. En este caso se tiene un único valor referenciado (o apuntado) desde dos puntos diferentes, el programa principal y la subrutina a la que se le pasa el argumento, por lo que cualquier acción sobre el parámetro se realiza sobre la misma posición de memoria.
+					</li>
+					<li>
+						<b>Paso por valor resultado</b><br>
+						Se basa en que dentro de la función se trabaja como si los argumentos hubieran sido pasados por valor, pero al acabar la función los valores que tengan los argumentos serán copiados a las variables que pertenecían. Este tipo puede ser simulado en cualquier lenguaje que permita el paso de valores por referencia de la siguiente forma:
+
+						
+						<img src="{% static 'media/valoresultado.png' %}" alt="25">
+
+					</li>
+				</ol>
+			</p>
+			
+		</article>
+		
+   	{% endblock %}
+
+
+	{% block paginacion %}
+		<li class="page-item"><a class="page-link" href="/tema/5/2/1"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
+		<li class="page-item"><a class="page-link" href="/tema/5/2/1">1</a></li>
+		<li class="page-item active"><a class="page-link" href="/tema/5/2/2">2</a></li>
+		<li class="page-item disabled"><a class="page-link" href="/tema/5/2/2"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+
+		<div class="siguiente-btn">
+			<a href="/tema/5/3/1" class="btn btn-primary" style="margin-left: 20px;">Siguiente Subtema</a>
+		</div>
+	{% endblock %}
+
+

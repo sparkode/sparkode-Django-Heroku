@@ -1,0 +1,92 @@
+{% extends "Temas/BaseTemas.html"%}
+{% load static %}
+    
+	{% block subtema %}
+		<h1 class="display-4">Tema 4. Organización de datos. </h1>
+    {% endblock %}
+
+
+
+	{% block temaSubtema %}
+		<li class="breadcrumb-item"><a href="#">Tema 4</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Tema 4.2: Unidimensionales: conceptos básicos, operaciones y aplicaciones. </li>
+	{% endblock %}
+
+
+    
+	{% block contenido %}
+			
+		<article class="post clearfix article">
+							
+			<h2 class="post-title">
+				Unidimensionales: conceptos básicos, operaciones y aplicaciones.
+			</h2>
+			<p class="post-contenido text-justify">
+				
+			Un arreglo unidimensional tiene una sola dimensión. A los arreglos de una dimensión también se les llama listas.
+			Un arreglo unidimensional es un tipo de datos estructurado que está formado de una colección finita y ordenada de datos del mismo tipo. Es la estructura natural para modelar listas de elementos iguales. <br>
+
+			El tipo de acceso a los arreglos unidimensionales es el acceso directo, es decir, podemos acceder a cualquier elemento del arreglo sin tener que consultar a elementos anteriores o posteriores, esto mediante el uso de un índice para cada elemento del arreglo que nos da su posición relativa. <br>
+
+			<h4 class="post-title">
+				Operaciones.
+			</h4>
+			Para manejar un arreglo, las operaciones a efectuarse son:
+			<ul>
+				<li> Declaración del arreglo</li>
+				<li> Creación del arreglo</li>
+				<li> Inicialización de los elementos del arreglo</li>
+				<li> Acceso a los elementos del arreglo</li>
+			</ul><br>
+			
+			<h4 class="post-title">
+				Aplicaciones.
+			</h4>
+			Los elementos de un arreglo son variables del tipo base del vector, por lo que se utilizan 
+			de la misma manera en expresiones y demás instrucciones, como la asignación. Por ejemplo, para asignar 
+			un valor a un elemento de un arreglo basta con escribir:<br>
+			arreglo[índice] = valor; <br>
+
+			en donde <i> arreglo </i> es el nombre del arreglo e <i> indice </i> hace referencia a la 
+			posición del elemento al que se le quiere asignar el <i> valor </i>.<br>
+
+			El nombre de un arreglo también puede emplearse sin índice, bajo ciertas circunstancias, por ejemplo, para pasar el arreglo 
+			completo como parámetro a una función. Cuando se emplea el nombre solo, lo que se está manejando es en realidad un puntero al primer elemento del arreglo.<br><br>
+
+			<h4 class="post-title">
+				Listas.
+			</h4>
+			Para resolver el problema de manejar dos listas seria: una con los nombres de un grupo de alumnos y otra con una 
+			calificación para cada uno de los alumnos. Primero se deberán leer los nombres de los alumnos y la calificación que 
+			corresponde a cada uno de ellos y después habrá que desplegar dos columnas: una con los nombres de los alumnos y la otra con sus respectivas calificaciones. <br><br>
+
+
+			</p>
+		</article>
+
+		<div class="siguiente-btn">
+			<a href="/ejercicioEj/EJ4/2/N/1" class="btn btn-primary" style="margin-right: 800px;">Ejemplo</a>
+		<div>
+   	{% endblock %}
+
+
+	{% block video %}
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ONhqBUqX_L4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	{% endblock %}
+
+	
+	{% block paginacion %}
+		<div class="ejercicios-btn">
+			<a href="/tema/4/1/3" style="margin-right: 40px ;" class="btn btn-primary">Subtema Anterior</a>
+		</div>
+
+		<div class="siguiente-btn">
+			<a href="/tema/4/3/1" class="btn btn-primary">Siguiente Subtema</a>
+		</div>
+	{% endblock %}
+
+
+
+
+
+

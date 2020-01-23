@@ -1,0 +1,71 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/fecha.js' %}"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+    #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #sortable li {margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; height: 1.5em; }
+    html>body #sortable li { height: 1.5em; line-height: 1.2em; }
+    .ui-state-highlight {color: blue; height: 1.5em; line-height: 1.2em; }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+    $( "#sortable" ).sortable({
+        placeholder: "ui-state-highlight"
+    });
+    $( "#sortable" ).disableSelection();
+    } );
+    </script>
+{% block scrips %}
+	
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 1. Diseño algorítmico. </h1>			
+{% endblock %}
+
+{% block subtema %}
+    <li class="breadcrumb-item"><a href="#">Tema 1</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Tema 1.4: Diseño de funciones.</li>
+{% endblock %}
+
+{% block contenido %}
+    <article class="post clearfix article">
+            <p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+        1.- Pseudocódigo que permite leer la edad y peso de una persona y posteriormente imprimirla.</p>
+            <ul id="sortable">
+
+        <li class="ui-state-default">Inicio</li><br>
+        <li class="ui-state-default">Variables edad, peso.</li><br>
+        <li class="ui-state-default">Imprimir "Escribir los datos (Edad, Peso):"</li><br>
+        <li class="ui-state-default">Leer Edad, Leer Peso.</li><br>
+        <li class="ui-state-default">Visualizar "Tu peso es: ", peso, " y tu edad es: ", edad.</li><br>
+        <li class="ui-state-default">Fin.</li><br>
+        </ul>
+
+    </article>   
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/1/4/2" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+

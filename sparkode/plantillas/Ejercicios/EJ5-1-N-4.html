@@ -1,0 +1,45 @@
+{% extends 'Ejercicios/BaseEjemplos.html' %}
+{% load static %}
+
+{% block scrips %}
+	
+{% endblock %}
+
+{% block tema %}
+	<h1 class="display-4">Tema 5. Modularidad. </h1>		
+{% endblock %}
+
+{% block subtema %}
+	<li class="breadcrumb-item"><a href="#">Tema 5</a></li>
+	<li class="breadcrumb-item active" aria-current="page">Tema 5.1: Declaración y uso de módulos. </li>{% endblock %}
+{% block contenido %}
+	<article class="post clearfix article">
+		<a href="#" class="thumb pull-left">
+			<img src="" alt="">
+		</a>
+		<h2 class="post-title">
+			<a href="#">Variables. </a>
+		</h2>
+		
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+			1. Utilización del mismo identificador de variable en diferentes funciones mostrando su localidad.</p><br>
+		<p style="text-align: center;">
+			<img src="{% static 'media/variablelocal.png' %}" width="600" height="500" class="d-inline-block align-top" alt=""><br>
+		</p>
+
+		<p  class="post-contenido text-justify" style="color: #020ace; font-size: 150%" >
+			2. Utilización de variables globales como mecanismo de intercambio de información entre funciones.</p><br>
+		<p style="text-align: center;">
+			<img src="{% static 'media/variableglobal.png' %}" width="600" height="500" class="d-inline-block align-top" alt=""><br>
+		</p>
+
+	</article>
+{% endblock %}
+
+{% block Regresar %}
+	<div class="ejercicios-btn">
+		<a href="/tema/5/1/4" class="btn btn-primary">Regresar al tema</a>
+	</div>
+{% endblock %}
+
+
